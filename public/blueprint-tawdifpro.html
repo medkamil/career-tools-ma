@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint - Tawdif Pro Complete Structure</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f8fafc; color: #1e293b; padding: 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #0f172a; }
+  h2 { font-size: 1.4rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid #10b981; color: #0f172a; }
+  h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: #334155; }
+  .badge { display: inline-block; padding: 0.2rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+  .done { background: #d1fae5; color: #065f46; }
+  .missing { background: #fee2e2; color: #991b1b; }
+  .wip { background: #fef3c7; color: #92400e; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .card { background: white; border-radius: 1rem; padding: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+  .card h4 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .card p { font-size: 0.85rem; color: #64748b; margin-bottom: 0.75rem; }
+  .card .route { font-family: monospace; font-size: 0.8rem; color: #64748b; background: #f1f5f9; padding: 0.2rem 0.5rem; border-radius: 4px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .stat { background: white; border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid #e2e8f0; }
+  .stat .num { font-size: 2rem; font-weight: 700; color: #10b981; }
+  .stat .label { font-size: 0.8rem; color: #64748b; }
+  .checklist { list-style: none; }
+  .checklist li { padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+  .checklist .icon { font-size: 1.2rem; }
+  .phase { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; }
+  .phase-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .phase-header .num { background: #10b981; color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+  th, td { padding: 0.6rem 1rem; text-align: right; border-bottom: 1px solid #e2e8f0; }
+  th { background: #f8fafc; font-weight: 600; }
+  @media print { body { padding: 0; } .card { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🧭 Tawdif Pro — Blueprint Complet</h1>
+<p style="color:#64748b;font-size:1.05rem;">الهيكل الكامل للمنصة + خطة الإصلاح + متطلبات AdSense</p>
+
+<div class="stats">
+  <div class="stat"><div class="num">6/21</div><div class="label">صفحات مكتملة</div></div>
+  <div class="stat"><div class="num">15</div><div class="label">مقالات ناقصة</div></div>
+  <div class="stat"><div class="num">3</div><div class="label">صفحات قانونية ناقصة</div></div>
+  <div class="stat"><div class="num">2</div><div class="label">أدوات غير مبنية</div></div>
+</div>
+
+<!-- PHASE 1: LEGAL & ESSENTIAL -->
+<div class="phase">
+<div class="phase-header"><span class="num">1</span><h3 style="margin:0;">الصفحات القانونية والإجبارية لـ AdSense</h3><span class="badge missing">مطلوب فوراً</span></div>
+<table>
+  <tr><th>#</th><th>الصفحة</th><th>المسار</th><th>الحالة</th><th>ملاحظات</th></tr>
+  <tr><td>1</td><td>سياسة الخصوصية (Privacy Policy)</td><td>/privacy-policy</td><td><span class="badge missing">❌</span></td><td>مطلوب من AdSense والـ GDPR</td></tr>
+  <tr><td>2</td><td>شروط الاستخدام (Terms of Service)</td><td>/terms-of-service</td><td><span class="badge missing">❌</span></td><td>مطلوب من AdSense</td></tr>
+  <tr><td>3</td><td>اتصل بنا (Contact)</td><td>/contact</td><td><span class="badge missing">❌</span></td><td>صفحة بإيميل + فورم</td></tr>
+  <tr><td>4</td><td>من نحن (About)</td><td>/about</td><td><span class="badge wip">⚠️ موجود placeholder</span></td><td>محتاج محتوى حقيقي + صور</td></tr>
+</table>
+</div>
+
+<!-- PHASE 2: ARTICLES -->
+<div class="phase">
+<div class="phase-header"><span class="num">2</span><h3 style="margin:0;">المقالات — 15 مقالة ناقصة</h3><span class="badge missing">مطلوب عاجل</span></div>
+<p style="font-size:0.9rem;color:#64748b;">كل مقال: 1200-1500 كلمة، 60% دارجة + 30% فرنسية + 10% فصحى، FAQ Schema، روابط داخلية</p>
+<table>
+  <tr><th>#</th><th>القسم</th><th>المقال</th><th>الحالة</th></tr>
+  <tr><td>1</td><td>التوظيف</td><td>أفضل 10 مواقع للبحث عن عمل في المغرب</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>2</td><td>التوظيف</td><td>كيفاش تكتب CV احترافي في المغرب 2026</td><td><span class="badge done">✅</span></td></tr>
+  <tr><td>3</td><td>التوظيف</td><td>نصائح اجتياز مقابلة العمل</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>4</td><td>التوظيف</td><td>حقوق الأجير في القانون المغربي</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>5</td><td>التوظيف</td><td>الفرق بين CDD و CDI في المغرب</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>6</td><td>التوظيف</td><td>الحد الأدنى للأجور SMIG في المغرب</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>7</td><td>التكوين</td><td>التسجيل في OFPPT 2026</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>8</td><td>التكوين</td><td>أفضل 10 تكوينات مهنية مطلوبة في المغرب 2026</td><td><span class="badge done">✅</span></td></tr>
+  <tr><td>9</td><td>التكوين</td><td>تكوين مجاني عن بعد</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>10</td><td>التكوين</td><td>منح التكوين المهني</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>11</td><td>التكوين</td><td>شهادات مهنية معتمدة</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>12</td><td>التكوين</td><td>التدريب المستمر</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>13</td><td>المشاريع</td><td>برنامج Forsa 2026</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>14</td><td>المشاريع</td><td>برنامج INTELAKA</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>15</td><td>المشاريع</td><td>كيف تصبح مقاولاً ذاتياً</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>16</td><td>المشاريع</td><td>10 أفكار مشاريع صغيرة مربحة في المغرب</td><td><span class="badge done">✅</span></td></tr>
+  <tr><td>17</td><td>المشاريع</td><td>التمويل البنكي للمشاريع</td><td><span class="badge missing">❌</span></td></tr>
+  <tr><td>18</td><td>المشاريع</td><td>الدراسة السوقية للمشروع</td><td><span class="badge missing">❌</span></td></tr>
+</table>
+</div>
+
+<!-- PHASE 3: TOOLS -->
+<div class="phase">
+<div class="phase-header"><span class="num">3</span><h3 style="margin:0;">الأدوات — Build حقيقي</h3><span class="badge missing">مطلوب</span></div>
+<table>
+  <tr><th>#</th><th>الأداة</th><th>المسار</th><th>الحالة</th><th>ما تحتاجه</th></tr>
+  <tr><td>1</td><td>حاسبة الراتب</td><td>/salary-calculator</td><td><span class="badge done">✅ كاملة</span></td><td>—</td></tr>
+  <tr><td>2</td><td>مولد السيرة الذاتية</td><td>/cv-generator</td><td><span class="badge missing">❌ Placeholder</span></td><td>Form + Preview + PDF export (html2pdf.js / jsPDF)</td></tr>
+  <tr><td>3</td><td>طباعة الشيك</td><td>/cheque-printer</td><td><span class="badge missing">❌ Placeholder</span></td><td>Form بنكي + معاينة + طباعة</td></tr>
+</table>
+</div>
+
+<!-- PHASE 4: SEO & TECHNICAL -->
+<div class="phase">
+<div class="phase-header"><span class="num">4</span><h3 style="margin:0;">تحسين SEO & الأداء</h3><span class="badge wip">مستمر</span></div>
+<ul class="checklist">
+  <li><span class="icon">✅</span> Metadata الديناميكي (title, description لكل صفحة)</li>
+  <li><span class="icon">✅</span> Open Graph + Twitter Cards</li>
+  <li><span class="icon">✅</span> Schema.org Organization (موجود ف layout)</li>
+  <li><span class="icon">✅</span> FAQ Schema (موجود ف المقالات + حاسبة الراتب)</li>
+  <li><span class="icon">✅</span> Sitemap.xml</li>
+  <li><span class="icon">✅</span> Robots.txt</li>
+  <li><span class="icon">❌</span> Article Schema (nécessaire pour chaque article)</li>
+  <li><span class="icon">❌</span> BreadcrumbList Schema</li>
+  <li><span class="icon">❌</span> Google Analytics / Search Console</li>
+  <li><span class="icon">❌</span> تحسين Core Web Vitals (LCP, CLS, INP)</li>
+  <li><span class="icon">❌</span> Images optimisées (next/image, WebP)</li>
+  <li><span class="icon">✅</span> Cairo font swap (pas de CLS)</li>
+  <li><span class="icon">❌</span> إضافة canonical URLs صريحة</li>
+  <li><span class="icon">❌</span> Internal linking strategy (ربط المقالات ببعضها)</li>
+</ul>
+</div>
+
+<!-- PHASE 5: CONTENT EXPANSION -->
+<div class="phase">
+<div class="phase-header"><span class="num">5</span><h3 style="margin:0;">توسيع المحتوى لـ E-E-A-T</h3><span class="badge wip">مستمر</span></div>
+<ul class="checklist">
+  <li><span class="icon">❌</span> صفحة المؤلفين (Author bio)</li>
+  <li><span class="icon">❌</span> شهادات المستخدمين (Testimonials)</li>
+  <li><span class="icon">❌</span> إحصائيات وأرقام رسمية فالمقالات</li>
+  <li><span class="icon">❌</span> روابط لمصادر موثوقة (وزارة الشغل, OFPPT, etc.)</li>
+  <li><span class="icon">❌</span> تحديث المقالات بتاريخ آخر تعديل</li>
+</ul>
+</div>
+
+<!-- FINAL SUMMARY -->
+<div class="phase" style="background:#ecfdf5;border-color:#10b981;">
+<div class="phase-header"><span class="num" style="background:#059669;">✓</span><h3 style="margin:0;">الخلاصة — الخطة التنفيذية</h3></div>
+<ol style="margin-right:1.5rem;line-height:2;">
+  <li><strong>المرحلة 1 (عاجل):</strong> صفحات Privacy Policy + Terms + Contact + About محتوى حقيقي</li>
+  <li><strong>المرحلة 2 (عاجل):</strong> 15 مقالة متبقية بنفس الجودة (دارجة/فرنسية/فصحى + FAQ Schema)</li>
+  <li><strong>المرحلة 3 (مهم):</strong> بناء مولد CV + طباعة الشيك بشكل حقيقي</li>
+  <li><strong>المرحلة 4 (SEO):</strong> Article Schema, Breadcrumb, Analytics, تحسين الأداء</li>
+  <li><strong>المرحلة 5 (E-E-A-T):</strong> Author bio, testimonials, مصادر رسمية</li>
+</ol>
+<p style="margin-top:1rem;font-weight:600;color:#065f46;">
+🚀 باش نوصلو لـ 100 صفحة مفهرسة + AdSense approval + Traffic عضوي
+</p>
+</div>
+
+<p style="text-align:center;margin-top:3rem;color:#94a3b8;font-size:0.85rem;">
+Tawdif Pro — Blueprint v1.0 — آخر تحديث: يونيو 2026
+</p>
+</div>
+</body>
+</html>

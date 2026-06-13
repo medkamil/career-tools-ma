@@ -7,9 +7,18 @@ const footerColumns = [
     title: "عن المنصة",
     links: [
       { href: "/about", label: "من نحن" },
-      { href: "/about", label: "المهمة والرؤية" },
-      { href: "/about", label: "شروط الاستخدام" },
-      { href: "/about", label: "سياسة الخصوصية" },
+      { href: "/contact", label: "اتصل بنا" },
+      { href: "/terms-of-service", label: "شروط الاستخدام" },
+      { href: "/privacy-policy", label: "سياسة الخصوصية" },
+    ],
+  },
+  {
+    title: "الأقسام",
+    links: [
+      { href: "/emplois", label: "التوظيف" },
+      { href: "/formations", label: "التكوين" },
+      { href: "/projets", label: "المشاريع" },
+      { href: "/salary-calculator", label: "الأدوات" },
     ],
   },
   {
@@ -21,20 +30,10 @@ const footerColumns = [
     ],
   },
   {
-    title: "الموارد",
-    links: [
-      { href: "/about", label: "المدونة" },
-      { href: "/about", label: "الأسئلة الشائعة" },
-      { href: "/about", label: "دليل الاستخدام" },
-    ],
-  },
-  {
     title: "تواصل معنا",
     links: [
       { href: `mailto:${siteConfig.contactEmail}`, label: "البريد الإلكتروني" },
-      { href: siteConfig.links.twitter, label: "تويتر" },
-      { href: siteConfig.links.linkedin, label: "لينكد إن" },
-      { href: siteConfig.links.facebook, label: "فيسبوك" },
+      { href: "/contact", label: "أرسل رسالة" },
     ],
   },
 ];
@@ -44,7 +43,7 @@ const socialLinks = [
   { href: siteConfig.links.github, icon: Code, label: "جيت هاب" },
   { href: siteConfig.links.linkedin, icon: UserRound, label: "لينكد إن" },
   { href: siteConfig.links.facebook, icon: Users, label: "فيسبوك" },
-];
+].filter((s) => s.href);
 
 export function Footer() {
   return (
