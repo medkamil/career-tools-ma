@@ -1,65 +1,86 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, FileText, Calculator, Printer } from "lucide-react";
+import { siteConfig } from "@/config/site";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "منصة الأدوات المهنية الشاملة - توظيف، تكوين، مشاريع",
+  description:
+    "منصة مغربية مجانية للتوظيف والتكوين المهني والمشاريع. أنشئ سيرتك الذاتية، احسب راتبك، واطبع شيكات بنكية.",
+};
+
+const tools = [
+  {
+    title: "مولد السيرة الذاتية",
+    description: "أنشئ سيرة ذاتية احترافية في دقائق",
+    icon: FileText,
+    href: "/cv-generator",
+  },
+  {
+    title: "حاسبة الراتب",
+    description: "احسب صافي راتبك بعد الخصومات والضرائب",
+    icon: Calculator,
+    href: "/salary-calculator",
+  },
+  {
+    title: "طباعة الشيك",
+    description: "اطبع شيكات بنكية احترافية بسهولة",
+    icon: Printer,
+    href: "/cheque-printer",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col items-center">
+      {/* Hero Section */}
+      <section className="flex w-full flex-col items-center px-4 py-20 text-center sm:py-28">
+        <h1 className="max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          منصة التوظيف والتكوين المهني والأدوات التفاعلية في المغرب
+        </h1>
+        <p className="mt-4 max-w-xl text-lg text-gray-600">
+          منصة مغربية متكاملة للتوظيف، التكوين المهني، المشاريع، وأدوات تفاعلية
+          تسهل حياتك المهنية
+        </p>
+        <Link
+          href="/cv-generator"
+          className="mt-8 inline-flex h-12 items-center gap-2 rounded-lg bg-emerald-600 px-6 text-base font-medium text-white transition-colors hover:bg-emerald-700"
+        >
+          ابدأ مع مولد السيرة الذاتية
+          <ArrowLeft className="h-5 w-5" />
+        </Link>
+      </section>
+
+      {/* Tools Grid */}
+      <section className="w-full max-w-7xl px-4 pb-20">
+        <h2 className="mb-8 text-2xl font-bold text-gray-900">
+          أدواتنا المهنية
+        </h2>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {tools.map((tool) => {
+            const Icon = tool.icon;
+            return (
+              <Link key={tool.href} href={tool.href}>
+                <Card className="h-full transition-shadow hover:shadow-md">
+                  <CardHeader>
+                    <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100">
+                      <Icon className="h-6 w-6 text-emerald-600" />
+                    </div>
+                    <CardTitle>{tool.title}</CardTitle>
+                    <CardDescription>{tool.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <span className="text-sm font-medium text-emerald-600">
+                      استخدم الأداة
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }

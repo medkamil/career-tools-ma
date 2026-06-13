@@ -1,37 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# منصة الأدوات المهنية الشاملة | Tawdif Pro
 
-## Getting Started
+**منصة مغربية متكاملة للتوظيف، التكوين المهني، المشاريع، وأدوات تفاعلية.**
 
-First, run the development server:
+A comprehensive Moroccan platform for employment, vocational training, projects, and interactive tools.
+
+## ✨ Features
+
+- **CV Generator** - Create professional Arabic CVs in minutes
+- **Salary Calculator** - Calculate net salary after taxes and deductions (Morocco)
+- **Cheque Printer** - Print professional Moroccan bank cheques
+- **RTL Support** - Full Arabic right-to-left interface
+- **Mobile-First** - Responsive design optimized for all devices
+- **SEO Optimized** - Open Graph, Twitter Cards, JSON-LD Schema, sitemap
+
+## 🛠 Tech Stack
+
+| Technology     | Purpose                          |
+| -------------- | -------------------------------- |
+| Next.js 16     | React framework with App Router  |
+| TypeScript     | Type safety (strict mode)        |
+| Tailwind CSS 4 | Utility-first styling            |
+| Cairo Font     | Arabic-optimized typography      |
+| Lucide React   | Icon library                     |
+| clsx           | Conditional class names          |
+| tailwind-merge | Class conflict resolution        |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (recommended: 20 LTS)
+- npm 9+
+
+### Installation
+
+```bash
+git clone https://github.com/tawdifpro/tawdifpro.git
+cd tawdifpro
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+tawdifpro/
+├── app/
+│   ├── layout.tsx          # Root layout (SEO, fonts, RTL)
+│   ├── page.tsx            # Landing page
+│   ├── globals.css         # Tailwind CSS v4
+│   ├── sitemap.ts          # Dynamic sitemap
+│   ├── (marketing)/
+│   │   └── about/page.tsx  # About page
+│   └── (tools)/
+│       ├── cv-generator/   # CV Generator page
+│       ├── salary-calculator/ # Salary Calculator page
+│       └── cheque-printer/ # Cheque Printer page
+├── components/
+│   ├── ui/                 # Reusable UI components
+│   │   ├── button.tsx
+│   │   └── card.tsx
+│   └── layout/             # Layout components
+│       ├── Header.tsx      # Sticky header with mobile menu
+│       └── Footer.tsx      # 4-column footer
+├── config/
+│   └── site.ts             # Site configuration
+├── lib/
+│   └── utils.ts            # cn() utility
+├── public/
+│   ├── robots.txt          # SEO robots
+│   └── favicon.ico
+├── vercel.json             # Vercel deployment config
+└── package.json
+```
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploy to Vercel (Recommended)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# career-tools-ma" 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tawdifpro/tawdifpro)
+
+Or manually:
+
+```bash
+npm run build
+vercel --prod
+```
+
+### Environment Variables
+
+No environment variables are required for the base installation.
+
+## 🧪 SEO Checklist
+
+- [x] Metadata API with dynamic title template
+- [x] Open Graph & Twitter Cards
+- [x] JSON-LD Organization Schema
+- [x] robots.txt
+- [x] XML Sitemap
+- [x] RTL (`dir="rtl"`) & Arabic (`lang="ar"`)
+- [x] Semantic HTML (h1, h2, landmarks)
+- [x] Mobile-first responsive design
+- [x] Security headers (via vercel.json)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📬 Contact
+
+- **Email:** contact@tawdifpro.ma
+- **Website:** https://tawdifpro.ma
+- **Twitter:** [@tawdifpro](https://twitter.com/tawdifpro)
+
+---
+
+Made with ❤️ for Moroccan professionals.

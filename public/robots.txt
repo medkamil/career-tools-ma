@@ -1,0 +1,13 @@
+# Tawdif Pro - Robots.txt
+# https://tawdifpro.ma
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+
+# Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://tawdifpro.ma/sitemap.xml
