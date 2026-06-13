@@ -16,7 +16,7 @@ const features = [
 
 const articles = [
   { title: "أفضل 10 مواقع للبحث عن عمل في المغرب", desc: "مواقع مجانية وحديثة للباحثين عن فرص شغل" },
-  { title: "كيف تكتب سيرة ذاتية احترافية", desc: "خطوات عملية لكتابة CV يجذب انتباه المسؤولين" },
+  { title: "كيفاش تكتب CV احترافي في المغرب 2026", desc: "نصائح ذهبية ونماذج CV بالعربية والفرنسية", href: "/emplois/guides/cv-professionnel-maroc-2026" },
   { title: "نصائح اجتياز مقابلة العمل", desc: "أهم الأسئلة المتوقعة وكيفية الاستعداد" },
   { title: "حقوق الأجير في القانون المغربي", desc: "كل ما يهمك معرفته عن قانون الشغل" },
   { title: "الفرق بين CDD و CDI في المغرب", desc: "شرح مفصل لأنواع العقود وشروطها" },
@@ -51,17 +51,28 @@ export default function EmploisPage() {
       <section className="mt-12">
         <h2 className="mb-6 text-2xl font-bold text-gray-900">أحدث المقالات</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {articles.map((a) => (
-            <Card key={a.title} className="relative">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-base">{a.title}</CardTitle>
-                  <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">قريباً</span>
-                </div>
-                <CardDescription>{a.desc}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
+          {articles.map((a) => {
+            const Wrapper = a.href ? ({ children }: { children: React.ReactNode }) => <Link href={a.href!}>{children}</Link> : ({ children }: { children: React.ReactNode }) => <>{children}</>;
+            return (
+              <Wrapper key={a.title}>
+                <Card className="relative h-full transition-shadow hover:shadow-md">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-base">{a.title}</CardTitle>
+                      {a.href ? (
+                        <Link href={a.href} className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700 hover:bg-emerald-200">
+                          اقرأ المقال
+                        </Link>
+                      ) : (
+                        <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">قريباً</span>
+                      )}
+                    </div>
+                    <CardDescription>{a.desc}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </Wrapper>
+            );
+          })}
         </div>
       </section>
 

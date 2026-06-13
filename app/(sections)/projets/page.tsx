@@ -18,7 +18,7 @@ const articles = [
   { title: "برنامج Forsa 2026", desc: "شروط وطريقة التسجيل في برنامج فرصة لدعم المقاولات" },
   { title: "برنامج INTELAKA", desc: "تفاصيل برنامج انطلاقة لدعم المشاريع الصغيرة" },
   { title: "كيف تصبح مقاولاً ذاتياً", desc: "خطوات التسجيل في نظام المقاول الذاتي بالمغرب" },
-  { title: "أفكار مشاريع مربحة", desc: "10 أفكار مشاريع صغيرة مربحة في المغرب 2026" },
+  { title: "10 أفكار مشاريع صغيرة مربحة في المغرب", desc: "بميزانية أقل من 30,000 درهم مع برامج الدعم", href: "/projets/guides/idees-projets-petit-budget-maroc" },
   { title: "التمويل البنكي للمشاريع", desc: "كيف تحصل على تمويل لمشروعك من البنوك المغربية" },
   { title: "الدراسة السوقية للمشروع", desc: "كيف تعد دراسة جدوى لمشروعك خطوة بخطوة" },
 ];
@@ -51,17 +51,28 @@ export default function ProjetsPage() {
       <section className="mt-12">
         <h2 className="mb-6 text-2xl font-bold text-gray-900">أحدث المقالات</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {articles.map((a) => (
-            <Card key={a.title} className="relative">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-base">{a.title}</CardTitle>
-                  <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">قريباً</span>
-                </div>
-                <CardDescription>{a.desc}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
+          {articles.map((a) => {
+            const Wrapper = a.href ? ({ children }: { children: React.ReactNode }) => <Link href={a.href!}>{children}</Link> : ({ children }: { children: React.ReactNode }) => <>{children}</>;
+            return (
+              <Wrapper key={a.title}>
+                <Card className="relative h-full transition-shadow hover:shadow-md">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-base">{a.title}</CardTitle>
+                      {a.href ? (
+                        <Link href={a.href} className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700 hover:bg-emerald-200">
+                          اقرأ المقال
+                        </Link>
+                      ) : (
+                        <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">قريباً</span>
+                      )}
+                    </div>
+                    <CardDescription>{a.desc}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </Wrapper>
+            );
+          })}
         </div>
       </section>
 
