@@ -7,10 +7,11 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { href: "/emplois", label: "التوظيف" },
+  { href: "/formations", label: "التكوين" },
+  { href: "/projets", label: "المشاريع" },
+  { href: "/salary-calculator", label: "الأدوات" },
   { href: "/about", label: "عن المنصة" },
-  { href: "/cv-generator", label: "السيرة الذاتية" },
-  { href: "/salary-calculator", label: "حاسبة الراتب" },
-  { href: "/cheque-printer", label: "طباعة الشيك" },
 ];
 
 export function Header() {
@@ -51,7 +52,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="/cv-generator"
+            href="/emplois"
             className="hidden h-10 items-center justify-center rounded-lg bg-emerald-600 px-4 text-sm font-medium text-white transition-colors hover:bg-emerald-700 md:inline-flex"
           >
             ابدأ الآن
@@ -92,7 +93,7 @@ export function Header() {
             </nav>
             <div className="mt-auto border-t border-gray-200 p-4">
               <Link
-                href="/cv-generator"
+                href="/emplois"
                 onClick={() => setIsOpen(false)}
                 className="flex h-12 w-full items-center justify-center rounded-lg bg-emerald-600 text-base font-medium text-white transition-colors hover:bg-emerald-700"
               >
