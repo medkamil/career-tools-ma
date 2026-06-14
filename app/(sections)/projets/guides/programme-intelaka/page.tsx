@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "برنامج INTELAKA (انطلاقة) - دليل كامل 2026",
-  description: "برنامج INTELAKA (انطلاقة) فالمغرب 2026: شروط الاستفادة، التمويل حتى 100,000 درهم، خطوات التسجيل، الوثائق المطلوبة. دليل كامل باش تستفيد من دعم المشاريع الصغرى.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,38 +85,30 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function ProgrammeIntelakaPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/projets" className="hover:text-emerald-600">المشاريع</Link>
-        {" > "}
-        <span className="text-gray-900">برنامج INTELAKA 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">برنامج INTELAKA (انطلاقة) - دليل كامل 2026</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>11 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>برنامج INTELAKA (انطلاقة) هو برنامج حكومي مغربي كايقدم تمويلاً سهلاً وسريعاً للشباب باش يبداو مشاريعهم. من 2020 ل 2026، البرنامج دعم أكثر من 100,000 شاب مغربي فجميع جهات المملكة.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم المشاريع", href: "/projets" },
+        { name: "برنامج INTELAKA 2026", href: "/projets/guides/programme-intelaka" }
+      ]}
+      title="برنامج INTELAKA (انطلاقة) - دليل كامل 2026"
+      readingTime="10 دقائق قراءة"
+    >
+<p>برنامج INTELAKA (انطلاقة) هو برنامج حكومي مغربي كايقدم تمويلاً سهلاً وسريعاً للشباب باش يبداو مشاريعهم. من 2020 ل 2026، البرنامج دعم أكثر من 100,000 شاب مغربي فجميع جهات المملكة.</p>
 
         <p>فهاد المقال، غادي نعرفوك على كل شي خاص ببرنامج INTELAKA 2026: الشروط، المبلغ، خطوات التسجيل، والنصائح باش تنجح.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو برنامج INTELAKA؟</h2>
+        <h2>شنو هو برنامج INTELAKA؟</h2>
         <p>INTELAKA (انطلاقة) هو برنامج KAFAA للتمويل. كايقدم قرض حسن (بدون فايدة) للمشاريع الصغرى. الفرق بينو وبين القروض البنكية التقليدية هو أنو بدون فايدة وبدون ضمانات معقدة.</p>
 
         <p>المميزات:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>قرض حسن:</strong> بدون فايدة (ربا).</li>
           <li><strong>بدون ضمان:</strong> ما كايتطلبش ضمان عقاري ولا كفيل.</li>
           <li><strong>فترة سماح:</strong> 6 أشهر قبل بداية السداد.</li>
@@ -129,8 +116,8 @@ export default function ProgrammeIntelakaPage() {
           <li><strong>مواكبة:</strong> تكوين وإشراف مجاني.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">شروط التسجيل ف INTELAKA 2026</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>شروط التسجيل ف INTELAKA 2026</h2>
+        <ul>
           <li>الجنسية المغربية.</li>
           <li>السن: 18 - 40 سنة.</li>
           <li>الإقامة: فالمغرب.</li>
@@ -140,7 +127,7 @@ export default function ProgrammeIntelakaPage() {
           <li>غير مسجل ك مقاول (يمكن ل Auto-entrepreneur).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">مبلغ التمويل وشروط السداد</h2>
+        <h2>مبلغ التمويل وشروط السداد</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -158,8 +145,8 @@ export default function ProgrammeIntelakaPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">خطوات التسجيل ف INTELAKA</h2>
-        <ol className="list-decimal space-y-2 pr-6">
+        <h2>خطوات التسجيل ف INTELAKA</h2>
+        <ol>
           <li><strong>دخل ل intelaka.ma:</strong> وأنشئ حساب جديد.</li>
           <li><strong>اختر نوع المشروع:</strong> من القائمة: صناعي، تجاري، خدمي، فلاحي، حرفي.</li>
           <li><strong>املأ الاستمارة:</strong> معلومات شخصية + معلومات المشروع.</li>
@@ -170,8 +157,8 @@ export default function ProgrammeIntelakaPage() {
           <li><strong>التوقيع والصرف:</strong> فحسابك البنكي.</li>
         </ol>
 
-        <h2 className="text-2xl font-bold text-gray-900">الوثائق المطلوبة</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>الوثائق المطلوبة</h2>
+        <ul>
           <li>نسخة من بطاقة التعريف الوطنية.</li>
           <li>السيرة الذاتية (CV).</li>
           <li>وصف المشروع (Fiche projet).</li>
@@ -180,9 +167,9 @@ export default function ProgrammeIntelakaPage() {
           <li>وصل السكن (Justificatif de domicile).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">التكوين الأساسي ف INTELAKA</h2>
+        <h2>التكوين الأساسي ف INTELAKA</h2>
         <p>التكوين الأساسي (20 ساعة) هو شرط ضروري للحصول على التمويل. كايغطي:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>ريادة الأعمال: شنو هي المقاولة؟</li>
           <li>إعداد دراسة السوق.</li>
           <li>إعداد خطة العمل (Business Plan).</li>
@@ -191,8 +178,8 @@ export default function ProgrammeIntelakaPage() {
           <li>الجوانب القانونية والضريبية.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">أفكار مشاريع مناسبة ل INTELAKA</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>أفكار مشاريع مناسبة ل INTELAKA</h2>
+        <ul>
           <li><strong>مطعم صغير (Snack):</strong> تكلفة 30,000 - 50,000 MAD.</li>
           <li><strong>محل حلاقة/كوافير:</strong> تكلفة 15,000 - 30,000 MAD.</li>
           <li><strong>خدمات التنظيف:</strong> تكلفة 10,000 - 20,000 MAD.</li>
@@ -202,8 +189,8 @@ export default function ProgrammeIntelakaPage() {
           <li><strong>محل بقالة:</strong> تكلفة 20,000 - 40,000 MAD.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">نصائح للنجاح ف INTELAKA</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>نصائح للنجاح ف INTELAKA</h2>
+        <ul>
           <li><strong>كن جاداً:</strong> البرنامج كايستهدف الشباب الجاد. أظهر أنك عازم.</li>
           <li><strong>جهز دراسة السوق:</strong> حتى لو بسيطة. شنو المشكل؟ شنو الحل؟ من هم الزبناء؟</li>
           <li><strong>حضر خطة العمل:</strong> التكاليف، الإيرادات، الربحية. كن واقعياً.</li>
@@ -211,22 +198,10 @@ export default function ProgrammeIntelakaPage() {
           <li><strong>اسأل:</strong> إذا عندك أي سؤال، اسأل فريق البرنامج. هم كايعاونوك.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>INTELAKA (انطلاقة) هو فرصة للشباب المغربي باش يبدا مشروعو بتمويل ميسر بدون فايدة. ف 2026، البرنامج متاح فجميع جهات المغرب. قدم على intelaka.ma، حضر ملفك، وابدأ مشوارك المقاولاتي. نجاحك فهاد البرنامج يمكن يكون بداية طريقك لريادة الأعمال.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/projets/guides/programme-forsa-2026" className="text-emerald-600 underline hover:text-emerald-800">برنامج Forsa (فرصة)</Link>
-          {" | "}
-          <Link href="/projets/guides/auto-entrepreneur-maroc" className="text-emerald-600 underline hover:text-emerald-800">المقاول الذاتي</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

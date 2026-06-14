@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "تكوين السباكة والتدفئة في المغرب: المراكز، الأسعار، والمستقبل المهني",
@@ -30,37 +31,38 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", position: 3, name: "تكوين السباكة والتدفئة في المغرب", item: "https://tawdifpro.ma/formations/guides/formation-plomberie-chauffage-maroc" },
 ]};
 
+const schemas = [articleSchema, faqSchema, breadcrumbSchema];
+
+
 export default function FormationsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">تكوين السباكة والتدفئة في المغرب 2026: المراكز، الأسعار، والمستقبل المهني</h1>
-        <p className="mt-3 text-lg text-gray-600">OFPPT + شهادة + راتب + فرص الشغل</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span><span>7 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">السباكة والتدفئة (Plomberie et Chauffage) من المهن الأساسية لي كتطلب فجميع مشاريع البناء. كل عمارة، كل فيلا، كل فندق كيحتاج سباك. وهاد الشي كيخلي هاد المهنة مضمونة ومطلوبة.</p>
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "الرئيسية", href: "/formations" },
+        { name: "تكوين السباكة والتدفئة في المغرب", href: "/formations/guides/formation-plomberie-chauffage-maroc" }
+      ]}
+      title="تكوين السباكة والتدفئة في المغرب: المراكز، الأسعار، والمستقبل المهني"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">السباكة والتدفئة (Plomberie et Chauffage) من المهن الأساسية لي كتطلب فجميع مشاريع البناء. كل عمارة، كل فيلا، كل فندق كيحتاج سباك. وهاد الشي كيخلي هاد المهنة مضمونة ومطلوبة.</p>
         <p>فالمغرب، مع الطفرة العمرانية لي كتشهدها البلاد (المدن الجديدة، الطرق، الموانئ)، الطلب على السباكين والمتخصصين فالتدفئة راه كيزيد بزاف. فهاد المقال غنعطيكم كل المعلومات لي كتحتاجوها.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو تخصص السباكة والتدفئة؟</h2>
+        <hr />
+        <h2>شنو هو تخصص السباكة والتدفئة؟</h2>
         <p>هاد التخصص كيركز على تركيب وصيانة أنظمة المياه (Adduction d Eau)، الصرف الصحي (Assainissement)، أنظمة التدفئة المركزية (Chauffage Central)، والتجهيزات الصحية (Appareils Sanitaires).</p>
         <p>السباكة العصرية ولات كتدخل فيها التكنولوجيا (Pompes a Chaleur, Plomberie Connectee). السباك لي كيتعلم التقنيات الحديثة غادي يكون مطلوب بزاف.</p>
-        <h2 className="text-2xl font-bold text-gray-900">مراکز التكوين فالمغرب</h2>
+        <h2>مراکز التكوين فالمغرب</h2>
         <p className="font-medium text-gray-900">OFPPT (مكتب التكوين المهني)</p>
         <p>OFPPT كيقدم تكوين السباكة والتدفئة فجميع الجهات. التخصص: تقني فالتجهيز والتدفئة (Technicien en Equipement et Chauffage). المدة: سنتين. مجاني.</p>
         <p className="font-medium text-gray-900">المراكز الخاصة</p>
-        <ul className="list-disc space-y-1 pr-6">
+        <ul>
           <li><strong>معهد البناء والتجهيز:</strong> الدار البيضاء. الثمن: 8,000 - 15,000 DH.</li>
           <li><strong>مركز التكوين المهني فتقنيات البناء:</strong> الرباط. الثمن: 6,000 - 12,000 DH.</li>
           <li><strong>مدرسة الصنعة التقليدية:</strong> فاس. الثمن: 5,000 - 10,000 DH.</li>
           <li><strong>أكاديمية التدفئة والتكييف:</strong> طنجة. الثمن: 10,000 - 18,000 DH.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">المواد لي كتدرس فالتكوين</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>المواد لي كتدرس فالتكوين</h2>
+        <ul>
           <li><strong>السباكة العامة:</strong> أنواع المواسير (PVC, Cuivre, PER)، القطع، التركيبات.</li>
           <li><strong>التجهيزات الصحية:</strong> تركيب المراحيض، الحنفيات، الدش، المغاسل.</li>
           <li><strong>أنظمة التدفئة:</strong> التدفئة المركزية، التدفئة الأرضية، المشعات.</li>
@@ -68,27 +70,18 @@ export default function FormationsGuidePage() {
           <li><strong>المخططات:</strong> قراءة وتصميم مخططات السباكة.</li>
           <li><strong>السلامة:</strong> معايير السلامة المهنية.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">الرواتب المتوقعة</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>الرواتب المتوقعة</h2>
+        <ul>
           <li><strong>سباك مبتدئ:</strong> 3,000 - 5,000 DH</li>
           <li><strong>سباك محترف (2-3 سنين):</strong> 5,500 - 8,000 DH</li>
           <li><strong>متخصص فالتدفئة:</strong> 7,000 - 12,000 DH</li>
           <li><strong>سباك حر (Freelance):</strong> 8,000 - 18,000+ DH</li>
         </ul>
         <p>استعمل <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">حاسبة الراتب</Link> باش تعرف صافي راتبك.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-xl font-bold text-gray-900">الخلاصة</h2>
+        <hr />
+        <h2>الخلاصة</h2>
         <p>تكوين السباكة والتدفئة واحد من أحسن التكوينات المهنية فالمغرب 2026. الطلب كبير، الرواتب جيدة، وممكن تخدم لحسابك الخاص. إذا كنت باغي تتعلم صنعة فيها مستقبل، السباكة خيار ممتاز.</p>
         <p className="text-emerald-700 font-medium">شارك هاد المقال مع صاحبك لي كيقلب على صنعة!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          📚 اقرأ أيضاً:{" "}
-          <Link href="/formations/guides/formation-electricite-batiment-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين كهرباء البناء</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-soudure-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين الحام فالمغرب</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

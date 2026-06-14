@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "تكوين الحلاقة والتجميل في المغرب: المراكز، الأسعار، وشهادة التجميل",
@@ -30,37 +31,38 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", position: 3, name: "تكوين الحلاقة والتجميل في المغرب", item: "https://tawdifpro.ma/formations/guides/formation-coiffure-esthetique-maroc" },
 ]};
 
+const schemas = [articleSchema, faqSchema, breadcrumbSchema];
+
+
 export default function FormationsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">تكوين الحلاقة والتجميل في المغرب 2026: المراكز، الأسعار، وشهادة التجميل</h1>
-        <p className="mt-3 text-lg text-gray-600">OFPPT + معاهد خاصة + شهادات + رواتب</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span><span>7 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">الحلاقة والتجميل (Coiffure et Esthetique) راهو قطاع كيعرف نمو كبير فالمغرب. الناس ولات كتهتم بمظهرها أكثر من قبل، وصالونات التجميل كتتفتح فكل حي وكل مدينة.</p>
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "الرئيسية", href: "/formations" },
+        { name: "تكوين الحلاقة والتجميل في المغرب", href: "/formations/guides/formation-coiffure-esthetique-maroc" }
+      ]}
+      title="تكوين الحلاقة والتجميل في المغرب: المراكز، الأسعار، وشهادة التجميل"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">الحلاقة والتجميل (Coiffure et Esthetique) راهو قطاع كيعرف نمو كبير فالمغرب. الناس ولات كتهتم بمظهرها أكثر من قبل، وصالونات التجميل كتتفتح فكل حي وكل مدينة.</p>
         <p>هاد المجال مزيج بين الفن والتقنية. ما كلشي لي كيعرف يحلق يقدر يكون محترف. التكوين المهني هو لي كيعطيك التقنيات الصحيحة والمعايير المهنية لي كتفرق بينك وبين أي حد.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-2xl font-bold text-gray-900">أنواع التكوين فالحلاقة والتجميل</h2>
+        <hr />
+        <h2>أنواع التكوين فالحلاقة والتجميل</h2>
         <p className="font-medium text-gray-900">التكوين الأساسي (Formation de Base)</p>
         <p>كيتعلم فيه المتدرب أساسيات الحلاقة (للرجال) والكوافير (للنساء)، العناية بالشعر، التقنيات الأساسية ديال القص والتسريح.</p>
         <p className="font-medium text-gray-900">التكوين المتخصص (Formation Specialisee)</p>
         <p>كايركز على مجال معين: الميك أب الاحترافي، العناية بالبشرة (Soins Esthetiques)، العناية بالأظافر (Nail Art)، أو التلوين المتقدم (Coloration).</p>
-        <h2 className="text-2xl font-bold text-gray-900">أشهر المراكز فالمغرب</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>أشهر المراكز فالمغرب</h2>
+        <ul>
           <li><strong>OFPPT:</strong> جميع المدن. تخصص Coiffure et Esthetique. مجاني. سنتين.</li>
           <li><strong>معهد الجمال الدولي (Institut International de Beaute):</strong> الدار البيضاء. الثمن: 15,000 - 25,000 DH.</li>
           <li><strong>أكاديمية لوريال (L Oreal Academy):</strong> الدار البيضاء. تخصص فالتلوين والعناية بالشعر.</li>
           <li><strong>مركز فن التجميل:</strong> مراكش. الثمن: 8,000 - 18,000 DH.</li>
           <li><strong>معهد التجميل الحديث:</strong> الرباط. الثمن: 10,000 - 20,000 DH.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">المهارات المكتسبة فالتكوين</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>المهارات المكتسبة فالتكوين</h2>
+        <ul>
           <li><strong>القص والتسريح:</strong> تقنيات قص الشعر للرجال والنساء.</li>
           <li><strong>التلوين:</strong> خلط الألوان، تقنيات الصباغة، التلاشي (Balayage).</li>
           <li><strong>العناية بالبشرة:</strong> تنظيف، ترطيب، ماسكات، علاجات متخصصة.</li>
@@ -68,27 +70,18 @@ export default function FormationsGuidePage() {
           <li><strong>العناية بالأظافر:</strong> مانيكير، باديكير، جل، نيل أرت.</li>
           <li><strong>إدارة الصالون:</strong> استقبال الزبناء، إدارة المواعيد، المحاسبة البسيطة.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">الرواتب المتوقعة</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>الرواتب المتوقعة</h2>
+        <ul>
           <li><strong>مبتدئ:</strong> 2,500 - 4,000 DH + بقشيش</li>
           <li><strong>محترف (2-3 سنين):</strong> 4,000 - 7,000 DH + بقشيش</li>
           <li><strong>متخصص فالتجميل:</strong> 5,000 - 10,000 DH</li>
           <li><strong>مالك صالون:</strong> 8,000 - 20,000+ DH</li>
         </ul>
         <p>استعمل <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">حاسبة الراتب</Link> باش تعرف صافي راتبك.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-xl font-bold text-gray-900">الخلاصة</h2>
+        <hr />
+        <h2>الخلاصة</h2>
         <p>تكوين الحلاقة والتجميل خيار ممتاز للشباب لي عندهم ذوق فني وحب للابتكار. التكوين كاين مجاني (OFPPT) ومدفوع، وفرص الشغل موجودة فجميع المدن. هاد المجال كيعطيك إمكانية تشتغل فصالون، ولا تفتح مشروعك الخاص.</p>
         <p className="text-emerald-700 font-medium">شارك هاد المقال مع صاحبك لي كيبغي يتعلم الحلاقة والتجميل!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          📚 اقرأ أيضاً:{" "}
-          <Link href="/formations/guides/formation-cuisine-patisserie-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين الطبخ والحلويات</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-auxiliaire-vie-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين مساعد التمريض</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

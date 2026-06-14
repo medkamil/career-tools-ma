@@ -1,10 +1,6 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "مشروع التجارة الإلكترونية (E-commerce) في المغرب 2026",
-  description: "دليل شامل لبدء مشروع التجارة الإلكترونية في المغرب 2026: منصات، تكاليف من 10,000 درهم، شحن، دفع، ضرائب، وأمثلة لمتاجر مغربية ناجحة.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -64,38 +60,38 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function ProjetsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">مشروع التجارة الإلكترونية (E-commerce) في المغرب 2026</h1>
-        <p className="mt-3 text-lg text-gray-600">(من الفكرة للمتجر - دليل كامل)</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>فريق Tawdif Pro</span>
-          <span>•</span>
-          <span>13 دقيقة قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">أنا بديت ب 12,000 درهم فقط - جبت بضاعة من درب عمر، صورتهم بتيليفوني، ونشرتهم فـ Instagram. فالشهر الأول دوزت 22,000 درهم. - هادا هو واقع التجارة الإلكترونية فالمغرب 2026.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "????????", href: "/" },
+        { name: "????????", href: "/projets" },
+        { name: "", href: "(sections)/projets/guides/projet-ecommerce-maroc-guide" }
+      ]}
+      title="مشروع التجارة الإلكترونية (E-commerce) في المغرب 2026"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">أنا بديت ب 12,000 درهم فقط - جبت بضاعة من درب عمر، صورتهم بتيليفوني، ونشرتهم فـ Instagram. فالشهر الأول دوزت 22,000 درهم. - هادا هو واقع التجارة الإلكترونية فالمغرب 2026.</p>
         <p>التجارة الإلكترونية فالمغرب راه كاتعيش ثورة حقيقية. الناس كتشري من الإنترنت أكثر من أي وقت مضى. السوق كبر، وفرص النجاح كبيرة.</p>
         <p>هاد المقال غيكون دليلك الشامل لبدء مشروع E-commerce فالمغرب: من اختيار المنتوج، لتصميم المتجر، لخدمات الدفع والشحن.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. ليش التجارة الإلكترونية فالمغرب 2026؟</h2>
+        <h2>1. ليش التجارة الإلكترونية فالمغرب 2026؟</h2>
         <p>المؤشرات راه كلها إيجابية. عدد المغاربة لي كيشريو عبر الإنترنت زاد بنسبة 40% فآخر سنتين.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>انتشار الهواتف الذكية (90%+ من المغاربة عندهم Smartphone).</li>
           <li>تطور حلول الدفع الإلكتروني (CMI، PayPlus، وغيرها).</li>
           <li>شبكة الشحن (Amana، بريد المغرب) ولات أكثر احترافية.</li>
           <li>المنافسة مازال فيها فرص، خصوصاً فالمجالات المتخصصة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. اختيار المنتوج - المفتاح ديال النجاح</h2>
+        <h2>2. اختيار المنتوج - المفتاح ديال النجاح</h2>
         <p>المشكل الأكبر ديال المتاجر الجديدة: كايبغيو يبيعو كلشي. ركز على واحد niche محدد.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الملابس العصرية:</strong> خصوصاً النسائية والأطفال. المصدر من تركيا، الصين، أو الجملة المحلي.</li>
           <li><strong>منتجات التجميل والعناية:</strong> زيت الأرگان، صابون طبيعي، كريمات العناية. هامش الربح 40-60%.</li>
           <li><strong>الإلكترونيات والإكسسوارات:</strong> سماعات، شواحن، كوفرات تلفون.</li>
@@ -103,45 +99,41 @@ export default function ProjetsGuidePage() {
           <li><strong>المنتجات الرياضية:</strong> ملابس رياضية، أدوات التمرين المنزلي.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. نماذج العمل - شنو الطريقة المناسبة ليك؟</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>3. نماذج العمل - شنو الطريقة المناسبة ليك؟</h2>
+        <ul>
           <li><strong>Dropshipping:</strong> ما كاينش مخزون. المنتوج كيتشحن من المورّد للزبون. رأس مال صغير ولكن هامش ربح أقل.</li>
           <li><strong>المخزون الخاص:</strong> كتشري البضاعة وتخزنها. تحتاج رأس مال أكبر (10,000 درهم+).</li>
           <li><strong>Print on Demand:</strong> طباعة التصاميم على التيشيرتات والمگات. الربح: 50-100 درهم لكل قطعة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. المنصات - فين تبني متجرك؟</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>4. المنصات - فين تبني متجرك؟</h2>
+        <ul>
           <li><strong>Shopify:</strong> الأسهل والأكتر احترافية. كايدعم CMI للدفع المغربي. الاشتراك: 30-50 دولار شهرياً.</li>
           <li><strong>WooCommerce (WordPress):</strong> مجاني ولكن يحتاج استضافة (500-1,000 درهم سنوياً).</li>
           <li><strong>Selly.ma:</strong> منصة مغربية 100%. تدعم الدفع المحلي والتوصيل عبر Amana. الاشتراك: 300-500 درهم شهرياً.</li>
           <li><strong>Instagram + WhatsApp:</strong> مجاني. الأكثر انتشاراً فالمغرب.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. الدفع الإلكتروني والشحن</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>5. الدفع الإلكتروني والشحن</h2>
+        <ul>
           <li><strong>CMI (Monetique):</strong> رسوم 2-3% لكل عملية. كتحتاج شركة (RC) وحساب بنكي مهني.</li>
           <li><strong>COD (Cash On Delivery):</strong> الدفع عند التسليم عبر Amana أو بريد المغرب.</li>
           <li><strong>Amana:</strong> رسوم 15-30 درهم، تغطية وطنية، خدمة COD.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. التسويق والجوانب القانونية</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>6. التسويق والجوانب القانونية</h2>
+        <ul>
           <li><strong>Facebook & Instagram Ads:</strong> ميزانية البداية: 3,000 - 5,000 درهم شهرياً.</li>
           <li><strong>المقاول الذاتي (Auto-entrepreneur):</strong> أحسن خيار. IR 1-4%، إعفاء من TVA. التسجيل مجاني عبر service-public.ma.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>التجارة الإلكترونية فالمغرب مازال فيها فرص كبيرة. السر: اختار منتوج مطلوب، ركز على الجودة والخدمة، واستثمر فالتسويق.</p>
         <p>إذا بغيتي تحسب صافي الربح ديال متجرك، <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">استعمل حاسبة الراتب</Link>.</p>
         <p>لبرامج الدعم، <Link href="/projets/guides/programme-intelaka" className="font-medium text-emerald-600 underline hover:text-emerald-700">برنامج INTELAKA</Link> كيعطيك قرض حتى 50,000 درهم بلا فائدة.</p>
         <p>الله يوفقك!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">📚 اقرأ أيضاً: <Link href="/projets/guides/idees-projets-petit-budget-maroc" className="text-emerald-600 underline hover:text-emerald-800">أفكار مشاريع صغيرة مربحة</Link> | <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link></p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

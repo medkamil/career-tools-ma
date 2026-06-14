@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "نموذج رسالة الدافع (Lettre de Motivation) في المغرب 2026 مع أمثلة",
-  description: "أفضل نماذج رسالة الدافع (Lettre de Motivation) في المغرب 2026. أمثلة جاهزة للتعديل، نصائح الكتابة، والأخطاء الشائعة اللي خاصك تتفادا باش تزيد فرصك فالقبول.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -74,33 +69,26 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function LettreMotivationPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">رسالة الدافع (Lettre de Motivation)</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">نموذج رسالة الدافع (Lettre de Motivation) في المغرب 2026 مع أمثلة</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>8 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>Lettre de Motivation (رسالة الدافع) هي وثيقة صغيرة ولكن تأثيرها كبير فسوق الشغل المغربي. بزاف ديال الشركات فالمغرب كاتقرا الرسالة قبل CV. يعني، الرسالة هي الانطباع الأول وغالبا ما كاتحدد واش غادي يقراو CV ديالك ولا لا. فهاد المقال غادي نعطيك نماذج جاهزة ونصائح عملية باش تكتب رسالة كاتفتح ليك الأبواب.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "نموذج رسالة الدافع (Lettre de Motivation) 2026", href: "/emplois/guides/lettre-motivation-maroc-exemple" }
+      ]}
+      title="نموذج رسالة الدافع (Lettre de Motivation) في المغرب 2026 مع أمثلة"
+      readingTime="10 دقائق قراءة"
+    >
+<p>Lettre de Motivation (رسالة الدافع) هي وثيقة صغيرة ولكن تأثيرها كبير فسوق الشغل المغربي. بزاف ديال الشركات فالمغرب كاتقرا الرسالة قبل CV. يعني، الرسالة هي الانطباع الأول وغالبا ما كاتحدد واش غادي يقراو CV ديالك ولا لا. فهاد المقال غادي نعطيك نماذج جاهزة ونصائح عملية باش تكتب رسالة كاتفتح ليك الأبواب.</p>
 
         <p>شنو هي بالضبط Lettre de Motivation؟ هي رسالة كاترفق مع CV فاش كاتقدم على وظيفة. الهدف ديالها: شرح علاش أنت الشخص المناسب للوظيفة، وعلاش بغيتي هاد الشركة بالذات. ما كاتعاودش المعلومات لي فـ CV، ولكن كاتعمق فسببين: قدراتك، ورغبتك فالانضمام لتلك الشركة.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. نموذج Lettre de Motivation بالعربية (للقطاع العام والوظائف الإدارية)</h2>
+        <h2>1. نموذج Lettre de Motivation بالعربية (للقطاع العام والوظائف الإدارية)</h2>
         <p>هاد النموذج كايناسب المباريات والوظائف الحكومية والمؤسسات العمومية:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
           <p><strong>الموضوع:</strong> ترشيح لمنصب [اسم المنصب]</p>
@@ -111,7 +99,7 @@ export default function LettreMotivationPage() {
           <p>[الاسم الكامل] - [رقم الهاتف] - [البريد الإلكتروني]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. نموذج Lettre de Motivation بالفرنسية (للوظائف بالقطاع الخاص)</h2>
+        <h2>2. نموذج Lettre de Motivation بالفرنسية (للوظائف بالقطاع الخاص)</h2>
         <p>هاد النموذج هو الأكثر طلبا فالمغرب. كايناسب الشركات الخاصة والبنوك:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
           <p className="font-bold">Objet: Candidature au poste de [Titre du Poste]</p>
@@ -124,7 +112,7 @@ export default function LettreMotivationPage() {
           <p>[Téléphone] | [Email]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. نموذج Lettre de Motivation بالإنجليزية (للمناصب الدولية)</h2>
+        <h2>3. نموذج Lettre de Motivation بالإنجليزية (للمناصب الدولية)</h2>
         <p>هاد النموذج كايناسب الشركات المتعددة الجنسيات والمناصب لي كاتطلب الإنجليزية:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
           <p className="font-bold">Subject: Application for [Job Title]</p>
@@ -136,7 +124,7 @@ export default function LettreMotivationPage() {
           <p>[Full Name]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. نصائح عملية للكتابة</h2>
+        <h2>4. نصائح عملية للكتابة</h2>
 
         <h3 className="text-xl font-bold text-gray-900">4.1. التخصيص هو المفتاح</h3>
         <p>ما ترسلش نفس الرسالة لجميع الشركات. اقرا عن الشركة قبل ما تكتب. شوف شنو كاتدير، شنو قيمها، شنو مشاريعها الحالية. وضمن هاد المعلومات ف الرسالة. مثلا: "أتابع مشاريعكم فمجال الطاقة المتجددة، وأعجبت بشكل خاص بمشروع Noor". هاد الشي كايوريهم أنك بغيتي هاد الشركة بالذات، مش أي شركة.</p>
@@ -150,8 +138,8 @@ export default function LettreMotivationPage() {
         <h3 className="text-xl font-bold text-gray-900">4.4. الأخطاء الإملائية</h3>
         <p>هاد أكبر عدو. خطأ إملائي واحد كايخلي الـ recruteur كايعتقد أنك ما عندكش اهتمام بالتفاصيل. استعمل أدوات مجانية باش تصلح الأخطاء: Scribens (للفرنسية)، BonPatron، و Grammarly (للإنجليزية). اقرا الرسالة بصوت عالي قبل ما ترسلها.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. أخطاء شائعة ف Lettre de Motivation فالمغرب</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>5. أخطاء شائعة ف Lettre de Motivation فالمغرب</h2>
+        <ul>
           <li><strong>النسخ واللصق:</strong> قالب عام بدون تخصيص. هاد أكبر خطأ. الـ recruteur كايقرا بزاف ديال الرسائل ونفس القالب البارد كايبان من بعيد.</li>
           <li><strong>التكرار:</strong> نفس المعلومات لي فـ CV. الرسالة كاتكمل الـ CV، ما كاتعاودش.</li>
           <li><strong>العبارات المكررة:</strong> "Je suis motivé, dynamique, ponctuel, sérieux..." هاد الكلمات كاتعني والو. بدلها بأمثلة واقعية.</li>
@@ -160,22 +148,13 @@ export default function LettreMotivationPage() {
           <li><strong>اللغة الغير مناسبة:</strong> مستوى اللغة الرسمية كايختلف حسب الشركة. شركة حديثة (startup) تقدر تستعمل لغة أقل رسمية. بنك تقليدي خاصك رسمي بزاف.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. الفرق بين Lettre للقطاع العام والقطاع الخاص</h2>
+        <h2>6. الفرق بين Lettre للقطاع العام والقطاع الخاص</h2>
         <p>الفرق واضح فالمغرب. فالقطاع العام (الوظيفة العمومية): الشكل رسمي بزاف، كايتكتب بالعربية غالبا، والتركيز على الخدمة العمومية والرغبة فخدمة الوطن. فالقطاع الخاص: الشكل أقل رسمية، كايتكتب بالفرنسية غالبا، والتركيز على المهارات والإنجازات والقيمة لي غادي تجيبها للشركة.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>Lettre de Motivation هي مفتاحك للوظيفة لي كاتحلم بها. استثمر الوقت فكتابتها، خصصها لكل شركة، راقب الأخطاء الإملائية، واستعمل الأرقام والأمثلة الواقعية. تذكر: أول انطباع كايدوم. رسالة قوية كاتخلي الـ recruteur يقرا CV ديالك باهتمام. بالتوفيق!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/cv-professionnel-maroc-2026" className="text-emerald-600 underline hover:text-emerald-800">CV professionnel Maroc 2026</Link>
-          {" | "}
-          <Link href="/emplois/guides/questions-entretien-embauche-reponses" className="text-emerald-600 underline hover:text-emerald-800">أسئلة مقابلة العمل</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

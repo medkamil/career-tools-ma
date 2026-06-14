@@ -1,10 +1,6 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "مشروع مطعم أو كانطينة في المغرب: دراسة جدوى وتكاليف 2026",
-  description: "دراسة جدوى كاملة لمشروع مطعم أو كانطينة في المغرب 2026: التكاليف من 50,000 إلى 300,000 درهم، التراخيص، التجهيزات، ونسبة الأرباح المتوقعة مع أمثلة واقعية.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -82,42 +78,40 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function ProjetsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">مشروع مطعم أو كانطينة في المغرب: دراسة جدوى وتكاليف 2026</h1>
-        <p className="mt-3 text-lg text-gray-600">(التراخيص، التجهيزات، والأرباح المتوقعة)</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>فريق Tawdif Pro</span>
-          <span>•</span>
-          <span>12 دقيقة قراءة</span>
-        </div>
-      </header>
-
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "????????", href: "/" },
+        { name: "????????", href: "/projets" },
+        { name: "", href: "(sections)/projets/guides/projet-restaurant-cantine-maroc" }
+      ]}
+      title="مشروع مطعم أو كانطينة في المغرب: دراسة جدوى وتكاليف 2026"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">
           المطاعم والكانطينات فالمغرب راه فيها فلوس بزاف، ولكن السر كاين فالتخطيط والموقع. حميد من فاس بدا بكانطينة صغيرة فجنب الجامعة ب 45,000 درهم، ودابا عندو 4 مطاعم فالرباط وفاس. كلشي بدا بدراسة جدوى.
         </p>
         <p>شنو كاتعرف على مشروع المطعم فالمغرب 2026؟ الطلب على الأكل خارج المنزل كيزيد عام بعد عام، خصوصاً فالمدن الكبيرة. المغاربة كيخرجو مع العائلة، والموظفين كيدورو على الغداء، والطلاب كيدوزو فالكافيتريات. السوق واعد، ولكن خاصك تفهم كيفاش تبدا وتدير الحسابات مزيان.</p>
         <p>فهاد المقال، غنشرح ليك بالتفصيل: التكاليف، التراخيص، التجهيزات، ونسبة الأرباح.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. أنواع المطاعم واختيار النموذج المناسب</h2>
+        <h2>1. أنواع المطاعم واختيار النموذج المناسب</h2>
         <p>قبل ما تفتح أي مطعم، خاصك تحدد النوع. هاد القرار كيأثر على كل شي: رأس المال، التجهيزات، والزبائن.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الكانطينة (Cantine) أو الوجبات السريعة:</strong> ميزانية 50,000 - 100,000 درهم. ساندويتشات، برغر، تاكين، وجبات سريعة. الهامش ف الربح بين 25% و 40%. مثالية فالمناطق الجامعية والصناعية.</li>
           <li><strong>المطاطساطو:</strong> ميزانية 80,000 - 150,000 درهم. كيبوردو، مشاوي، سلطات. الهامش 20-30%. مناسبة فالمناطق السكنية الراقية.</li>
           <li><strong>المطعم المتخصص (بيتزا، باستا، مأكولات بحرية):</strong> ميزانية 150,000 - 300,000 درهم. الهامش 15-25%. كيحتاج لطاهي متخصص وتجهيزات خاصة.</li>
           <li><strong>مقهى-مطعم (Cafe-Restaurant):</strong> ميزانية 200,000 - 400,000 درهم. يجمع بين المقهى والمطعم. هامش الربح 20-30%، ولكن مدة استرجاع رأس المال كتكون أسرع بفضل المشروبات.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. التكاليف بالتفصيل (ميزانية مطعم صغير فالمغرب)</h2>
+        <h2>2. التكاليف بالتفصيل (ميزانية مطعم صغير فالمغرب)</h2>
         <p>هاد الأرقام مبنية على تجارب حقيقية ومتوسط الأسعار فالمدن المغربية الكبرى.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الكراء:</strong> 5,000 - 15,000 درهم شهرياً (2-3 شهور كراء مقدم = 15,000 - 45,000 درهم).</li>
           <li><strong>التجهيزات (Equipement):</strong> 30,000 - 80,000 درهم (فرن، ثلاجة، فريزر، طاولات، كراسي، نظام شفط).</li>
           <li><strong>الديكور والتهيئة:</strong> 20,000 - 50,000 درهم (دهان، إضاءة، تبليط، لافتة).</li>
@@ -127,9 +121,9 @@ export default function ProjetsGuidePage() {
         </ul>
         <p><strong>المجموع التقريبي:</strong> 120,000 - 250,000 درهم لمطعم صغير. الكانطينة تقدر تبدا بـ 50,000 - 80,000 درهم.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. التراخيص والجوانب القانونية</h2>
+        <h2>3. التراخيص والجوانب القانونية</h2>
         <p>هاد الخطوة كتكون مملة ولكن أساسية. ما تقدرش تفتح من غيرها.</p>
-        <ol className="list-decimal space-y-2 pr-6">
+        <ol>
           <li><strong>السجل التجاري (RC):</strong> كتسجل فالمحكمة التجارية. الرسوم حوالي 1,000 - 2,000 درهم.</li>
           <li><strong>الضريبة المهنية (Patente):</strong> كتسجل فإدارة الضرائب. حوالي 1,000 - 3,000 درهم سنوياً حسب النشاط.</li>
           <li><strong>رخصة البلدية:</strong> كتقدم طلب للجماعة (la commune). الرسوم حوالي 2,000 - 5,000 درهم.</li>
@@ -138,13 +132,13 @@ export default function ProjetsGuidePage() {
         </ol>
         <p>نصيحة: استعمل محاسب (Expert-comptable) باش يعاونك فهاد الإجراءات. كيكلف حوالي 500 - 1,000 درهم شهرياً، ولكن كيوفّر عليك بزاف ديال الوقت والمشاكل.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. اختيار الموقع - السر فالهندسة المعمارية للنجاح</h2>
+        <h2>4. اختيار الموقع - السر فالهندسة المعمارية للنجاح</h2>
         <p>فالمغرب، الموقع كيحدد 70% من نجاح المطعم. راه الزبائن ما كيحبوش يمشيو بعيد باش ياكلو. المطاعم لي فوسط المدينة (Centre-ville) كتكون أكتر نجاح، ولكن الكراء غالي.</p>
         <p>مثال واقعي: كريمة من طنجة عندها مطعم بركر فبني مكادة. الكراء 3,500 درهم فقط، ولكن الحركة ماشي قوية. كانت كتدوز 15 زبون فاليوم. نصحناها تنتقل لحي العرفان، زاد الكراء لـ 8,000 درهم ولكن الزبائن زادو لـ 50+ فاليوم. الفرق السيولة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. تجهيزات المطبخ - شنو تحتاج بالضبط؟</h2>
+        <h2>5. تجهيزات المطبخ - شنو تحتاج بالضبط؟</h2>
         <p>المطبخ هو قلب المطعم. استثمار مزيان فالتجهيزات كيعني خدمة أسرع وأكل بجودة أحسن.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الفرن (Four):</strong> 7,000 - 15,000 درهم. فرن غاز مع ثيرموستات.</li>
           <li><strong>الثلاجة (Refrigerateur):</strong> 6,000 - 12,000 درهم. ثلاجة كبيرة مع أدراج.</li>
           <li><strong>الفريزر (Congelateur):</strong> 3,000 - 5,000 درهم.</li>
@@ -154,9 +148,9 @@ export default function ProjetsGuidePage() {
           <li><strong>الكراسي والطاولات للزبائن:</strong> 10,000 - 20,000 درهم حسب العدد والجودة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. دراسة الجدوى المالية - شنو كتقدر تكسب؟</h2>
+        <h2>6. دراسة الجدوى المالية - شنو كتقدر تكسب؟</h2>
         <p>مطعم صغير فوسط مدينة مغربية (40 كرسي، 50 زبون فاليوم):</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الدخل الشهري:</strong> 50 زبون × 80 درهم (متوسط الفاتورة) × 26 يوم = 104,000 درهم.</li>
           <li><strong>مصاريف التشغيل:</strong> المواد الأولية (35%) = 36,400 درهم، الكراء = 8,000 درهم، الرواتب (2-3 عمال) = 12,000 درهم، الكهرباء والماء = 4,000 درهم، مصاريف أخرى = 5,000 درهم.</li>
           <li><strong>المجموع:</strong> 65,400 درهم.</li>
@@ -164,17 +158,12 @@ export default function ProjetsGuidePage() {
           <li><strong>فترة استرجاع رأس المال:</strong> 4 - 8 شهور (حسب المبلغ المستثمر).</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>مشروع المطعم فالمغرب مربح إذا كان عندك التخطيط الصحيح والموقع المناسب. الأهم من رأس المال هو الجودة والاستمرارية. الناس راه خاصها تأكل مزيان وبسعر معقول.</p>
         <p>إذا بغيتي تعرف شحال غادي يبقى ليك صافي الربح بعد المصاريف والضرائب، <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">استعمل حاسبة الراتب</Link> ديالنا باش تحسب كل شي بدقة.</p>
         <p>شد الفكرة، وتوكل على الله!</p>
-      </div>
-
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">📚 اقرأ أيضاً: <Link href="/projets/guides/idees-projets-petit-budget-maroc" className="text-emerald-600 underline hover:text-emerald-800">أفكار مشاريع صغيرة مربحة</Link> | <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link></p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "دليل الحصول على وظيفة في القطاع العام بالمغرب 2026",
-  description: "كيفية الحصول على وظيفة في القطاع العام بالمغرب 2026. شروط الترشيح للمباريات، كيفية التسجيل، تحضير الاختبارات، والوظائف الحكومية المتاحة.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,44 +85,37 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function RecrutementFonctionPubliquePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">الوظيفة العمومية فالمغرب</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">دليل الحصول على وظيفة في القطاع العام بالمغرب 2026</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>11 دقيقة قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>الوظيفة العمومية فالمغرب كاتبقى الحلم ديال بزاف الأسر. الأجر المضمون، الاستقرار، التقاعد، والتغطية الصحية. ولكن، الطريق ليها ما ساهلش. المباريات كايتنظمو كل عام، ولكن التنافس شرس بزاف. فاش كايتعلن على مباراة وحدة، كايتقدمو آلاف المرشحين. فهاد المقال غادي نعطيك دليل كامل باش توصل للوظيفة العمومية.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "دليل الحصول على وظيفة في القطاع العام 2026", href: "/emplois/guides/recrutement-fonction-publique-maroc-2026" }
+      ]}
+      title="دليل الحصول على وظيفة في القطاع العام بالمغرب 2026"
+      readingTime="10 دقائق قراءة"
+    >
+<p>الوظيفة العمومية فالمغرب كاتبقى الحلم ديال بزاف الأسر. الأجر المضمون، الاستقرار، التقاعد، والتغطية الصحية. ولكن، الطريق ليها ما ساهلش. المباريات كايتنظمو كل عام، ولكن التنافس شرس بزاف. فاش كايتعلن على مباراة وحدة، كايتقدمو آلاف المرشحين. فهاد المقال غادي نعطيك دليل كامل باش توصل للوظيفة العمومية.</p>
 
         <p>الوظيفة العمومية فالمغرب كاتقسم ل 3 أقسام: الوزارات (Secteur Ministériel)، المؤسسات العمومية (Établissements Publics)، والجماعات الترابية (Collectivités Territoriales). كل قسم عندو نظامو الخاص فالتوظيف. ولكن، أغلبهم كايمشيو على نظام المباريات (Concours).</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. أنواع المباريات فالقطاع العام</h2>
+        <h2>1. أنواع المباريات فالقطاع العام</h2>
         <p>المباريات فالمغرب كاتقسم ل 3 أنواع رئيسية:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>مباراة على أساس الشهادة (Concours sur Titres):</strong> كاتطلب مستوى دراسي محدد (باك + 2، باك + 3، باك + 5). الاختبار كايكون على أساس الشهادة والمعدل. بعض المباريات كاتطلب معدل معين فالباكالوريا (مثلا 14/20 فما فوق).</li>
           <li><strong>مباراة على أساس الاختبار (Concours sur Épreuves):</strong> كاتكون فيها اختبار كتابي (Écrit) واختبار شفوي (Oral). الكتابي كايتكون من أسئلة فالتخصص و أسئلة فالثقافة العامة المغربية. الشفوي كايختبر الشخصية والقدرة على التواصل.</li>
           <li><strong>مباراة ولوج مراكز التكوين:</strong> بحال المدرسة الوطنية للصناعة (ENSIAS)، المدرسة العليا للإدارة (ENA)، المدرسة الوطنية للفلاحة، والمدرسة الوطنية للتجارة والتسيير (ENCG). هاد المباريات كايتنافس عليها بزاف فالمغرب.</li>
         </ul>
         <p>ف 2026، بعض القطاعات (مثل التعليم والصحة) كايزيدو فعدد المناصب بشكل ملحوظ. وزارة التربية الوطنية كاتعلن على آلاف المناصب كل عام. وزارة الصحة عندها حاجة كبيرة للأطر التمريضية والأطباء.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. كيفية تحضير الملف</h2>
+        <h2>2. كيفية تحضير الملف</h2>
         <p>الملف هو أول انطباع عند اللجنة. أي نقص ف الوثائق كايحطك فالسحب مباشرة. الوثائق المطلوبة عادة:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>طلب خطي بخط اليد (Candidature manuscrite) على ورقة عادية.</li>
           <li>نسخة من البطاقة الوطنية (CIN) مصادق عليها.</li>
           <li>نسخ من الشهادات الدراسية مصادق عليها (Copies certifiées conformes).</li>
@@ -139,9 +127,9 @@ export default function RecrutementFonctionPubliquePage() {
         </ul>
         <p>نصيحة: جهز الملف قبل ما ينشر الإعلان. بزاف ديال الناس كايتأخرو حتا اللحظة الأخيرة. الملف المرتب والمنظم كايعطي انطباع إيجابي. استعمل مشبك ورق (trombone) بدل الدباسة، ودير غلاف بلاستيكي شفاف.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. نصائح للاختبار الكتابي</h2>
+        <h2>3. نصائح للاختبار الكتابي</h2>
         <p>الاختبار الكتابي هو أكبر عقبة. المرشحين كايتصفاو بزاف فهاد المرحلة. باش تنجح، ركز على هاد النقاط:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الثقافة العامة المغربية:</strong> التاريخ (الاستقلال، المسيرة الخضراء، حرب الرمال)، الجغرافيا (الأقاليم، المدن، الموارد الطبيعية)، الاقتصاد (مخطط المغرب الأخضر، الميزانية العامة).</li>
           <li><strong>المعلومات عن الوزارة:</strong> اقرا الموقع الرسمي للوزارة. اعرف البرامج والمشاريع الحالية. مثلا، إلا كانت مباراة مع وزارة التجهيز، خاصك تعرف المشاريع الكبرى (ميناء طنجة المتوسط، القطار فائق السرعة).</li>
           <li><strong>القانون الإداري (Droit Administratif):</strong> أساسيات القانون الإداري المغربي. التنظيم الإداري، الميزانية، الصفقات العمومية.</li>
@@ -149,18 +137,18 @@ export default function RecrutementFonctionPubliquePage() {
           <li><strong>تنظيم الإجابة:</strong> ابدا بالأسئلة لي كاتعرفها. قسم الوقت على جميع الأسئلة. ما تبقاش طويل فسؤال واحد.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. نصائح للاختبار الشفوي (Oral)</h2>
+        <h2>4. نصائح للاختبار الشفوي (Oral)</h2>
         <p>الشفوي هو الفرصة الأخيرة. الناس لي وصلو لهاد المرحلة عندهم نفس المستوى الدراسي تقريبا. الفرق كايكون ف الشخصية والثقة:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>اللباس الرسمي:</strong> اللباس كايعطي انطباع أولي. للرجال: بدلة كحلة ولا رمادية مع كرافة بيضاء. للنساء: بدلة رسمية ولا فستان محتشم. المغرب كايزال محافظ فهاد النقطة.</li>
           <li><strong>لغة الجسد:</strong> اتكلم بوضوح، حافظ على التواصل البصري مع أعضاء اللجنة. لا تنظر للأرض ولا للسقف.</li>
           <li><strong>الاستعداد:</strong> توقع أسئلة حول: شخصيتك، شهاداتك، علاش بغيتي هاد الوظيفة، وأخبار المغرب الجارية.</li>
           <li><strong>التواضع والثقة:</strong> كن متواضع ولكن واثق من قدراتك. ما تهدرش على نفسك بزاف ولا تنتقد الشركات السابقة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. سلم الأجور فالوظيفة العمومية</h2>
+        <h2>5. سلم الأجور فالوظيفة العمومية</h2>
         <p>الوظيفة العمومية عندها سلم أجور معروف (Échelle Salariale). كل إطار (cadre) عندو échelle معينة:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>Échelle 7-8:</strong> التقنيون (Bac + 2) - الأجر يبدا من 4,500 ل 5,500 درهم.</li>
           <li><strong>Échelle 9-10:</strong> الإطار المتوسط (Bac + 3) - 5,500 ل 7,000 درهم.</li>
           <li><strong>Échelle 11-12:</strong> الإطار العالي (Bac + 5) - 7,000 ل 9,000 درهم.</li>
@@ -168,9 +156,9 @@ export default function RecrutementFonctionPubliquePage() {
         </ul>
         <p>هاد الأرقام كاتزاد عليها تعويضات (Indemnités) كاتختلف حسب القطاع. مثلا، أستاذ فالتعليم العمومي عندو تعويضات إضافية (Indemnité d enseignement). موظف فالصحة عندو تعويضات المبيت (garde).</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. مواقع متابعة الإعلانات</h2>
+        <h2>6. مواقع متابعة الإعلانات</h2>
         <p>باش ما تفوتكش المباريات، تابع هاد المواقع:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الموقع الرسمي للوظيفة العمومية:</strong> www.emploi-public.ma.</li>
           <li><strong>الجريدة الرسمية (Journal Officiel):</strong> كاتنشر ف每 جمعة.</li>
           <li><strong>مواقع الوزارات:</strong> كل وزارة كاتنشر إعلاناتها فالموقع الرسمي.</li>
@@ -179,19 +167,10 @@ export default function RecrutementFonctionPubliquePage() {
           <li><strong>مجموعات الواتساب:</strong> مجموعات خاصة بالمترشحين للمباريات.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>الوظيفة العمومية لسه هدف استراتيجي فالمغرب. المنافسة شرسة، ولكن مع التحضير الجيد والمتابعة المستمرة للإعلانات، تقدر تحقق الحلم. ابدأ التحضير دابا، ما تستناشش. المباريات غادي تجي، وهاد المرة غادي تكون جاهز. بالتوفيق!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/cv-professionnel-maroc-2026" className="text-emerald-600 underline hover:text-emerald-800">CV professionnel Maroc 2026</Link>
-          {" | "}
-          <Link href="/emplois/guides/salaire-moyen-maroc-par-secteur" className="text-emerald-600 underline hover:text-emerald-800">متوسط الرواتب فالمغرب</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

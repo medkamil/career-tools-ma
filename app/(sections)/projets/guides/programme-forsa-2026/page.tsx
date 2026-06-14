@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "برنامج Forsa 2026 (فرصة) - دليل كامل للتقديم والشروط",
-  description: "برنامج Forsa 2026 فالمغرب: شروط التسجيل، التمويل حتى 100,000 درهم، المبلغ، كيفية التقديم، والوثائق المطلوبة. دليل كامل لبرنامج فرصة لدعم المقاولات الشابة.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,45 +85,37 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function ProgrammeForsaPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/projets" className="hover:text-emerald-600">المشاريع</Link>
-        {" > "}
-        <span className="text-gray-900">برنامج Forsa 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">برنامج Forsa 2026 (فرصة) - دليل كامل للتقديم والشروط</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>12 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>برنامج Forsa (فرصة) هو واحد من أهم البرامج الحكومية لدعم ريادة الأعمال فالمغرب. منذ إطلاقو ف 2024، دعم آلاف المشاريع الصغرى وخلق ألاف ديال فرص الشغل. ف 2026، البرنامج ولا أكثر تطوراً وانتشاراً.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم المشاريع", href: "/projets" },
+        { name: "برنامج Forsa 2026", href: "/projets/guides/programme-forsa-2026" }
+      ]}
+      title="برنامج Forsa 2026 (فرصة) - دليل كامل للتقديم والشروط"
+      readingTime="10 دقائق قراءة"
+    >
+<p>برنامج Forsa (فرصة) هو واحد من أهم البرامج الحكومية لدعم ريادة الأعمال فالمغرب. منذ إطلاقو ف 2024، دعم آلاف المشاريع الصغرى وخلق ألاف ديال فرص الشغل. ف 2026، البرنامج ولا أكثر تطوراً وانتشاراً.</p>
 
         <p>فهاد المقال، غادي نعرفوك على كل شي خاص ببرنامج Forsa 2026: الشروط، المبلغ، كيفاش تقدم، ونصائح للنجاح.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو برنامج Forsa؟</h2>
+        <h2>شنو هو برنامج Forsa؟</h2>
         <p>Forsa (فرصة) هو برنامج حكومي مغربي لدعم المقاولات الصغيرة جداً والصغرى (TPE/PME). كايدبر من طرف وزارة السياحة والصناعة التقليدية والاقتصاد الاجتماعي والتضامني، بشراكة مع البنوك المغربية.</p>
 
         <p>البرنامج كايقدم:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>تمويل:</strong> من 20,000 ل 100,000 درهم منحة غير قابلة للاسترداد.</li>
           <li><strong>مواكبة:</strong> تكوين وإشراف على مدار 12 شهر.</li>
           <li><strong>ربط:</strong> مع مستثمرين وشركاء محتملين.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">شروط التسجيل فبرنامج Forsa 2026</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>شروط التسجيل فبرنامج Forsa 2026</h2>
+        <ul>
           <li><strong>الجنسية:</strong> مغربية.</li>
           <li><strong>السن:</strong> 18 - 45 سنة.</li>
           <li><strong>الإقامة:</strong> فالمغرب.</li>
@@ -138,7 +125,7 @@ export default function ProgrammeForsaPage() {
           <li><strong>الالتزام:</strong> حضور التكوين والمواكبة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">مبلغ التمويل وكيفية الصرف</h2>
+        <h2>مبلغ التمويل وكيفية الصرف</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -156,8 +143,8 @@ export default function ProgrammeForsaPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">خطوات التسجيل فبرنامج Forsa 2026</h2>
-        <ol className="list-decimal space-y-2 pr-6">
+        <h2>خطوات التسجيل فبرنامج Forsa 2026</h2>
+        <ol>
           <li><strong>التسجيل على المنصة:</strong> دخل ل forsa.ma وأنشئ حساب.</li>
           <li><strong>ملأ الاستمارة:</strong> المعلومات الشخصية، فكرة المشروع، القطاع، المبلغ.</li>
           <li><strong>حمل الوثائق:</strong> CV، دراسة السوق (Étude de marché)، خطة العمل (Business Plan)، البطاقة الوطنية، الشهادات.</li>
@@ -169,8 +156,8 @@ export default function ProgrammeForsaPage() {
           <li><strong>صرف 50% الثانية:</strong> بعد تحقيق الأهداف.</li>
         </ol>
 
-        <h2 className="text-2xl font-bold text-gray-900">الوثائق المطلوبة</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>الوثائق المطلوبة</h2>
+        <ul>
           <li>نسخة من بطاقة التعريف الوطنية (CIN).</li>
           <li>السيرة الذاتية (CV).</li>
           <li>دراسة السوق للمشروع (Étude de marché).</li>
@@ -180,8 +167,8 @@ export default function ProgrammeForsaPage() {
           <li>أي وثائق إضافية (شهادات خبرة، توصيات).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">نصائح للنجاح فبرنامج Forsa</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>نصائح للنجاح فبرنامج Forsa</h2>
+        <ul>
           <li><strong>فكرة واضحة:</strong> كون عندك فكرة مشروع محددة وواضحة. ما تجيش ب فكرة عامة.</li>
           <li><strong>دراسة السوق:</strong> أعد دراسة السوق مزيان. شنو المشكل؟ شنو الحل؟ شنو المنافسة؟</li>
           <li><strong>Business Plan متماسك:</strong> خطة العمل مهمة بزاف. اشمل: التكاليف، الإيرادات المتوقعة، الربحية.</li>
@@ -190,8 +177,8 @@ export default function ProgrammeForsaPage() {
           <li><strong>الثقة فالمقابلة:</strong> كن واثق من فكرتك. أظهر الحماس والجدية.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">أسئلة متوقعة فالمقابلة</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>أسئلة متوقعة فالمقابلة</h2>
+        <ul>
           <li>شنو هو مشروعك؟ شرح الفكرة فدقيقتين.</li>
           <li>شنو المشكل لي كايحلو مشروعك؟</li>
           <li>شنو هي المنافسة؟ واش كاينين مشاريع مشابهة؟</li>
@@ -201,22 +188,10 @@ export default function ProgrammeForsaPage() {
           <li>شنو يحتاج مشروعك باش ينجح؟</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>برنامج Forsa هو فرصة ذهبية لكل مغربي عندو فكرة مشروع و محتاج الدعم. ف 2026، البرنامج ولا أكثر سهولة وانتشاراً. قدم على forsa.ma، جهز ملفك، وابدأ مشوارك المقاولاتي. الدعم كاين، كل ما تحتاجه هو الفكرة والعزيمة.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/projets/guides/programme-intelaka" className="text-emerald-600 underline hover:text-emerald-800">برنامج INTELAKA (انطلاقة)</Link>
-          {" | "}
-          <Link href="/projets/guides/auto-entrepreneur-maroc" className="text-emerald-600 underline hover:text-emerald-800">المقاول الذاتي</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

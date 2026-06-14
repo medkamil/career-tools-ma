@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "تكوين مساعد التمريض في المغرب: المراكز، الأسعار، وشروط الولوج",
@@ -30,35 +31,36 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", position: 3, name: "تكوين مساعد التمريض في المغرب", item: "https://tawdifpro.ma/formations/guides/formation-auxiliaire-vie-maroc" },
 ]};
 
+const schemas = [articleSchema, faqSchema, breadcrumbSchema];
+
+
 export default function FormationsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">تكوين مساعد التمريض في المغرب 2026: المراكز، الأسعار، وشروط الولوج</h1>
-        <p className="mt-3 text-lg text-gray-600">ISPITS + معاهد خاصة + شهادة الدولة + راتب</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span><span>8 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">التمريض والمجال الصحي (Professions Infirmieres et Sante) راهو من أحسن المجالات لي كتضمن ليك شغل مستقر فالمغرب. المستشفيات والعيادات والمراكز الصحية كلها كتحتاج ممرضين ومساعدي تمريض.</p>
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "الرئيسية", href: "/formations" },
+        { name: "تكوين مساعد التمريض في المغرب", href: "/formations/guides/formation-auxiliaire-vie-maroc" }
+      ]}
+      title="تكوين مساعد التمريض في المغرب: المراكز، الأسعار، وشروط الولوج"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">التمريض والمجال الصحي (Professions Infirmieres et Sante) راهو من أحسن المجالات لي كتضمن ليك شغل مستقر فالمغرب. المستشفيات والعيادات والمراكز الصحية كلها كتحتاج ممرضين ومساعدي تمريض.</p>
         <p>هاد المجال كيعرف طلب كبير بزاف، خصوصا مع البرامج الحكومية (تغطية صحية شاملة، إصلاح القطاع الصحي). كل عام، وزارة الصحة كتفتح مباريات لتوظيف الآلاف ديال الممرضين. فهاد المقال غنوضح ليكم كل المعلومات على تكوين التمريض فالمغرب.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-2xl font-bold text-gray-900">الفرق بين الممرض ومساعد التمريض</h2>
+        <hr />
+        <h2>الفرق بين الممرض ومساعد التمريض</h2>
         <p>فالمغرب، كاين فرق بين: الممرض (Infirmier - 3 سنين تكوين ف ISPITS ولا معهد خاص)، ومساعد التمريض (Auxiliaire de Vie - 6 شهور لسنة تكوين فمراكز متخصصة). الممرض عندو صلاحيات أكبر فالعناية الطبية، بينما مساعد التمريض كيساعد فالرعاية الأساسية.</p>
-        <h2 className="text-2xl font-bold text-gray-900">أفضل المعاهد لتعلم التمريض فالمغرب</h2>
+        <h2>أفضل المعاهد لتعلم التمريض فالمغرب</h2>
         <p className="font-medium text-gray-900">ISPITS (المعاهد العليا لمهن التمريض وتقنيات الصحة)</p>
         <p>هي المعاهد العمومية لي كتكون فجميع المدن. أحسنها: ISPITS الدار البيضاء، ISPITS الرباط، ISPITS فاس، ISPITS مراكش. الثمن: 10,000 - 15,000 DH سنويا (قطاع عمومي). مدة التكوين: 3 سنين.</p>
         <p className="font-medium text-gray-900">المعاهد الخاصة</p>
-        <ul className="list-disc space-y-1 pr-6">
+        <ul>
           <li><strong>المعهد العالي للعلوم الصحية:</strong> الدار البيضاء. الثمن: 25,000 - 45,000 DH سنويا.</li>
           <li><strong>معهد سيبو (SIBO):</strong> الرباط. الثمن: 20,000 - 35,000 DH سنويا.</li>
           <li><strong>معهد الصحة (Institut de Sante):</strong> فاس. الثمن: 18,000 - 30,000 DH سنويا.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">المواد لي كتدرس فالتكوين</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>المواد لي كتدرس فالتكوين</h2>
+        <ul>
           <li><strong>التشريح وعلم وظائف الأعضاء:</strong> دراسة جسم الإنسان.</li>
           <li><strong>التمريض الأساسي:</strong> قياس الضغط، الحقن، التضميد.</li>
           <li><strong>علم الأدوية:</strong> أنواع الأدوية وتأثيراتها.</li>
@@ -66,27 +68,18 @@ export default function FormationsGuidePage() {
           <li><strong>الصحة العامة:</strong> التوعية الصحية، الوقاية.</li>
           <li><strong>الأخلاقيات المهنية:</strong> حقوق المريض، السر المهني.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">الرواتب المتوقعة</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>الرواتب المتوقعة</h2>
+        <ul>
           <li><strong>ممرض (قطاع عمومي):</strong> 5,000 - 10,000 DH</li>
           <li><strong>ممرض (قطاع خاص):</strong> 4,000 - 7,000 DH</li>
           <li><strong>مساعد تمريض:</strong> 3,500 - 5,500 DH</li>
           <li><strong>ممرض متخصص:</strong> 8,000 - 14,000 DH</li>
         </ul>
         <p>استعمل <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">حاسبة الراتب</Link> باش تعرف صافي راتبك.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-xl font-bold text-gray-900">الخلاصة</h2>
+        <hr />
+        <h2>الخلاصة</h2>
         <p>تكوين التمريض والمجال الصحي خيار ممتاز للشباب المغربي. الطلب كبير، الشغل مضمون، والراتب جيد. المجال الصحي كيعرف نقص كبير فالمغرب، وهاد الشي كيخلق فرص بزاف للخريجين.</p>
         <p className="text-emerald-700 font-medium">شارك هاد المقال مع صاحبك لي باغي يخدم فالمجال الصحي!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          📚 اقرأ أيضاً:{" "}
-          <Link href="/formations/guides/formation-comptabilite-gestion-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين المحاسبة والتدبير</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-langue-anglais-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين اللغة الإنجليزية</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

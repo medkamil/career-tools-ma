@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "التدريب المستمر للعاملين في المغرب 2026 (دليل كامل)",
-  description: "دليل التدريب المستمر للعاملين في المغرب 2026. برامج التكوين المستمر، الشروط، التمويل من OPPPT والشركات، وأفضل المؤسسات المعتمدة للتطوير المهني.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,36 +85,28 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function FormationContinueMarocPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/formations" className="hover:text-emerald-600">التكوين</Link>
-        {" > "}
-        <span className="text-gray-900">التدريب المستمر للعاملين في المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">التدريب المستمر للعاملين في المغرب 2026 (دليل كامل)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>11 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>العالم كايتغير بسرعة. المهارات لي كانت مطلوبة 2020، ولّا قديمة ف 2026. هادشي علاش التكوين المستمر (Formation continue) ولّا ضروري باش تبقى تنافسي فسوق الشغل.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التكوين", href: "/formations" },
+        { name: "التدريب المستمر للعاملين في المغرب 2026", href: "/formations/guides/formation-continue-maroc" }
+      ]}
+      title="التدريب المستمر للعاملين في المغرب 2026 (دليل كامل)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>العالم كايتغير بسرعة. المهارات لي كانت مطلوبة 2020، ولّا قديمة ف 2026. هادشي علاش التكوين المستمر (Formation continue) ولّا ضروري باش تبقى تنافسي فسوق الشغل.</p>
 
         <p>فهاد المقال، غادي نعرفوك على كل شي خاص بالتدريب المستمر للعاملين فالمغرب 2026: الحقوق، البرامج، التمويل، وأفضل المؤسسات.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو التكوين المستمر؟</h2>
+        <h2>شنو هو التكوين المستمر؟</h2>
         <p>التكوين المستمر هو عملية تعلم مستدامة كايديرها العامل بعد ما بدا الخدمة. الهدف:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>تطوير المهارات الحالية (Upgrading).</li>
           <li>اكتساب مهارات جديدة (Reskilling).</li>
           <li>مواكبة التطورات التكنولوجية.</li>
@@ -127,17 +114,17 @@ export default function FormationContinueMarocPage() {
           <li>تحسين فرص الشغل والراتب.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">حقوق العامل فالتكوين المستمر فالمغرب</h2>
+        <h2>حقوق العامل فالتكوين المستمر فالمغرب</h2>
         <p>القانون المغربي كايحمي حق العامل فالتكوين المستمر. النقاط الرئيسية:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>المادة 543 من مدونة الشغل:</strong> كل مقاولة ملزمة بوضع برنامج سنوي للتكوين المستمر.</li>
           <li><strong>التمويل الإلزامي:</strong> 1.5% من كتلة الأجور السنوية خاصها تكون للتكوين المستمر.</li>
           <li><strong>إجازة التكوين:</strong> 15 يوم فالسنة للعامل باش يتابع تكوين.</li>
           <li><strong>عدم التمييز:</strong> كل العاملين عندهم نفس الحق فالتكوين بغض النظر عن السن، الجنس، ولا المنصب.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">أنواع التكوين المستمر</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>أنواع التكوين المستمر</h2>
+        <ul>
           <li><strong>التكوين الداخلي (Formation interne):</strong> كايدوي داخل الشركة مع مدربين داخليين أو خارجيين.</li>
           <li><strong>التكوين الخارجي (Formation externe):</strong> فمراكز تدريب متخصصة.</li>
           <li><strong>التكوين عن بعد (E-learning):</strong> عبر منصات أونلاين.</li>
@@ -145,7 +132,7 @@ export default function FormationContinueMarocPage() {
           <li><strong>التدريب الفردي (Coaching/Mentoring):</strong> مع خبير فالمجال.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">أفضل المؤسسات للتكوين المستمر فالمغرب</h2>
+        <h2>أفضل المؤسسات للتكوين المستمر فالمغرب</h2>
 
         <h3 className="text-xl font-bold text-gray-900">OFPPT - التكوين المستمر</h3>
         <p>OFPPT عندو قسم خاص بالتكوين المستمر (Service de Formation Continue). كايقدم تكوينات قصيرة فجميع المجالات بأسعار رمزية. التخصصات: الصناعة، البناء، التكنولوجيا، الخدمات.</p>
@@ -159,8 +146,8 @@ export default function FormationContinueMarocPage() {
         <h3 className="text-xl font-bold text-gray-900">Microsoft Learning Center / Cisco Academy</h3>
         <p>مراكز تدريب معتمدة من Microsoft و Cisco. كايتوفر تكوينات فالتكنولوجيا: Azure, Office 365, Networks, Security. بشهادات دولية.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">كيفاش تموّل التكوين المستمر ديالك؟</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>كيفاش تموّل التكوين المستمر ديالك؟</h2>
+        <ul>
           <li><strong>الشركة:</strong> الشركة ملزمة بتمويل التكوين المستمر من ميزانية 1.5%.</li>
           <li><strong>OFPPT:</strong> تكوينات مجانية أو برسم رمزي.</li>
           <li><strong>ANAPEC:</strong> دعم التكوين لطالبي الشغل.</li>
@@ -168,7 +155,7 @@ export default function FormationContinueMarocPage() {
           <li><strong>تمويل ذاتي:</strong> استثمر فمستقبلك. التكوين هو أحسن استثمار.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">أهم التكوينات المستمرة المطلوبة 2026</h2>
+        <h2>أهم التكوينات المستمرة المطلوبة 2026</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -189,8 +176,8 @@ export default function FormationContinueMarocPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">نصائح للاستفادة القصوى من التكوين المستمر</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>نصائح للاستفادة القصوى من التكوين المستمر</h2>
+        <ul>
           <li><strong>طابق مع أهدافك المهنية:</strong> اختار تكوين كايساعدك ف مسيرتك.</li>
           <li><strong>اطلب من المشغل:</strong> تقدر تطلب تكوين معين. الشركة كايكون عندها ميزانية.</li>
           <li><strong>استعمل التكوين عن بعد:</strong> مرن وأقل تكلفة.</li>
@@ -198,31 +185,19 @@ export default function FormationContinueMarocPage() {
           <li><strong>شارك زملاءك:</strong> التعلم الجماعي أنجع.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">إجازة التكوين (Congé de Formation)</h2>
+        <h2>إجازة التكوين (Congé de Formation)</h2>
         <p>كل عامل عندو الحق ف 15 يوم فالسنة للتكوين. كيفاش كايدوي الإجراء:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>قدم طلب مكتوب 30 يوم قبل بداية التكوين.</li>
           <li>ارفق برنامج التكوين والمؤسسة.</li>
           <li>انتظر الرد ف 15 يوم.</li>
           <li>إذا رفض، اكتب الأسباب.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>التكوين المستمر هو المفتاح باش تبقى فالسوق وانت تطور. فالمغرب 2026، الفرص متاحة: تكوينات مجانية، تمويل حكومي، وبرامج معتمدة. ما تفوتش الفرصة. استثمر فمستقبلك المهني اليوم.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/formations/guides/certifications-professionnelles" className="text-emerald-600 underline hover:text-emerald-800">الشهادات المهنية</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-gratuite-en-ligne" className="text-emerald-600 underline hover:text-emerald-800">تكوين مجاني عن بعد</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

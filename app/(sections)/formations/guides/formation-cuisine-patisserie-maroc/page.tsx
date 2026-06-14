@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "تكوين الطبخ والحلويات في المغرب: المراكز، الأسعار، وشهادات الشيف",
@@ -34,36 +34,37 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", position: 3, name: "تكوين الطبخ والحلويات في المغرب", item: "https://tawdifpro.ma/formations/guides/formation-cuisine-patisserie-maroc" },
 ]};
 
+const schemas = [articleSchema, faqSchema, breadcrumbSchema];
+
+
 export default function FormationsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">تكوين الطبخ والحلويات في المغرب 2026: المراكز، الأسعار، وشهادات الشيف</h1>
-        <p className="mt-3 text-lg text-gray-600">مدارس الطبخ + OFPPT + شهادات + رواتب</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span><span>8 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">الطبخ (Cuisine) والحلويات (Patisserie) راهو من المجالات لي كتعرف رواج كبير فالمغرب. مع تطور السياحة والفنادق والمطاعم، الطلب على الشيفات المحترفين كيزيد عام بعد عام.</p>
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "الرئيسية", href: "/formations" },
+        { name: "تكوين الطبخ والحلويات في المغرب", href: "/formations/guides/formation-cuisine-patisserie-maroc" }
+      ]}
+      title="تكوين الطبخ والحلويات في المغرب: المراكز، الأسعار، وشهادات الشيف"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">الطبخ (Cuisine) والحلويات (Patisserie) راهو من المجالات لي كتعرف رواج كبير فالمغرب. مع تطور السياحة والفنادق والمطاعم، الطلب على الشيفات المحترفين كيزيد عام بعد عام.</p>
         <p>هاد المجال مزيج بين الفن والعلم. ما كلشي لي كيطيب فدارو يقدر يكون شيف محترف. التكوين المهني هو لي كيعطي الأدوات والمعايير لي كتفرق بين طباخ عادي وشيف محترف.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-2xl font-bold text-gray-900">أنواع تكوين الطبخ فالمغرب</h2>
+        <hr />
+        <h2>أنواع تكوين الطبخ فالمغرب</h2>
         <p className="font-medium text-gray-900">التكوين الأساسي (Formation de Base)</p>
         <p>كيتعلم المتدرب فيه أساسيات الطبخ: تقطيع الخضر، تحضير المرق، طرق الطهي (القلي، السلق، الشواء)، والنظافة الغذائية.</p>
         <p className="font-medium text-gray-900">التكوين المتخصص (Formation Specialisee)</p>
         <p>كايركز على مجال معين: المطبخ المغربي التقليدي، المطبخ العالمي، الحلويات العصرية، المخبوزات (Boulangerie)، أو الشوكولاتة.</p>
-        <h2 className="text-2xl font-bold text-gray-900">أشهر مدارس الطبخ فالمغرب</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>أشهر مدارس الطبخ فالمغرب</h2>
+        <ul>
           <li><strong>Institut Superieur des Metiers de la Patisserie:</strong> الدار البيضاء. تخصص فالحلويات فقط. الثمن: 25,000 - 40,000 DH.</li>
           <li><strong>Le Matre Culinary Academy:</strong> الدار البيضاء. تكوين شامل. الثمن: 15,000 - 30,000 DH.</li>
           <li><strong>مدرسة الفنون الطبخية مراكش:</strong> مراكش. الثمن: 12,000 - 25,000 DH.</li>
           <li><strong>OFPPT (تخصص فندقة ومطبخ):</strong> جميع المدن. مجاني.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">المواد لي كتدرس فمدرسة الطبخ</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>المواد لي كتدرس فمدرسة الطبخ</h2>
+        <ul>
           <li><strong>تقنيات الطبخ (Techniques Culinaires):</strong> القطع، التحضير، طرق الطهي.</li>
           <li><strong>الحلويات (Patisserie):</strong> الكريما، العجائن، الشوكولاتة، التزيين.</li>
           <li><strong>النظافة (Hygiene Alimentaire):</strong> معايير HACCP، السلامة الغذائية.</li>
@@ -71,26 +72,17 @@ export default function FormationsGuidePage() {
           <li><strong>إدارة المطبخ:</strong> التخطيط للقائمة، حساب التكاليف، إدارة المخزون.</li>
           <li><strong>فن التقديم (Presentation):</strong> ديكور الأطباق، التنسيق.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">الرواتب المتوقعة بعد التكوين</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>الرواتب المتوقعة بعد التكوين</h2>
+        <ul>
           <li><strong>طباخ مبتدئ:</strong> 3,000 - 5,000 DH</li>
           <li><strong>Chef de Partie:</strong> 6,000 - 10,000 DH</li>
           <li><strong>Sous Chef:</strong> 10,000 - 15,000 DH</li>
           <li><strong>Chef Executif:</strong> 15,000 - 30,000+ DH</li>
         </ul>
-        <hr className="border-gray-200" />
-        <h2 className="text-xl font-bold text-gray-900">الخلاصة</h2>
+        <hr />
+        <h2>الخلاصة</h2>
         <p>تكوين الطبخ والحلويات فالمغرب خيار ممتاز لعشاق المطبخ. مع القطاع السياحي المزدهر والفنادق لي كتتفتح، الطلب على الشيفات المحترفين غادي يبقى مرتفع. سواء اخترت OFPPT المجاني ولا مدرسة خاصة، المهم هو الشغف والالتزام.</p>
         <p className="text-emerald-700 font-medium">شارك المقال مع صاحبك لي كيبغي يولي شيف محترف!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          📚 اقرأ أيضاً:{" "}
-          <Link href="/formations/guides/formation-informatique-developpement-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين البرمجة والمعلوميات</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-langue-anglais-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين اللغة الإنجليزية</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "نصائح اجتياز مقابلة العمل في المغرب 2026 (دليلك الكامل)",
-  description: "دليل شامل لاجتياز مقابلة العمل في المغرب 2026. أسئلة متوقعة، لباس مناسب، لغة الجسد، والمتابعة. نصائح عملية للنجاح من خبراء الموارد البشرية المغاربة.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,36 +85,28 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function ConseilsEntretienEmbauchePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">نصائح اجتياز مقابلة العمل في المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">نصائح اجتياز مقابلة العمل في المغرب 2026 (دليلك الكامل)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>11 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>مقابلة العمل (Entretien d&apos;embauche) هي الخطوة الأصعب فالبحث على الخدمة. حتى لو CV ديالك مزيان وتجربتك قوية، المقابلة هي لي غادي تحدد واش غادي تجيب الخدمة ولا لا. فالمغرب 2026، الشركات كاتعطي أهمية كبيرة للمقابلة الشخصية.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "نصائح اجتياز مقابلة العمل في المغرب 2026", href: "/emplois/guides/conseils-entretien-embauche" }
+      ]}
+      title="نصائح اجتياز مقابلة العمل في المغرب 2026 (دليلك الكامل)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>مقابلة العمل (Entretien d&apos;embauche) هي الخطوة الأصعب فالبحث على الخدمة. حتى لو CV ديالك مزيان وتجربتك قوية، المقابلة هي لي غادي تحدد واش غادي تجيب الخدمة ولا لا. فالمغرب 2026، الشركات كاتعطي أهمية كبيرة للمقابلة الشخصية.</p>
 
         <p>فهاد المقال، غادي نعرفوك على كل شي خاص بالمقابلة: من التحضير، للباس، الأسئلة المتوقعة، لغة الجسد، وحتى المتابعة بعد المقابلة. دليل كامل باش تكون جاهز.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. التحضير قبل المقابلة (La Préparation)</h2>
+        <h2>1. التحضير قبل المقابلة (La Préparation)</h2>
         <p>هاد الخطوة كاتحدد 70% من نجاحك. ما تفوتش عليها.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>ابحث على الشركة:</strong> تاريخها، منتجاتها/خدماتها، قيمها، آخر الأخبار ديالها. موقعهم LinkedIn وموقعهم الرسمي. أكتر من 60% من المرشحين كايجيو وما عندهمش فكرة على الشركة.</li>
           <li><strong>اقرا الوصف الوظيفي مزيان:</strong> شنو كايطلبوا؟ شنو هي المهارات المطلوبة؟ جهز أمثلة من تجربتك كاتطابق.</li>
           <li><strong>جهز الأسئلة ديالك:</strong> على الأقل 3 أسئلة ذكية. مثلاً: شنو هي التحديات لي كاتواجه الفريق هاد العام؟ واش كاين برنامج تدريب للموظفين الجدد؟</li>
@@ -127,20 +114,20 @@ export default function ConseilsEntretienEmbauchePage() {
           <li><strong>جهز الوثائق:</strong> CV (3 نسخ)، رسالة التوصية (Lettre de recommandation)، الشهادات، بطاقة التعريف. حطهم فملف مرتب.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. اللباس والمظهر (La Tenue Vestimentaire)</h2>
+        <h2>2. اللباس والمظهر (La Tenue Vestimentaire)</h2>
         <p>فالمغرب، اللباس كايدل على الاحترام والجدية. القاعدة: ألبس أفضل من اللباس المطلوب بدرجة.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الرجال:</strong> Costume كحلي ولا رمادي + قميص أبيض + ربطة عنق (Cravate) مناسبة + أحذية رسمية (سودا).</li>
           <li><strong>النساء:</strong> Costume (جاكيت وبنطلون أو تنورة) + بلوزة محتشمة + أحذية بكعب متوسط (3-5 سم).</li>
           <li><strong>للشركات الحديثة (Startups):</strong> Smart Casual: بنطلون شينو + قميص + جاكيت خفيف. بدون ربطة عنق.</li>
           <li><strong>تفادى:</strong> الجينز الممزق، التيشيرتات المكتوب عليها، الكابات، النعال، العطور القوية، الماكياج الزايد.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. أهم الأسئلة المتوقعة وكيف تجاوب عليها</h2>
+        <h2>3. أهم الأسئلة المتوقعة وكيف تجاوب عليها</h2>
 
         <h3 className="text-xl font-bold text-gray-900">3.1. &quot;قولي ليا على راسك&quot; (Parlez-moi de vous)</h3>
         <p>هاد السؤال أول سؤال فـ 80% من المقابلات. الجواب الخاص: 3 أقسام:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الحاضر (30 ثانية):</strong> من أنا مهنياً؟ (المنصب الحالي، الخبرة).</li>
           <li><strong>الماضي (60 ثانية):</strong> من أين جيت؟ (التكوين، الخبرات السابقة المهمة).</li>
           <li><strong>المستقبل (30 ثانية):</strong> فين باغي نمشي؟ (طموحي يتطابق مع هاد الوظيفة).</li>
@@ -148,7 +135,7 @@ export default function ConseilsEntretienEmbauchePage() {
 
         <h3 className="text-xl font-bold text-gray-900">3.2. &quot;شنو هي نقاط قوتك؟&quot; (Vos points forts)</h3>
         <p>اختار 3 نقاط قوة مرتبطة بالوظيفة. استعمل طريقة STAR:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>S</strong> (Situation): الوضعية.</li>
           <li><strong>T</strong> (Task): المهمة.</li>
           <li><strong>A</strong> (Action): الإجراء لي درتي.</li>
@@ -162,8 +149,8 @@ export default function ConseilsEntretienEmbauchePage() {
         <h3 className="text-xl font-bold text-gray-900">3.4. &quot;علاش باغي هاد الخدمة؟&quot; (Pourquoi voulez-vous ce poste)</h3>
         <p>الجواب: اربطه بـ: شغفك بالمجال، مهاراتك المناسبة، وقيم الشركة. ما تجاوبش &quot;حيت كاينة&quot; ولا &quot;حيت خاصني خدمة&quot;.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. لغة الجسد (Langage Corporel)</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>4. لغة الجسد (Langage Corporel)</h2>
+        <ul>
           <li><strong>المصافحة:</strong> قوية وحازمة (2-3 ثواني)، مع الابتسامة والتواصل البصري.</li>
           <li><strong>الجلوس:</strong> استقامة الظهر، اليدين فالحجر ولا على الطاولة، الرجلين مرتاحين.</li>
           <li><strong>التواصل البصري:</strong> 60-70% من الوقت. لا تشد النظر (يبدو عدواني) ولا تتهرب (يبدو غير واثق).</li>
@@ -171,9 +158,9 @@ export default function ConseilsEntretienEmbauchePage() {
           <li><strong>الابتسامة:</strong> طبيعية. الابتسامة كاتعطي انطباع إيجابي.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. الأسئعة لي خاصك تسأل فالنهاية</h2>
+        <h2>5. الأسئعة لي خاصك تسأل فالنهاية</h2>
         <p>فالنهاية ديال المقابلة، المدير غادي يسقسي: &quot;واش عندك أسئلة؟&quot;. الجواب يكون إييييي دائماً. إليك 5 أسئلة ذكية:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>شنو هي التحديات لي كاتواجه الفريق حالياً؟</li>
           <li>واش كاين برنامج تدريب (Formation) للموظفين الجدد؟</li>
           <li>شنو هي معايير النجاح لهاد المنصب ف أول 6 شهور؟</li>
@@ -181,16 +168,16 @@ export default function ConseilsEntretienEmbauchePage() {
           <li>شنو هي الخطوات الجاية ف عملية التوظيف؟</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. المتابعة بعد المقابلة (Le Suivi)</h2>
+        <h2>6. المتابعة بعد المقابلة (Le Suivi)</h2>
         <p>هاد الخطوة كاتفرق بينك وبين المرشحين الآخرين.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>بعد 24 ساعة:</strong> سيفط إيميل شكر (Email de remerciement). مختصر: شكر، ذكر نقطة من المقابلة، تأكيد الاهتمام.</li>
           <li><strong>بعد 7 أيام:</strong> إذا ما جاوبوش، تابع ب إيميل ولا مكالمة مهنية.</li>
           <li><strong>إذا قبلوك:</strong> رد بسرعة واطلب تفاصيل العرض (Offre).</li>
           <li><strong>إذا ما قبلوكش:</strong> اطلب Feedback واش علاش. هاد الشي غادي يفيدك فالمرات الجاية.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">نموذج إيميل شكر بعد المقابلة</h2>
+        <h2>نموذج إيميل شكر بعد المقابلة</h2>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
           <p><strong>Subject:</strong> Remerciement - [Votre Nom] - [Poste]</p>
           <p>Bonjour Monsieur/Madame [Nom],</p>
@@ -198,22 +185,10 @@ export default function ConseilsEntretienEmbauchePage() {
           <p>Je suis très intéressé par ce poste et je suis convaincu que mes compétences en [compétence] correspondent à vos besoins.</p>
         </div>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>مقابلة العمل هي فرصة باش تبيع مهاراتك. كلما تحضرت أكثر، كلما زادت فرص نجاحك. خذ الأمور بجدية، كن واثق من راسك، وتذكر: الشركة كاتحتاجك بنفس القدر لي كتحتاجها. بالتوفيق.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/questions-entretien-embauche-reponses" className="text-emerald-600 underline hover:text-emerald-800">أسئلة مقابلة العمل وأجوبتها</Link>
-          {" | "}
-          <Link href="/emplois/guides/meilleurs-sites-emploi-maroc" className="text-emerald-600 underline hover:text-emerald-800">أفضل مواقع التوظيف</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

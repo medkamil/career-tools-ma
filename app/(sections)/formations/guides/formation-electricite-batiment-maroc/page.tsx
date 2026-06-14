@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "تكوين كهرباء البناء في المغرب: المراكز، الأسعار، وشروط الولوج",
@@ -40,38 +41,39 @@ const breadcrumbSchema = {
   ],
 };
 
+const schemas = [articleSchema, faqSchema, breadcrumbSchema];
+
+
 export default function FormationsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">تكوين كهرباء البناء فالمغرب 2026: المراكز، الأسعار، وشروط الولوج</h1>
-        <p className="mt-3 text-lg text-gray-600">OFPPT + مراكز خاصة + شهادات + راتب</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span>
-          <span>7 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">كهرباء البناء (Electricite de Batiment) واحد من أكثر التخصصات طلبا فالمغرب. كل عمارة، كل فيلا، كل مصنع كيحتاج كهربائي. مع النمو العمراني لي كيشهدو المغرب، الطلب على هاد المهنة راه كيزيد عام بعد عام.</p>
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "????????", href: "/" },
+        { name: "???????", href: "/formations" },
+        { name: "تكوين كهرباء البناء في المغرب: المراكز، الأسعار، وشروط الولوج", href: "(sections)/formations/guides/formation-electricite-batiment-maroc" }
+      ]}
+      title="تكوين كهرباء البناء في المغرب: المراكز، الأسعار، وشروط الولوج"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">كهرباء البناء (Electricite de Batiment) واحد من أكثر التخصصات طلبا فالمغرب. كل عمارة، كل فيلا، كل مصنع كيحتاج كهربائي. مع النمو العمراني لي كيشهدو المغرب، الطلب على هاد المهنة راه كيزيد عام بعد عام.</p>
         <p>فهاد المقال غنعطيكم كل المعلومات لي كتحتاجوها باش تبداو تكوين فكهرباء البناء: شنو هي المراكز، شحال الثمن، شحال المدة، وشنو هي فرص الشغل.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو تخصص كهرباء البناء؟</h2>
+        <hr />
+        <h2>شنو هو تخصص كهرباء البناء؟</h2>
         <p>كهرباء البناء هو تخصص كيركز على التركيبات الكهربائية فالمباني السكنية والتجارية والصناعية. كايتعلم المتدرب كيفاش يصمم ويركب ويصون الشبكات الكهربائية، ويقرا المخططات، ويختار المعدات المناسبة.</p>
         <p>التخصص مقسم لعدة مستويات: تقني (Technicien) و تقني متخصص (Technicien Specialise). الفرق بيناتهم فعمق المعرفة وقدرة التدخل فالمشاريع الكبرى.</p>
-        <h2 className="text-2xl font-bold text-gray-900">أفضل مراكز تكوين كهرباء البناء فالمغرب</h2>
+        <h2>أفضل مراكز تكوين كهرباء البناء فالمغرب</h2>
         <p className="font-medium text-gray-900">OFPPT - Office de la Formation Professionnelle</p>
         <p>OFPPT كيبقى أحسن خيار للتكوين المهني فالمغرب. كاين فجميع المدن، التكوين مجاني، والشهادة معترف بها. أقوى المراكز: الدار البيضاء، الرباط، طنجة، فاس، مراكش.</p>
         <p className="font-medium text-gray-900">المراكز الخاصة</p>
-        <ul className="list-disc space-y-1 pr-6">
+        <ul>
           <li><strong>IGD (Institut de Gestion et de Developpement):</strong> فجميع المدن الكبرى. الثمن: 8,000 - 12,000 DH.</li>
           <li><strong>CFP (Centre de Formation Professionnelle):</strong> فاس، الدار البيضاء. الثمن: 6,000 - 10,000 DH.</li>
           <li><strong>IGA (Institut Superieur de Gestion et d Administration):</strong> الرباط، الدار البيضاء. الثمن: 10,000 - 15,000 DH.</li>
           <li><strong>معهد الطاقة الشمسية (ISES):</strong> مراكش. الثمن: 12,000 - 18,000 DH.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">المواد لي كتدرس فالتكوين</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>المواد لي كتدرس فالتكوين</h2>
+        <ul>
           <li><strong>الكهرباء العامة:</strong> التيار المستمر والتيار المتردد، قانون أوم، القدرة الكهربائية.</li>
           <li><strong>المخططات الكهربائية:</strong> قراءة وتصميم Schémas Electriques.</li>
           <li><strong>التمديدات الكهربائية:</strong> تركيب القنوات، الأسلاك، اللوحات الكهربائية.</li>
@@ -79,8 +81,8 @@ export default function FormationsGuidePage() {
           <li><strong>الطاقة الشمسية:</strong> تصميم وتركيب الألواح الشمسية، الربط بالشبكة.</li>
           <li><strong>الأتمتة:</strong> المبررات المنطقية، التحكم الآلي (Gestion Technique du Batiment).</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">الرواتب المتوقعة</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>الرواتب المتوقعة</h2>
+        <ul>
           <li><strong>كهربائي مبتدئ:</strong> 3,000 - 5,000 DH صافية.</li>
           <li><strong>تقني كهرباء (خبرة 2-3 سنين):</strong> 5,500 - 8,000 DH.</li>
           <li><strong>تقني متخصص (خبرة 5 سنين+):</strong> 9,000 - 14,000 DH.</li>
@@ -88,8 +90,8 @@ export default function FormationsGuidePage() {
           <li><strong>كهربائي حر (Freelance):</strong> الدخل كيختلف ولكن كيقدرو يكسبو 8,000 - 18,000 DH حسب المشاريع.</li>
         </ul>
         <p>باش تعرف بالضبط شحال يبقى ليك صافي من الراتب، استعمل <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">حاسبة الراتب</Link> ديالنا.</p>
-        <h2 className="text-2xl font-bold text-gray-900">فرص الشغل</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>فرص الشغل</h2>
+        <ul>
           <li>شركات البناء والأشغال العمومية (BTP).</li>
           <li>شركات الطاقة (ONEE, Energie Electrique).</li>
           <li>مكاتب الدراسات التقنية (Bureaux d Etudes).</li>
@@ -97,21 +99,10 @@ export default function FormationsGuidePage() {
           <li>شركات الطاقة الشمسية والطاقات المتجددة.</li>
           <li>المصانع (الصيانة الكهربائية).</li>
         </ul>
-        <hr className="border-gray-200" />
-        <h2 className="text-xl font-bold text-gray-900">الخلاصة</h2>
+        <hr />
+        <h2>الخلاصة</h2>
         <p>تكوين كهرباء البناء من أحسن التكوينات المهنية فالمغرب 2026. الطلب كبير، الرواتب جيدة، وفرص التطور المهني موجودة. إذا كنت باغي تتعلم صنعة فيها مستقبل، كهرباء البناء خيار ممتاز.</p>
         <p className="text-emerald-700 font-medium">شارك هاد المقال واعاون صاحبك يعرف أكثر على هاد التكوين!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          📚 اقرأ أيضاً:{" "}
-          <Link href="/formations/guides/formation-plomberie-chauffage-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين السباكة والتدفئة فالمغرب</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-soudure-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين الحام فالمغرب</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">حاسبة الراتب</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

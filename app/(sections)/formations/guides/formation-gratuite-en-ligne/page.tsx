@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "أفضل منصات التكوين المجاني عن بعد في المغرب 2026",
-  description: "أفضل منصات التكوين المجاني عن بعد في المغرب 2026. Coursera, Edx, منصة التكوين عن بعد, Udemy, وغيرها. تعلم مهارات جديدة بشهادات معتمدة وطور مسيرتك المهنية.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,89 +85,81 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function FormationGratuiteEnLignePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/formations" className="hover:text-emerald-600">التكوين</Link>
-        {" > "}
-        <span className="text-gray-900">أفضل منصات التكوين المجاني عن بعد في المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">أفضل منصات التكوين المجاني عن بعد في المغرب 2026</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>11 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>العالم ولكّل رقمي. ف 2026، التكوين عن بعد (Formation à distance) ولّا ضروري باش تطور مهاراتك وتزيد فرصك فالشغل. والمزيان فيه أنو بزاف ديال المنصات كايتوفر تكوينات مجانية بالكامل.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التكوين", href: "/formations" },
+        { name: "أفضل منصات التكوين المجاني عن بعد في المغرب 2026", href: "/formations/guides/formation-gratuite-en-ligne" }
+      ]}
+      title="أفضل منصات التكوين المجاني عن بعد في المغرب 2026"
+      readingTime="10 دقائق قراءة"
+    >
+<p>العالم ولكّل رقمي. ف 2026، التكوين عن بعد (Formation à distance) ولّا ضروري باش تطور مهاراتك وتزيد فرصك فالشغل. والمزيان فيه أنو بزاف ديال المنصات كايتوفر تكوينات مجانية بالكامل.</p>
 
         <p>فهاد المقال، غادي نعرفوك على أفضل منصات التكوين المجاني عن بعد فالمغرب 2026: عالمية ومحلية. مع الشهادات لي كاتقدم والمجالات المتاحة.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. Coursera.org — العملاق العالمي</h2>
+        <h2>1. Coursera.org — العملاق العالمي</h2>
         <p>Coursera هي أكبر منصة تعليم عن بعد فالعالم. فيها أكتر من 2000 دورة من أشهر الجامعات (Stanford, Yale, Michigan). فالمغرب، تقدر تصل للدورات مجاناً ب Audit و Financial Aid.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>المجالات:</strong> IT, Business, Data Science, الصحة، اللغات.</li>
           <li><strong>الشهادة:</strong> بشهادة مدفوعة (تقدر تطلب Financial Aid).</li>
           <li><strong>اللغة:</strong> إنجليزية (مع ترجمة للعربية فبعض الدورات).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. Edx.org — من جامعات Ivy League</h2>
+        <h2>2. Edx.org — من جامعات Ivy League</h2>
         <p>Edx منصة تأسست من MIT و Harvard. فيها دورات عالية الجودة فجميع المجالات. CS50 من Harvard هي أشهر دورة برمجة فالعالم.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>المجالات:</strong> علوم الكمبيوتر، الهندسة، الإدارة، اللغات.</li>
           <li><strong>الشهادة:</strong> Audit مجاني + شهادة مدفوعة.</li>
           <li><strong>الميزة:</strong> دورات من أفضل جامعات العالم.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. منصة التكوين عن بعد (mtae.ma) — المغربية</h2>
+        <h2>3. منصة التكوين عن بعد (mtae.ma) — المغربية</h2>
         <p>منصة حكومية مغربية من وزارة التربية الوطنية. كاتقدم تكوينات مجانية بالكامل بشهادات معتمدة. الأنسب للمغاربة حيت المحتوى بالعربية والفرنسية.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>المجالات:</strong> التربية، تكنولوجيا التعليم، اللغات، المهارات الحياتية.</li>
           <li><strong>الشهادة:</strong> مجانية ومعتمدة من الوزارة.</li>
           <li><strong>اللغة:</strong> العربية والفرنسية.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. FreeCodeCamp.org — البرمجة مجاناً</h2>
+        <h2>4. FreeCodeCamp.org — البرمجة مجاناً</h2>
         <p>FreeCodeCamp منصة مجانية 100% لتعلم البرمجة. كاتقدم 8 شهادات فالتطوير: Responsive Web Design, JavaScript Algorithms, Front-end Libraries, Data Visualization, Back-end APIs, Quality Assurance, Scientific Computing, Data Analysis.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>المدة:</strong> 300 ساعة لكل شهادة.</li>
           <li><strong>الشهادة:</strong> مجانية.</li>
           <li><strong>اللغة:</strong> إنجليزية (العربية متوفرة فبعض الدروس).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. Google Digital Garage — التسويق الرقمي</h2>
+        <h2>5. Google Digital Garage — التسويق الرقمي</h2>
         <p>منصة Google الرسمية للتدريب على التسويق الرقمي. فيها 26 وحدة من Fundamentals of Digital Marketing. الشهادة معترف بها عالمياً.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الشهادة:</strong> مجانية من Google.</li>
           <li><strong>اللغة:</strong> العربية والإنجليزية والفرنسية.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. LinkedIn Learning — المهارات المهنية</h2>
+        <h2>6. LinkedIn Learning — المهارات المهنية</h2>
         <p>LinkedIn Learning عندو شهر مجاني (Free Trial). فيه آلاف الدورات فجميع المهارات المهنية. بعد ما كاتكمل الدورة، تلقى badge ف بروفايل LinkedIn ديالك.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">7. منصة OFPPT للتكوين عن بعد</h2>
+        <h2>7. منصة OFPPT للتكوين عن بعد</h2>
         <p>OFPPT عندو منصة خاصة للتكوين عن بعد. كاتقدم تكوينات إضافية للمسجلين ف OFPPT. بعض التكوينات مفتوحة للجميع. مجانية بالكامل.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">8. Khan Academy — من التعليم الأساسي للجامعي</h2>
+        <h2>8. Khan Academy — من التعليم الأساسي للجامعي</h2>
         <p>Khan Academy منصة مجانية 100%. كاتغطي مواد من الابتدائي للجامعي. فالمغرب، كثير من الطلاب كايستعملوها للتقوية فالرياضيات والعلوم.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">9. Microsoft Learn — تكنولوجيا مايكروسوفت</h2>
+        <h2>9. Microsoft Learn — تكنولوجيا مايكروسوفت</h2>
         <p>Microsoft Learn كاتقدم تكوينات مجانية فجميع منتجات Microsoft: Azure, Office 365, Dynamics 365, Power Platform, AI. كاتوفر شارات (Badges) وشهادات معترف بها.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">10. YouTube — تعلم أي حاجة مجاناً</h2>
+        <h2>10. YouTube — تعلم أي حاجة مجاناً</h2>
         <p>YouTube هو أكبر مكتبة فيديوهات تعليمية فالعالم. فالمغرب، كاين قنوات مغربية متخصصة فالتعليم والتكوين. مثلاً: قنوات فالمحاسبة، البرمجة، التسويق، الطبخ، الصيانة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">كيفاش تختار المنصة المناسبة؟</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>كيفاش تختار المنصة المناسبة؟</h2>
+        <ul>
           <li><strong>للبرمجة والتكنولوجيا:</strong> FreeCodeCamp, Coursera، CS50.</li>
           <li><strong>للإدارة والأعمال:</strong> Coursera, LinkedIn Learning, Edx.</li>
           <li><strong>للشهادات الحكومية فالمغرب:</strong> mtae.ma, OFPPT.</li>
@@ -180,8 +167,8 @@ export default function FormationGratuiteEnLignePage() {
           <li><strong>للتسويق الرقمي:</strong> Google Digital Garage, HubSpot Academy.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">نصائح للاستفادة القصوى من التكوين المجاني</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>نصائح للاستفادة القصوى من التكوين المجاني</h2>
+        <ul>
           <li><strong>حدد هدفك:</strong> شنو باغي تتعلم وعلاش؟</li>
           <li><strong>خصّص وقت:</strong> ساعة فاليوم على الأقل.</li>
           <li><strong>طبق ما تعلمتي:</strong> التطبيق هو المفتاح. سو مشروع صغير.</li>
@@ -189,22 +176,10 @@ export default function FormationGratuiteEnLignePage() {
           <li><strong>احصل على الشهادة:</strong> حتى لو مجانية. الشهادة كاتزيد ف CV.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>العالم الرقمي كايوفرو ليك تكوينات بملايين الدولارات مجاناً. المهارات لي كاتحتاجها باش تبدل حياتك المهنية ف 2026 كاينة f منصة وحدة من هاد المنصات. المبادرة منك. ابدأ اليوم.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/formations/guides/inscription-ofppt-2026" className="text-emerald-600 underline hover:text-emerald-800">التسجيل في OFPPT 2026</Link>
-          {" | "}
-          <Link href="/formations/guides/certifications-professionnelles" className="text-emerald-600 underline hover:text-emerald-800">الشهادات المهنية</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

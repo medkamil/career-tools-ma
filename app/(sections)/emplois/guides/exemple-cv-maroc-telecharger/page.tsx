@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "أفضل نموذج CV المغرب 2026 مع أمثلة جاهزة للتحميل",
-  description: "أفضل نموذج CV المغرب 2026. أمثلة جاهزة بالعربية والفرنسية، نصائح لكتابة السيرة الذاتية للمغرب، قوالب للقطاعين العام والخاص.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -82,33 +77,26 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function ExempleCVPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">نموذج CV المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">أفضل نموذج CV المغرب 2026 مع أمثلة جاهزة للتحميل</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>9 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>CV ولا السيرة الذاتية هو أول وثيقة كايقراها المشغل عنك. ف 2026، سوق الشغل فالمغرب ولا أكثر تنافسية من قبل. CV ضعيف ولا فيه أخطاء إملائية كايتحذف ف 10 ثواني فقط. فهاد المقال، غادي نعطيك نماذج جاهزة، نصائح عملية، وقوالب تقدر تحملها وتعدل عليها.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "أفضل نموذج CV المغرب 2026", href: "/emplois/guides/exemple-cv-maroc-telecharger" }
+      ]}
+      title="أفضل نموذج CV المغرب 2026 مع أمثلة جاهزة للتحميل"
+      readingTime="10 دقائق قراءة"
+    >
+<p>CV ولا السيرة الذاتية هو أول وثيقة كايقراها المشغل عنك. ف 2026، سوق الشغل فالمغرب ولا أكثر تنافسية من قبل. CV ضعيف ولا فيه أخطاء إملائية كايتحذف ف 10 ثواني فقط. فهاد المقال، غادي نعطيك نماذج جاهزة، نصائح عملية، وقوالب تقدر تحملها وتعدل عليها.</p>
 
         <p>قبل ما نبداو، حاجة مهمة: فالمغرب ماشي بحال أوربا. الشركات المغربية كاتفضل CV بالفرنسية ف 60% من الحالات. العربية كاتستعمل ف 30% (خصوصا فالقطاع العام والبنوك التقليدية). الإنجليزية كاتستعمل ف 10% (الشركات المتعددة الجنسيات). اختار اللغة على حسب المجال ديالك.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. نموذج CV بالفرنسية (الأكثر استخداما فالمغرب)</h2>
+        <h2>1. نموذج CV بالفرنسية (الأكثر استخداما فالمغرب)</h2>
         <p>هاد النموذج كايناسب أغلب الوظائف فالمغرب. نظيف، بسيط، ومباشر:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
           <p className="font-bold text-lg">[Nom Prénom]</p>
@@ -127,7 +115,7 @@ export default function ExempleCVPage() {
           <p className="mr-4">Arabe (Langue maternelle) | Français (Courant) | Anglais (Intermédiaire)</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. نموذج CV بالعربية (للقطاع العام والوظائف الإدارية)</h2>
+        <h2>2. نموذج CV بالعربية (للقطاع العام والوظائف الإدارية)</h2>
         <p>هاد النموذج كايناسب المباريات والمقابلات فالقطاع العمومي. الرسمية والوضوح هما الأساس:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
           <p className="font-bold text-lg">[الاسم الكامل]</p>
@@ -143,7 +131,7 @@ export default function ExempleCVPage() {
           <p className="mr-4">• [مهارة 1] • [مهارة 2] • [مهارة 3]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. نموذج CV بالإنجليزية (للشركات المتعددة الجنسيات)</h2>
+        <h2>3. نموذج CV بالإنجليزية (للشركات المتعددة الجنسيات)</h2>
         <p>هاد النموذج كايناسب الشركات الدولية لي كاتطلب الإنجليزية كلغة خدمة:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
           <p className="font-bold text-lg">[Full Name]</p>
@@ -157,7 +145,7 @@ export default function ExempleCVPage() {
           <p><strong>[Degree]</strong> - [University] | [Year]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. نصائح مهمة لـ CV ناجح</h2>
+        <h2>4. نصائح مهمة لـ CV ناجح</h2>
 
         <h3 className="text-xl font-bold text-gray-900">4.1. التخصيص (Personnalisation)</h3>
         <p>ما ترسلش نفس CV لجميع الشركات. كل شركة عندها احتياجات مختلفة. اقرا الإعلان مليح، شوف شنو كايتطلب، وعدل CV باش يظهر أنك الشخص المناسب. خصص حتى الملخص ديالك (Profil) على حسب الوظيفة.</p>
@@ -171,9 +159,9 @@ export default function ExempleCVPage() {
         <h3 className="text-xl font-bold text-gray-900">4.4. التصميم والشكل</h3>
         <p>فالمغرب، التصميم المعقد (ألوان بزاف، رسومات) ما كاينفعش. معظم الشركات كاتفضل CV نظيف بالأسود والأبيض أو بلون واحد (أزرق، أخضر داكن). استعمل Canva ولا قوالب Word باش دير تصميم احترافي. المهم: يكون قابلة للقراءة، بخط واضح، وهوامش منظمة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. قائمة المراجعة قبل إرسال CV</h2>
+        <h2>5. قائمة المراجعة قبل إرسال CV</h2>
         <p>قبل ما ترسل CV، تأكد من هاد النقاط:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>صحيح الإملاء والنحو؟ (استعمل خدمة مجانية بحال Scribens ولا BonPatron).</li>
           <li>صحيح التنسيق؟ (هوامش متساوية، خط واحد فكلشي، نفس الحجم).</li>
           <li>مخصص للوظيفة؟ (غير عام، كاين شي حاجة خاصة بهاد الشركة).</li>
@@ -183,8 +171,8 @@ export default function ExempleCVPage() {
           <li>LinkedIn مظبوط؟ الصورة، الملخص، الخبرات كلها محدثة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. أخطاء قاتلة فـ CV</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>6. أخطاء قاتلة فـ CV</h2>
+        <ul>
           <li><strong>الكذب:</strong> أغلى غلط. الشركات الكبرى كاتتحقق من المعلومات (background check).</li>
           <li><strong>طول CV:</strong> أقل من 10 سنين خبرة = صفحة وحدة. أكثر = صفحتين. بزاف من الناس كايديرو 3 صفحات وهاد خطأ قاتل.</li>
           <li><strong>الصورة غير مهنية:</strong> صورة جواز السفر، صورة فالشاطئ، صورة مع الأصحاب. خاصك صورة مهنية (خلفية بيضاء، لباس رسمي).</li>
@@ -192,19 +180,10 @@ export default function ExempleCVPage() {
           <li><strong>الروتين:</strong> "Je suis motivé, dynamique, ponctuel..." هاد الكلمات ما كاتعني والو. استبدلها بالنتائج والأرقام.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>CV هو بوابتك للوظيفة لي كاتحلم بها. استثمر الوقت والجهد فكتابته. خصصه لكل وظيفة، راقب الأخطاء، واستعمل الأرقام والأمثلة الواقعية. ومانساش، سوق الشغل فالمغرب ف 2026 كايطلب CV احترافي باش يكون ليك فرصة. بالتوفيق فمسيرتك المهنية!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/lettre-motivation-maroc-exemple" className="text-emerald-600 underline hover:text-emerald-800">نموذج Lettre de Motivation</Link>
-          {" | "}
-          <Link href="/emplois/guides/questions-entretien-embauche-reponses" className="text-emerald-600 underline hover:text-emerald-800">أسئلة مقابلة العمل</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

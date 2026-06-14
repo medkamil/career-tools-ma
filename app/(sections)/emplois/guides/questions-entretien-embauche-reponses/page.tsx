@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "أفضل أسئلة وإجابات مقابلة العمل في المغرب 2026",
-  description: "أهم أسئلة مقابلة العمل (Entretien Embauche) في المغرب 2026 مع الإجابات النموذجية. كيفية تحضير المقابلة، ونصائح النجاح حسب تجارب المرشحين المغاربة.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -82,33 +77,26 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function QuestionsEntretienPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">أسئلة مقابلة العمل فالمغرب</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">أفضل أسئلة وإجابات مقابلة العمل في المغرب 2026</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>12 دقيقة قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>المقابلة (Entretien) هي الفرصة الوحيدة باش تبيع نفسك للمشغل وجها لوجه. ولكن، الضغط والتوتر كايخلو بزاف ديال المرشحين يخطؤوا فأسئلة بسيطة. التحضير الجيد هو السر ديال النجاح. فهاد المقال، غادي نعطيك أشهر الأسئلة فسوق الشغل المغربي مع إجابات نموذجية ونصائح عملية باش تپريزي نفسك أحسن.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "أسئلة وإجابات مقابلة العمل في المغرب", href: "/emplois/guides/questions-entretien-embauche-reponses" }
+      ]}
+      title="أفضل أسئلة وإجابات مقابلة العمل في المغرب 2026"
+      readingTime="10 دقائق قراءة"
+    >
+<p>المقابلة (Entretien) هي الفرصة الوحيدة باش تبيع نفسك للمشغل وجها لوجه. ولكن، الضغط والتوتر كايخلو بزاف ديال المرشحين يخطؤوا فأسئلة بسيطة. التحضير الجيد هو السر ديال النجاح. فهاد المقال، غادي نعطيك أشهر الأسئلة فسوق الشغل المغربي مع إجابات نموذجية ونصائح عملية باش تپريزي نفسك أحسن.</p>
 
         <p>قبل ما نبداو، حاجة مهمة: المقابلة فالمغرب عندها خصوصياتها. المقابلات كاتكون غالبا بالدارجة والعربية (60%) والفرنسية (40%). فاش كاتكون بالفرنسية، راقب اللغة ديالك. فاش كاتكون بالدارجة، حافظ على الرسمية فالمضمون. ف 2026، بعض الشركات كاتبدا تستعمل الإنجليزية فالمقابلات (خصوصا فـ IT والـ Outsourcing).</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. أسئلة عامة وإجاباتها</h2>
+        <h2>1. أسئلة عامة وإجاباتها</h2>
         <p>هاد الأسئلة كاتجي فكل مقابلة تقريبا. تحضير إجابات واضحة ومختصرة كايزيد فرصك فالقبول:</p>
 
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7 space-y-4">
@@ -134,9 +122,9 @@ export default function QuestionsEntretienPage() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. أسئلة سلوكية (Situation Comportementale)</h2>
+        <h2>2. أسئلة سلوكية (Situation Comportementale)</h2>
         <p>هاد الأسئلة كاتختبر كيفاش كاتصرف ف مواقف حقيقية. الـ Recruteur كايحتاج يعرف أنك تقدر تتصرف فحالات الضغط والصراعات. أشهر طريقة للإجابة هي STAR:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>S (Situation):</strong> شنو كانت الحالة أو المشكل.</li>
           <li><strong>T (Tâche):</strong> شنو كانت المهمة المطلوبة منك.</li>
           <li><strong>A (Action):</strong> شنو الإجراءات لي ديرتيها بنفسك.</li>
@@ -144,7 +132,7 @@ export default function QuestionsEntretienPage() {
         </ul>
         <p>مثال: "فاش كنت خدام فشركة سابقة (Situation)، كان عندنا مشكل مع زبون كبير حابس الشحن (Tâche). أنا ديرت اجتماع عاجل مع الفريق، حللنا المشكل، وعرضنا حل على الزبون ف 24 ساعة (Action). الزبون رجع راضي والعقد تجدد (Résultat)." هاد الطريقة كاتخلي الإجابة واضحة ومركزة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. أسئلة خاصة بالمغرب</h2>
+        <h2>3. أسئلة خاصة بالمغرب</h2>
         <p>فالمغرب، كاين أسئلة خاصة كاتجي فالمقابلات:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7 space-y-4">
           <div>
@@ -157,9 +145,9 @@ export default function QuestionsEntretienPage() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. نصائح عامة للنجاح</h2>
+        <h2>4. نصائح عامة للنجاح</h2>
         <p>بعد ما تحضر الإجابات، خاصك تركز على هاد النقاط:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>البحث المسبق:</strong> اقرا عن الشركة، منتجاتها، قيمها، آخر أخبارها. هاد البحث كايظهر اهتمامك.</li>
           <li><strong>التدريب:</strong> تدرب على الإجابات قدام المراية ولا سجل راسك ففيديو. شوف لغة جسدك وطريقة كلامك.</li>
           <li><strong>اللباس:</strong> فالدار البيضاء والرباط، اللباس الرسمي ولا Smart Casual كايناسب. البدلة (Costume) هي الأكثر أمانا فالمغرب.</li>
@@ -167,9 +155,9 @@ export default function QuestionsEntretienPage() {
           <li><strong>التوقيت:</strong> وصل قبل المقابلة ب 15 دقيقة. التأخير فالمغرب كايحطك فالصورة السيئة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. أسئلة خاصك انت تسول</h2>
+        <h2>5. أسئلة خاصك انت تسول</h2>
         <p>فاش كايقولك "عندك أسئلة؟"، ما تقولش لا. الأسئلة الذكية كاتظهر أنك مهتم. أمثلة:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>شنو هي التحديات لي كاتواجه الفريق دابا فهاد القسم؟</li>
           <li>كيفاش كاتقاس النجاح فهاد المنصب ف أول 6 أشهر؟</li>
           <li>شنو هي فرص التطور المهني (formation) لي كاتقدمها الشركة؟</li>
@@ -178,27 +166,18 @@ export default function QuestionsEntretienPage() {
         </ul>
         <p>هذو أسئلة آمنة ومناسبة. تجنب الأسئلة ديال الراتب فالمقابلة الأولى (إلا هو لي بدا الحديث).</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. بعد المقابلة</h2>
+        <h2>6. بعد المقابلة</h2>
         <p>بعد ما تخرج من المقابلة، دير هاد الخطوات:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>بعث إيميل شكر (Thank you email) للـ Recruteur خلال 24 ساعة. كاتب فيه شكر على الوقت وشكر على الفرصة.</li>
           <li>فكر ف إجاباتك: شنو مزية وشنو ممكن تحسن فيه للمقبلات الجاية.</li>
           <li>إلا ما جاوبوش عليك خلال المدة لي قالوها، تقدر ترسل إيميل متابعة (Follow-up) ولكن ما تزعجش.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>المقابلة هي فرصة، مش اختبار. كلما تحضرتي أكثر، كلما كانت الفرصة أكبر. استعد للإجابات، تدرب على الـ STAR، وكن واثق من نفسك. سوق الشغل فالمغرب ف 2026 كاين فيه فرص بزاف ولكن التنافس كبير. اللي كايتحضر كايفوز. بالتوفيق!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/cv-professionnel-maroc-2026" className="text-emerald-600 underline hover:text-emerald-800">CV professionnel Maroc 2026</Link>
-          {" | "}
-          <Link href="/emplois/guides/lettre-motivation-maroc-exemple" className="text-emerald-600 underline hover:text-emerald-800">نموذج رسالة الدافع</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

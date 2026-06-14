@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "الفرق بين CDD و CDI في المغرب 2026 (دليل شامل)",
-  description: "دليل شامل للفرق بين عقد CDD و CDI في المغرب 2026. المدة، المزايا، الإنهاء، والتعويضات. أيهما تختار؟ مقارنة كاملة مع أمثلة عملية ونماذج العقود.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,45 +85,37 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function CddCdiMarocPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">الفرق بين CDD و CDI في المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">الفرق بين CDD و CDI في المغرب 2026 (دليل شامل)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>10 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>فاش كاتلقى خدمة جديدة فالمغرب، أول حاجة غادي تواجهك هو نوع العقد. غالباً غادي يكون CDD ولا CDI. كل واحد عندو مزايا وعيوب، والمهم أنك تفهم الفرق باش تاخد القرار الصحيح.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "الفرق بين CDD و CDI في المغرب 2026", href: "/emplois/guides/cdd-cdi-maroc" }
+      ]}
+      title="الفرق بين CDD و CDI في المغرب 2026 (دليل شامل)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>فاش كاتلقى خدمة جديدة فالمغرب، أول حاجة غادي تواجهك هو نوع العقد. غالباً غادي يكون CDD ولا CDI. كل واحد عندو مزايا وعيوب، والمهم أنك تفهم الفرق باش تاخد القرار الصحيح.</p>
 
         <p>هاد المقال غادي يشرح بالتفصيل الفرق بين CDD و CDI فالمغرب 2026. غادي نعرفوك على المدة، الحقوق، التعويضات، وكيفاش تختار النوع المناسب ليك.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو CDD؟ (Contrat à Durée Déterminée)</h2>
+        <h2>شنو هو CDD؟ (Contrat à Durée Déterminée)</h2>
         <p>CDD هو عقد تحديد المدة. يعني كايكون فيه تاريخ بداية وتاريخ نهاية محددين. كايستخدم للمهام المؤقتة والموسمية. القانون المغربي كايسمح ب 3 أنواع من CDD:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>CDD قصير:</strong> شهر ل 6 شهور، غالباً للمهام الموسمية.</li>
           <li><strong>CDD طويل:</strong> 6 شهور ل 12 شهر، قابل للتجديد مرة وحدة.</li>
           <li><strong>CDD لمهمة محددة:</strong> حتى 3 سنين لمشاريع محددة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو CDI؟ (Contrat à Durée Indéterminée)</h2>
+        <h2>شنو هو CDI؟ (Contrat à Durée Indéterminée)</h2>
         <p>CDI هو عقد غير محدد المدة. كايبقى ساري حتى يقرر الأجير ولا المشغل إنهاؤه. هذا هو العقد الأكثر شيوعاً والأكثر أماناً. فالقانون المغربي، CDI هو القاعدة، CDD هو الاستثناء.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">الفرق بين CDD و CDI فالمغرب 2026</h2>
+        <h2>الفرق بين CDD و CDI فالمغرب 2026</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -149,10 +136,10 @@ export default function CddCdiMarocPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">مزايا وعيوب كل عقد</h2>
+        <h2>مزايا وعيوب كل عقد</h2>
 
         <h3 className="text-xl font-bold text-gray-900">مزايا CDD</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>دخول سريع لسوق الشغل.</li>
           <li>فرصة لاكتساب الخبرة.</li>
           <li>مرونة فالتجربة (تقدر تجرب الشركة والعكس).</li>
@@ -160,7 +147,7 @@ export default function CddCdiMarocPage() {
         </ul>
 
         <h3 className="text-xl font-bold text-gray-900">عيوب CDD</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>عدم الاستقرار: كل ما كاينتهي العقد، خاصك تبحث على خدمة جديدة.</li>
           <li>صعوبة فالحصول على القروض البنكية.</li>
           <li>التطور الوظيفي محدود.</li>
@@ -168,7 +155,7 @@ export default function CddCdiMarocPage() {
         </ul>
 
         <h3 className="text-xl font-bold text-gray-900">مزايا CDI</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>الأمان الوظيفي والاستقرار.</li>
           <li>تسهيل القروض (Credits immobiliers, crédits auto).</li>
           <li>التطور المهني المستمر ف نفس الشركة.</li>
@@ -177,54 +164,42 @@ export default function CddCdiMarocPage() {
         </ul>
 
         <h3 className="text-xl font-bold text-gray-900">عيوب CDI</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>صعوبة فالتغيير: فاش كاتقيد بشركة، كايكون صعب تبدل.</li>
           <li>مدة الإخطار (Préavis) طويلة فاش باغي تستقيل.</li>
           <li>الالتزام الطويل المدى.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">كيفاش تحول CDD ل CDI؟</h2>
+        <h2>كيفاش تحول CDD ل CDI؟</h2>
         <p>القانون المغربي كايعطيك الحق ف التحويل من CDD ل CDI فالحالات التالية:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>بعد 24 شهر من CDD متجدد.</li>
           <li>إذا بقيتي ف الخدمة 30 يوم بعد انتهاء CDD والمشغل ما جددش العقد.</li>
           <li>إذا كان CDD باش تحل محل أجير غائب ورجع الأجير الأصلي، يمكن يتحول العقد ل CDI بعد 12 شهر.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو كايقول القانون المغربي؟</h2>
+        <h2>شنو كايقول القانون المغربي؟</h2>
         <p>مدونة الشغل المغربية (القانون 65-99) كاتنظم عقود العمل. أهم النقاط:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>CDD أقصى مدة: 12 شهر قابل للتجديد مرة وحدة (24 شهر).</li>
           <li>CDI هو العقد الافتراضي: إذا ما كتبش نوع العقد، كايتعتبر CDI.</li>
           <li>CDD خاصو يكون مكتوب: إذا ما كانش مكتوب، كايتعتبر CDI.</li>
           <li>فترة التجربة: 3 شهور للأطر، 1.5 شهر لغير الأطر.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">أيهما تختار؟</h2>
+        <h2>أيهما تختار؟</h2>
         <p>الجواب كايعتمد على وضعيتك:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>إذا كنت خريج جديد:</strong> CDD يمكن يكون فرصة للبداية. ولكن استمر فالبحث على CDI.</li>
           <li><strong>إذا كنت عندك عائلة والتزامات:</strong> CDI هو الأفضل للاستقرار.</li>
           <li><strong>إذا كنت باغي تسافر ولا نكمل الدراسات:</strong> CDD يمكن يكون أكثر مرونة.</li>
           <li><strong>إذا كنت باغي تبدل الخدمة:</strong> CDI مع شركة جديدة هو الأفضل.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>فهم الفرق بين CDD و CDI هو أول خطوة باش تحمي حقوقك فسوق الشغل. كل عقد عندو وظيفتو. المهم أنك تكون واعي بالمزايا والعيوب باش تاخد القرار المناسب لوضعيتك. ف 2026، سوق الشغل فالمغرب كايولي أكثر مرونة، ولكن CDI باقي هو المعيار ديال الأمان.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/droits-salarie-maroc" className="text-emerald-600 underline hover:text-emerald-800">حقوق الأجير في القانون المغربي</Link>
-          {" | "}
-          <Link href="/emplois/guides/types-contrats-travail-maroc" className="text-emerald-600 underline hover:text-emerald-800">أنواع عقود العمل</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

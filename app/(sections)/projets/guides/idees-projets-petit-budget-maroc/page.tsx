@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "10 أفكار مشاريع صغيرة مربحة بميزانية أقل من 30,000 درهم في المغرب",
@@ -74,24 +75,21 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
+
 export default function ProjetsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "الرئيسية", href: "/projets" },
+        { name: "10 أفكار مشاريع صغيرة مربحة في المغرب", href: "/projets/guides/idees-projets-petit-budget-maroc" }
+      ]}
+      title="10 أفكار مشاريع صغيرة مربحة بميزانية أقل من 30,000 درهم في المغرب"
+      readingTime="10 دقائق قراءة"
+    >
 
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">
-          10 أفكار مشاريع صغيرة مربحة بميزانية أقل من 30,000 درهم في المغرب
-        </h1>
-        <p className="mt-3 text-lg text-gray-600">(برامج الدعم + المقاول الذاتي)</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span>
-          <span>10 دقائق قراءة</span>
-        </div>
-      </header>
-
-      <div className="space-y-6 text-base leading-8 text-gray-800">
         <p className="text-lg font-medium text-emerald-700">
           فالمغرب، بدل ما تقعد تستنى "الفرصة المناسبة"، راه الفرصة كتصنع بالمبادرة والاجتهاد. بزاف ديال الشباب عندهم أفكار ولكن كيعطلهم شي حاجة: "ماعنديش الفلوس"، "الوضع صعب"، "الوقت ماشي مناسب".
         </p>
@@ -104,9 +102,9 @@ export default function ProjetsGuidePage() {
           فهاد المقال، غنعطيك 10 أفكار مشاريع عملية بميزانية أقل من 30,000 درهم، وكيفاش تبدأ بدون ما تخسر فلوسك.
         </p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. مشروع مقهى متنقل — Coffee Truck</h2>
+        <h2>1. مشروع مقهى متنقل — Coffee Truck</h2>
         <p>
           <strong>الميزانية:</strong> 25,000 - 30,000 درهم<br />
           <strong>الربح التقريبي:</strong> 7,000 - 12,000 درهم شهرياً
@@ -118,7 +116,7 @@ export default function ProjetsGuidePage() {
           مثال واقعي: "سعيد من مراكش" بدا بمقهى متنقل قدام كلية الطب (ميزانية 28,000 درهم). الآن عندو عربتين، أول واحدة ردات رأس المال فـ 4 شهور فقط. السر فالموقع — الموقع المناسب كيعني نجاح مضمون.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. مشروع خدمات التنظيف</h2>
+        <h2>2. مشروع خدمات التنظيف</h2>
         <p>
           <strong>الميزانية:</strong> 3,000 - 8,000 درهم<br />
           <strong>الربح التقريبي:</strong> 5,000 - 10,000 درهم شهرياً
@@ -127,7 +125,7 @@ export default function ProjetsGuidePage() {
           مشروع التنظيف من أسهل المشاريع لي كتطلب رأس مال صغير. كل ما تحتاج: مكنسة صناعية، مواد تنظيف، وبزاف ديال النية. الشركات، المكاتب، والفيلات فالمغرب كتطلب خدمات التنظيف باستمرار. تقدر تبدا وحدك وبعدين تطور وتجيب عمال.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. مشروع بيع الملابس عبر الإنترنت</h2>
+        <h2>3. مشروع بيع الملابس عبر الإنترنت</h2>
         <p>
           <strong>الميزانية:</strong> 8,000 - 15,000 درهم<br />
           <strong>الربح التقريبي:</strong> 6,000 - 15,000 درهم شهرياً
@@ -139,7 +137,7 @@ export default function ProjetsGuidePage() {
           نصيحة من تجربتي: راه المغاربة كيحبو الملابس العصرية بسعر معقول. الهامش ديال الربح كيكون 30-50%. التوصيل عبر "بريد المغرب" ولا "Amana".
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. مشروع تقديم الوجبات المنزلية</h2>
+        <h2>4. مشروع تقديم الوجبات المنزلية</h2>
         <p>
           <strong>الميزانية:</strong> 5,000 - 10,000 درهم<br />
           <strong>الربح التقريبي:</strong> 6,000 - 12,000 درهم شهرياً
@@ -148,7 +146,7 @@ export default function ProjetsGuidePage() {
           واش كتعرف تطيب؟ المغاربة كيحبو الأكل الصحي والمنزلي. الموظفون فالمكاتب كيدورو على وجبات فطور وغداء نظيفة وبسعر معقول. تقدر تبدأ بمطبخ فالدار ديالك وتوصل للزبائن القريبين منك.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. مشروع التصوير الفوتوغرافي</h2>
+        <h2>5. مشروع التصوير الفوتوغرافي</h2>
         <p>
           <strong>الميزانية:</strong> 15,000 - 25,000 درهم<br />
           <strong>الربح التقريبي:</strong> 5,000 - 15,000 درهم شهرياً
@@ -157,7 +155,7 @@ export default function ProjetsGuidePage() {
           فالمغرب، الطلب على التصوير كبير: الأعراس، حفلات، مناسبات، تصوير المنتوجات. كل ما تحتاج كاميرا مناسبة، عدسة، وبعض الإكسسوارات. من بعد تقدر تطور وتزود الخدمة.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. مشروع دروس الدعم والتكوين</h2>
+        <h2>6. مشروع دروس الدعم والتكوين</h2>
         <p>
           <strong>الميزانية:</strong> 2,000 - 5,000 درهم<br />
           <strong>الربح التقريبي:</strong> 4,000 - 10,000 درهم شهرياً
@@ -166,7 +164,7 @@ export default function ProjetsGuidePage() {
           عندك مهارة فشي مادة؟ واش كتعرف اللغة الفرنسية، الإنجليزية، البرمجة؟ المغرب كيعيش طلب كبير على الدروس الخصوصية. تقدر تبدأ بالتعليم عن بعد عبر Zoom، أو تستاجر قاعة صغيرة.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">7. مشروع منتجات التجميل الطبيعية</h2>
+        <h2>7. مشروع منتجات التجميل الطبيعية</h2>
         <p>
           <strong>الميزانية:</strong> 5,000 - 10,000 درهم<br />
           <strong>الربح التقريبي:</strong> 5,000 - 12,000 درهم شهرياً
@@ -175,7 +173,7 @@ export default function ProjetsGuidePage() {
           المغاربة كيتوجهو بزاف لـ produits naturels. زيت الأرڭان، الصابون البلدي، الكريمات الطبيعية. تقدر تصنع المنتوجات فالدار (بشرط النظافة والتعقيم) وتبيعها عبر الإنترنت ف Instagram.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">8. مشروع تربية الدواجن</h2>
+        <h2>8. مشروع تربية الدواجن</h2>
         <p>
           <strong>الميزانية:</strong> 10,000 - 20,000 درهم<br />
           <strong>الربح التقريبي:</strong> 5,000 - 8,000 درهم شهرياً
@@ -184,7 +182,7 @@ export default function ProjetsGuidePage() {
           الطلب على الدجاج والبيض البلدي فالمغرب كبير. راه الناس ولات كتقلب على المنتوج الطبيعي. إذا كانت عندك أرض صغيرة (فدور الضواحي)، تقدر تربي الدواجن وتبيع البيض واللحم.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">9. مشروع التوصيل — Livraison</h2>
+        <h2>9. مشروع التوصيل — Livraison</h2>
         <p>
           <strong>الميزانية:</strong> 15,000 - 20,000 درهم<br />
           <strong>الربح التقريبي:</strong> 5,000 - 10,000 درهم شهرياً
@@ -193,7 +191,7 @@ export default function ProjetsGuidePage() {
           فالمغرب 2026، الطلب على خدمات التوصيل كيزيد يوم بعد يوم. تقدر تبدا بـ scooter ولا moto. من بعد كبر النشاط واعقد شراكات مع المطاعم والمحلات الصغيرة.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900">10. مشروع صناعة الحلويات والمعجنات</h2>
+        <h2>10. مشروع صناعة الحلويات والمعجنات</h2>
         <p>
           <strong>الميزانية:</strong> 5,000 - 12,000 درهم<br />
           <strong>الربح التقريبي:</strong> 4,000 - 10,000 درهم شهرياً
@@ -202,13 +200,13 @@ export default function ProjetsGuidePage() {
           الحلويات عند المغاربة راه مطلوبة فالمناسبات (الأعراس، المواليد، رمضان). تقدر تبدا من داركم وتكبر بالطلب. الفكرة: قدم عروض خاصة للمناسبات مع تغليف أنيق.
         </p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">برامج الدعم المتاحة فالمغرب</h2>
+        <h2>برامج الدعم المتاحة فالمغرب</h2>
         <p>
           ما تنساش أن المغرب عندو برامج دعم قوية. أهم برنامجين:
         </p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>Forsa (فرصة):</strong> دعم مادي من 20,000 إلى 100,000 درهم بدون فائدة مع مرافقة. الهدف: دعم الشباب الحاملين للمشاريع.</li>
           <li><strong>INTELAKA (انطلاقة):</strong> قروض من 10,000 إلى 50,000 درهم للمقاولين الذاتيين بدون ضمانات. مدة السداد 7 سنين مع فترة سماح.</li>
           <li><strong>الوكالة الوطنية للمقاولات الصغرى والمتوسطة:</strong> مرافقة وتكوين وتوجيه.</li>
@@ -217,9 +215,9 @@ export default function ProjetsGuidePage() {
           إذا كنت باغي تعرف شنو غادي يكون دخلك الصافي من مشروعك، استعمل <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">حاسبة الراتب</Link> باش تحسب أرباحك المتوقعة.
         </p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>
           المضاربة بالمال الحرام ولا تربية المواشي شغل شريف. المهم هو النية والاجتهاد. أي مشروع من هاد الأفكار يمكن يكون البداية ديالك. الشيء المهم: <strong>ابدأ ولا تستنى الكمال</strong>. الكمال كيجي مع الوقت.
         </p>
@@ -229,7 +227,6 @@ export default function ProjetsGuidePage() {
         <p>
           الله يوفقك فمشوارك فريادة الأعمال! وشارك هاد المقال مع صاحبك لي كيدور على فكرة مشروع! 🚀
         </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

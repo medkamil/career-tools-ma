@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "كيف تصبح مقاولاً ذاتياً في المغرب 2026 (دليل كامل)",
-  description: "دليل المقاول الذاتي في المغرب 2026: شروط التسجيل فموقع المقاول الذاتي، الضرائب والإعفاءات، التصريح الشهري، والمزايا. خطوات عملية باش تولي Auto-entrepreneur.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,44 +85,36 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function AutoEntrepreneurMarocPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/projets" className="hover:text-emerald-600">المشاريع</Link>
-        {" > "}
-        <span className="text-gray-900">كيف تصبح مقاولاً ذاتياً في المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">كيف تصبح مقاولاً ذاتياً في المغرب 2026 (دليل كامل)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>12 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>المقاول الذاتي (Auto-entrepreneur) هو النظام المثالي باش تبدا مشروعك فالمغرب ببساطة وبدون تعقيدات. ف 2026، أكثر من نصف مليون مغربي مسجلين فهاد النظام، والعدد كايزيد كل عام.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم المشاريع", href: "/projets" },
+        { name: "كيف تصبح مقاولاً ذاتياً في المغرب 2026", href: "/projets/guides/auto-entrepreneur-maroc" }
+      ]}
+      title="كيف تصبح مقاولاً ذاتياً في المغرب 2026 (دليل كامل)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>المقاول الذاتي (Auto-entrepreneur) هو النظام المثالي باش تبدا مشروعك فالمغرب ببساطة وبدون تعقيدات. ف 2026، أكثر من نصف مليون مغربي مسجلين فهاد النظام، والعدد كايزيد كل عام.</p>
 
         <p>فهاد المقال، غادي نشرحوليك بالتفصيل كيفاش تسجل فالمقاول الذاتي فالمغرب 2026: الشروط، الخطوات، الضرائب، والمزايا.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو المقاول الذاتي؟</h2>
+        <h2>شنو هو المقاول الذاتي؟</h2>
         <p>المقاول الذاتي (Auto-entrepreneur) هو شخص طبيعي كايمارس نشاطاً اقتصادياً لحسابه الخاص. النظام كايتميز ب:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>مساطر إدارية مبسطة (التسجيل أونلاين ف 48 ساعة).</li>
           <li>جباية مخفضة (1% للخدمات، 2% للتجارة).</li>
           <li>محاسبة مبسطة (التصريح كل 3 شهور).</li>
           <li>تغطية اجتماعية (AMO + CNSS).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">شروط التسجيل فالمقاول الذاتي 2026</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>شروط التسجيل فالمقاول الذاتي 2026</h2>
+        <ul>
           <li><strong>الجنسية:</strong> مغربية (يمكن للأجانب المقيمين ببطاقة إقامة).</li>
           <li><strong>السن:</strong> 18 سنة فأكثر (بدون حد أقصى).</li>
           <li><strong>الإقامة:</strong> فالمغرب.</li>
@@ -136,12 +123,12 @@ export default function AutoEntrepreneurMarocPage() {
           <li><strong>الجمع مع الشغل:</strong> يمكن الجمع مع وظيفة (بعض الحالات).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">المهن المسموحة والممنوعة</h2>
+        <h2>المهن المسموحة والممنوعة</h2>
         <p><strong>مسموحة:</strong> التجارة (جميع الأنواع)، الخدمات (IT, استشارات, تنظيف, توصيل), الصناعة (تحويلية, حرفية), النقل (سيارة أجرة, دراجة), المقاولات (بناء, صيانة).</p>
         <p><strong>ممنوعة:</strong> المهن المنظمة (محاماة, طب, محاسبة), الأنشطة البنكية والتأمينية.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">خطوات التسجيل خطوة بخطوة</h2>
-        <ol className="list-decimal space-y-2 pr-6">
+        <h2>خطوات التسجيل خطوة بخطوة</h2>
+        <ol>
           <li><strong>دخل ل autoentrepreneur.ma:</strong> المنصة الرسمية للتسجيل.</li>
           <li><strong>أنشئ حساب:</strong> بإيميل صحيح وكلمة سر.</li>
           <li><strong>اختر النشاط:</strong> من لائحة الأنشطة (APE code).</li>
@@ -152,7 +139,7 @@ export default function AutoEntrepreneurMarocPage() {
           <li><strong>سجل ف CNSS:</strong> تلقائياً بعد التسجيل.</li>
         </ol>
 
-        <h2 className="text-2xl font-bold text-gray-900">الضرائب والاقتطاعات</h2>
+        <h2>الضرائب والاقتطاعات</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -172,8 +159,8 @@ export default function AutoEntrepreneurMarocPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">مزايا المقاول الذاتي</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>مزايا المقاول الذاتي</h2>
+        <ul>
           <li>تسجيل سريع ومجاني تقريباً (500 درهم).</li>
           <li>ضرائب مخفضة مقارنة ب SARL.</li>
           <li>محاسبة مبسطة (تصريح كل 3 شهور).</li>
@@ -183,17 +170,17 @@ export default function AutoEntrepreneurMarocPage() {
           <li>يمكن التوقف بسهولة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">عيوب المقاول الذاتي</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>عيوب المقاول الذاتي</h2>
+        <ul>
           <li>المسؤولية غير محدودة (الديون على الذمة المالية الشخصية).</li>
           <li>الحد الأقصى للمعاملات (500,000 / 2,000,000 درهم).</li>
           <li>صعوبة فالحصول على قروض كبيرة.</li>
           <li>لا يمكن توظيف أجير (غير مسموح).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">التصريح الشهري/الثلاثي</h2>
+        <h2>التصريح الشهري/الثلاثي</h2>
         <p>كمقاول ذاتي، خاصك تخلص الضرائب والاقتطاعات كل 3 شهور. الخطوات:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>دخل ل autoentrepreneur.ma.</li>
           <li>دخل الدخل (Chiffre d&apos;affaires) ديال الثلاثة شهور.</li>
           <li>ادفع الضريبة أونلاين (بطاقة بنكية).</li>
@@ -201,30 +188,18 @@ export default function AutoEntrepreneurMarocPage() {
         </ul>
         <p>إذا ما كانش دخل فالثلا شهور (صفر)، خاصك تقدم تصريح صفر (Déclaration zéro).</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">CNSS و AMO للمقاول الذاتي</h2>
+        <h2>CNSS و AMO للمقاول الذاتي</h2>
         <p>بعد التسجيل فالمقاول الذاتي، كايتسجل ف CNSS تلقائياً. كاتصدر ليك بطاقة CNSS. التغطية كاتشمل:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>AMO:</strong> التأمين الصحي (يغطي 70-90% من المصاريف الطبية).</li>
           <li><strong>التقاعد:</strong> معاش بعد 65 سنة.</li>
           <li><strong>التعويضات العائلية:</strong> 250 درهم لكل طفل.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>المقاول الذاتي هو أحسن طريقة باش تبدا مشروعك فالمغرب بسرعة وبدون تعقيدات. ف 2026، النظام ولا أكثر تطوراً. سجل على autoentrepreneur.ma، ابدأ مشروعك، واستفد من المزايا الجبائية والاجتماعية. المستقبل فالمقاولاتية يبدأ ب Auto-entrepreneur.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/projets/guides/programme-forsa-2026" className="text-emerald-600 underline hover:text-emerald-800">برنامج Forsa (فرصة)</Link>
-          {" | "}
-          <Link href="/projets/guides/etude-marche-projet" className="text-emerald-600 underline hover:text-emerald-800">الدراسة السوقية للمشروع</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

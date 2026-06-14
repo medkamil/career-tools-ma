@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { Calculator, ShieldCheck, AlertTriangle } from "lucide-react";
 import { SalaryCalculator } from "./components/SalaryCalculator";
 
 export const metadata: Metadata = {
@@ -58,29 +60,54 @@ export default function SalaryCalculatorPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="mx-auto max-w-4xl px-4 py-12 sm:py-16">
-        <div className="mb-10 text-center">
-          <h1 className="text-3xl font-bold text-gray-900">حاسبة الراتب الصافي في المغرب</h1>
-          <p className="mt-3 text-lg text-gray-600">
-            احسب صافي راتبك الشهري بعد خصم CNSS، AMO، والضريبة على الدخل (IR) وفقًا للقانون المغربي
-          </p>
-        </div>
-        <SalaryCalculator />
-        <div className="mt-12 space-y-4 rounded-xl border border-gray-200 bg-white p-6">
-          <h2 className="text-lg font-semibold text-gray-900">كيف يتم حساب الراتب في المغرب؟</h2>
-          <div className="space-y-3 text-sm leading-7 text-gray-600">
-            <p><strong>1. اقتطاع CNSS:</strong> 6.74% من الراتب الخام في حدود 6,000 درهم.</p>
-            <p><strong>2. اقتطاع AMO:</strong> 2.26% من الراتب الخام بدون سقف.</p>
-            <p><strong>3. المصاريف المهنية:</strong> 20% من الراتب بعد الاقتطاعات في حدود 2,500 درهم.</p>
-            <p><strong>4. الضريبة IR:</strong> تحسب حسب الشرائح الضريبية الشهرية.</p>
-            <p><strong>5. صافي الراتب:</strong> الراتب الخام مطروحاً منه الاقتطاعات والضريبة.</p>
+      <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50/80 to-white pb-0">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-200/30 via-transparent to-transparent" />
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 shadow-lg shadow-emerald-200/50">
+              <Calculator className="h-8 w-8 text-white" />
+            </div>
+            <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+              أداة مجانية
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              <span className="bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
+                حاسبة الراتب الصافي
+              </span>
+            </h1>
+            <p className="mt-4 text-lg text-gray-600">
+              احسب صافي راتبك الشهري بعد خصم CNSS، AMO، والضريبة على الدخل (IR) وفقًا للقانون المغربي
+            </p>
           </div>
         </div>
-        <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-6">
-          <p className="text-sm font-semibold text-amber-800">تنبيه</p>
-          <p className="mt-1 text-sm text-amber-700">
-            هذه الحاسبة تقريبية لأغراض إعلامية. قد تختلف الاقتطاعات حسب وضعيتك المهنية.
-          </p>
+      </section>
+
+      <div className="mx-auto max-w-4xl px-4 py-12 sm:py-16">
+        <SalaryCalculator />
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100">
+              <ShieldCheck className="h-5 w-5 text-emerald-600" />
+            </div>
+            <h2 className="text-lg font-semibold text-gray-900">كيف يتم حساب الراتب في المغرب؟</h2>
+            <div className="mt-3 space-y-2 text-sm leading-7 text-gray-600">
+              <p><strong>1. اقتطاع CNSS:</strong> 6.74% من الراتب الخام في حدود 6,000 درهم.</p>
+              <p><strong>2. اقتطاع AMO:</strong> 2.26% من الراتب الخام بدون سقف.</p>
+              <p><strong>3. المصاريف المهنية:</strong> 20% من الراتب بعد الاقتطاعات في حدود 2,500 درهم.</p>
+              <p><strong>4. الضريبة IR:</strong> تحسب حسب الشرائح الضريبية الشهرية.</p>
+              <p><strong>5. صافي الراتب:</strong> الراتب الخام مطروحاً منه الاقتطاعات والضريبة.</p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-amber-100 bg-amber-50/50 p-6 shadow-sm">
+            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
+              <AlertTriangle className="h-5 w-5 text-amber-600" />
+            </div>
+            <h2 className="text-lg font-semibold text-amber-900">تنبيه</h2>
+            <p className="mt-3 text-sm text-amber-700">
+              هذه الحاسبة تقريبية لأغراض إعلامية. قد تختلف الاقتطاعات حسب وضعيتك المهنية. يرجى استشارة خبير ضريبي للحصول على معلومات دقيقة.
+            </p>
+          </div>
         </div>
       </div>
     </>

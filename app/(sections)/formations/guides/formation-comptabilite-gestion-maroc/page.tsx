@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "تكوين المحاسبة والتدبير في المغرب: المدارس، الشهادات، والرواتب",
@@ -30,33 +31,34 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", position: 3, name: "تكوين المحاسبة والتدبير في المغرب", item: "https://tawdifpro.ma/formations/guides/formation-comptabilite-gestion-maroc" },
 ]};
 
+const schemas = [articleSchema, faqSchema, breadcrumbSchema];
+
+
 export default function FormationsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">تكوين المحاسبة والتدبير في المغرب 2026: المدارس، الشهادات، والرواتب</h1>
-        <p className="mt-3 text-lg text-gray-600">ISCAE + ENCG + OFPPT + خبراء المحاسبة</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span><span>8 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">المحاسبة والتدبير (Comptabilite et Gestion) راهو المجال لي كيدير العمود الفقري لأي مؤسسة. كل شركة، كل مقاولة، كل جمعية كتحتاج محاسب. هاد المجال معروف بالاستقرار والطلب المستمر.</p>
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "الرئيسية", href: "/formations" },
+        { name: "تكوين المحاسبة والتدبير في المغرب", href: "/formations/guides/formation-comptabilite-gestion-maroc" }
+      ]}
+      title="تكوين المحاسبة والتدبير في المغرب: المدارس، الشهادات، والرواتب"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">المحاسبة والتدبير (Comptabilite et Gestion) راهو المجال لي كيدير العمود الفقري لأي مؤسسة. كل شركة، كل مقاولة، كل جمعية كتحتاج محاسب. هاد المجال معروف بالاستقرار والطلب المستمر.</p>
         <p>سوق الشغل المغربي كيطلب بزاف ديال المحاسبين والمتدبرين، خصوصا مع التطورات التنظيمية (CNSS, Impots) والتوجه نحو المعايير الدولية. فهاد المقال غنوضح ليكم كل حاجة على تكوين المحاسبة فالمغرب.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-2xl font-bold text-gray-900">أنواع التكوين المحاسبي فالمغرب</h2>
+        <hr />
+        <h2>أنواع التكوين المحاسبي فالمغرب</h2>
         <p>كاين مستويات مختلفة: تكوين تقني (Technicien Specialise en Comptabilite) من OFPPP، إجازة مهنية فالمحاسبة من الكليات، ISCAE (Expertise Comptable)، ENCG (Gestion Financiere).</p>
-        <h2 className="text-2xl font-bold text-gray-900">أفضل المعاهد لتعلم المحاسبة</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>أفضل المعاهد لتعلم المحاسبة</h2>
+        <ul>
           <li><strong>ISCAE:</strong> الدار البيضاء والرباط. أشهر معهد للمحاسبة. التكوين 5 سنين. عمومي (تقريبا 15,000 DH سنويا).</li>
           <li><strong>ENCG:</strong> فعدة مدن (الدار البيضاء، فاس، أكادير، طنجة...). 3 سنين. عمومي (تقريبا 10,000 - 15,000 DH).</li>
           <li><strong>OFPPT:</strong> جميع المدن. تقني متخصص فالمحاسبة. سنتين. مجاني.</li>
           <li><strong>FEG (Facultes d Economie):</strong> جميع الجامعات. الإجازة 3 سنين. مجاني.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">الرواتب المتوقعة فالمحاسبة</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>الرواتب المتوقعة فالمحاسبة</h2>
+        <ul>
           <li><strong>محاسب مبتدئ:</strong> 4,000 - 6,000 DH</li>
           <li><strong>محاسب مالي:</strong> 7,000 - 10,000 DH</li>
           <li><strong>محاسب عام (Senior):</strong> 10,000 - 15,000 DH</li>
@@ -64,27 +66,18 @@ export default function FormationsGuidePage() {
           <li><strong>خبير محاسب:</strong> 25,000 - 60,000 DH</li>
         </ul>
         <p>استعمل <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">حاسبة الراتب</Link> باش تعرف صافي راتبك.</p>
-        <h2 className="text-2xl font-bold text-gray-900">الشهادات الدولية فالمحاسبة</h2>
+        <h2>الشهادات الدولية فالمحاسبة</h2>
         <p>هاد الشهادات كتزيد من فرصك فسوق الشغل وتقدر تزيد فالقيمة ديالك:</p>
-        <ul className="list-disc space-y-1 pr-6">
+        <ul>
           <li><strong>ACCA (Association of Chartered Certified Accountants):</strong> شهادة بريطانية معترف بها عالميا.</li>
           <li><strong>CMA (Certified Management Accountant):</strong> شهادة أمريكية فالمحاسبة الإدارية.</li>
           <li><strong>CIMA (Chartered Institute of Management Accountants):</strong> شهادة دولية فالمحاسبة الإدارية.</li>
           <li><strong>Expertise Comptable (ISCAE):</strong> الشهادة العليا فالمحاسبة فالمغرب.</li>
         </ul>
-        <hr className="border-gray-200" />
-        <h2 className="text-xl font-bold text-gray-900">الخلاصة</h2>
+        <hr />
+        <h2>الخلاصة</h2>
         <p>تكوين المحاسبة والتدبير من الخيارات الممتازة للشباب المغربي. طلب مستقر، رواتب جيدة، وتطور مهني واضح. اختر المسار لي يناسبك (OFPPT للسرعة، ISCAE للعمق، ENCG للتوازن) وابدأ فالتعلم.</p>
         <p className="text-emerald-700 font-medium">شارك هاد المقال مع صاحبك لي كيبغي يخدم فالمحاسبة!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          📚 اقرأ أيضاً:{" "}
-          <Link href="/formations/guides/formation-informatique-developpement-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين البرمجة والمعلوميات</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-langue-anglais-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين اللغة الإنجليزية</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

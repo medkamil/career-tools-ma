@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "حقوق الأجير في القانون المغربي 2026 (دليل شامل)",
-  description: "حقوق الأجير في القانون المغربي 2026: العطل المؤدى عنها والتقاعد والتعويضات وساعات العمل و إنهاء العقد. دليل شامل حسب مدونة الشغل لكل مستخدم.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,45 +85,37 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function DroitsSalarieMarocPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">حقوق الأجير في القانون المغربي 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">حقوق الأجير في القانون المغربي 2026 (دليل شامل)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>13 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>مدونة الشغل المغربية (Code du Travail) هي القانون لي كايحمي حقوق الأجير والمشغل ف نفس الوقت. ف 2026، بزاف ديال المستخدمين ما كايعرفوش حقوقهم الكاملة. هادشي كايخلّيهم عرضة للاستغلال بدون ما يدريو.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "حقوق الأجير في القانون المغربي 2026", href: "/emplois/guides/droits-salarie-maroc" }
+      ]}
+      title="حقوق الأجير في القانون المغربي 2026 (دليل شامل)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>مدونة الشغل المغربية (Code du Travail) هي القانون لي كايحمي حقوق الأجير والمشغل ف نفس الوقت. ف 2026، بزاف ديال المستخدمين ما كايعرفوش حقوقهم الكاملة. هادشي كايخلّيهم عرضة للاستغلال بدون ما يدريو.</p>
 
         <p>هاد المقال غادي يشرحلك حقوقك كأجير فالمغرب بالتفصيل. من العطل والتعويضات لساعات العمل وإنهاء العقد. دليل كامل باش تحمي راسك.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. ساعات العمل (Horaires de Travail)</h2>
+        <h2>1. ساعات العمل (Horaires de Travail)</h2>
         <p>القانون المغربي كايحدد ساعات العمل ف:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>القطاعات التجارية والصناعية والحرفية:</strong> 44 ساعة فالأسبوع (8.8 ساعة فاليوم).</li>
           <li><strong>القطاع الفلاحي:</strong> 48 ساعة فالأسبوع.</li>
           <li><strong>العمل الإضافي (Heures supplémentaires):</strong> الزيادة 25% ف النهار و 50% ف الليل (من 22:00 ل 6:00).</li>
           <li><strong>الراحة الأسبوعية:</strong> الأحد هو اليوم القانوني للراحة. أو يوم كامل بعد 6 أيام عمل.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. العطل السنوية (Congés Annuels)</h2>
+        <h2>2. العطل السنوية (Congés Annuels)</h2>
         <p>كل أجير عندو الحق ف 18 يوم عمل من العطلة السنوية المؤدى عنها بعد 6 أشهر من الخدمة. هاد العطلة كاتزاد مع الأقدمية:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>من 0 ل 5 سنين: 18 يوم (3 أسابيع).</li>
           <li>من 5 ل 10 سنين: 19 يوم.</li>
           <li>من 10 ل 15 سنة: 20 يوم.</li>
@@ -136,11 +123,11 @@ export default function DroitsSalarieMarocPage() {
           <li>هاد الزيادة مستمرة: يوم كل 5 سنين.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. التعويضات (Indemnités)</h2>
+        <h2>3. التعويضات (Indemnités)</h2>
 
         <h3 className="text-xl font-bold text-gray-900">3.1. تعويض الفصل (Indemnité de Licenciement)</h3>
         <p>إذا كان الفصل غير قانوني، أو حتى قانوني ولكن بسبب اقتصادي، عندك الحق فتعويض. كايحتسب على أساس:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>أقل من 5 سنين: 96 ساعة من الأجر (12 يوم).</li>
           <li>5 ل 10 سنين: 144 ساعة (18 يوم).</li>
           <li>10 ل 15 سنة: 192 ساعة (24 يوم).</li>
@@ -152,11 +139,11 @@ export default function DroitsSalarieMarocPage() {
         <h3 className="text-xl font-bold text-gray-900">3.2. تعويض العطلة غير المستعملة</h3>
         <p>فاش كاتخرج من الخدمة، المشغل خاصو يدفع ليك تعويض على العطل لي ما خديتيهاش. كايحتسب على أساس 1.5 يوم أجر لكل شهر من الخدمة فالسنة لي فاتت.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. إنهاء العقد (Rupture du Contrat)</h2>
+        <h2>4. إنهاء العقد (Rupture du Contrat)</h2>
 
         <h3 className="text-xl font-bold text-gray-900">4.1. الاستقالة (Démission)</h3>
         <p>عندك الحق تستقيل ف أي وقت. ولكن خاصك تحترم مدة الإخطار (Préavis):</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>الأجراء العاديون: 8 أيام.</li>
           <li>الأطر (Cadres): شهر واحد.</li>
           <li>المسيرون (Dirigeants): شهرين.</li>
@@ -165,18 +152,18 @@ export default function DroitsSalarieMarocPage() {
         <h3 className="text-xl font-bold text-gray-900">4.2. الفصل (Licenciement)</h3>
         <p>المشغل ما يقدرش يفصلك غير فحالات محددة فالقانون: خطأ جسيم، أسباب اقتصادية، عدم الكفاءة. ف كل الحالات، خاص المشغل يتبع الإجراءات القانونية: استدعاء للاستماع، رسالة بالفصل، إشعار CNSS.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. التغطية الصحية (CNSS)</h2>
+        <h2>5. التغطية الصحية (CNSS)</h2>
         <p>CNSS هي الضمان الاجتماعي فالمغرب. المشغل خاصو يسجلك ف CNSS ف أول 30 يوم من الخدمة. التغطية كاتشمل:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>AMO (التأمين الإجباري عن المرض):</strong> كايغطي 70-90% من مصاريف العلاج.</li>
           <li><strong>التقاعد:</strong> معاش بعد 65 سنة (على الأقل 3240 يوم من التصريح).</li>
           <li><strong>تعويضات العائلات (Allocations Familiales):</strong> 250 درهم فالشهر لكل طفل (3 أطفال كحد أقصى).</li>
           <li><strong>تعويضات البطالة:</strong> إذا توفرت الشروط.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. العطل الرسمية المؤدى عنها</h2>
+        <h2>6. العطل الرسمية المؤدى عنها</h2>
         <p>فالمغرب 2026، العطل الرسمية المؤدى عنها (Fêtes légales payées) هي:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>1 يناير: رأس السنة الميلادية.</li>
           <li>11 يناير: تقديم وثيقة الاستقلال.</li>
           <li>1 ماي: عيد الشغل.</li>
@@ -189,24 +176,24 @@ export default function DroitsSalarieMarocPage() {
           <li>العطل الدينية (حسب التقويم الهجري): عيد الفطر (يومين)، عيد الأضحى (يومين)، فاتح محرم، المولد النبوي.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">7. حقوق المرأة العاملة</h2>
+        <h2>7. حقوق المرأة العاملة</h2>
         <p>مدونة الشغل كاتعطي حقوق خاصة للمرأة:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>عطلة الأمومة:</strong> 14 أسبوع (98 يوم) مؤدى عنها.</li>
           <li><strong>فترات الرضاعة:</strong> ساعة فاليوم مخصصة للرضاعة (مؤدى عنها) لمدة 6 أشهر.</li>
           <li><strong>منع التمييز:</strong> القانون كايمنع التمييز بين الرجل والمرأة فالأجر والتوظيف.</li>
           <li><strong>حماية من الفصل:</strong> ما يمكنش طرد المرأة بسبب الحمل ولا الأمومة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">8. كيفاش تحمي حقوقك</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>8. كيفاش تحمي حقوقك</h2>
+        <ul>
           <li><strong>الوثائق:</strong> احتفظ بنسخة من العقد، وثائق الأجر، وكل المراسلات.</li>
           <li><strong>CNSS:</strong> تأكد من تسجيلك ف CNSS (تقدر تتحقق من l inscriptions عبر الموقع dina.ma).</li>
           <li><strong>مفتشية الشغل (Inspection du Travail):</strong> إذا كان عندك مشكل، تقدر تقدم شكوى لمفتش الشغل الجهوي.</li>
           <li><strong>المحكمة:</strong> يمكنك اللجوء للمحكمة الاجتماعية (Tribunal Social) خلال 90 يوم من تاريخ النزاع.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">9. جدول تعويضات الفصل حسب سنوات الأقدمية</h2>
+        <h2>9. جدول تعويضات الفصل حسب سنوات الأقدمية</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -227,22 +214,10 @@ export default function DroitsSalarieMarocPage() {
           </table>
         </div>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>معرفة حقوقك كأجير فالمغرب هو أفضل حماية ليك. القانون كاين ولكن خاصك تعرف كيفاش تستعملو. ف 2026، سوق الشغل فالمغرب كايتطور، وحماية المستخدمين كاتزيد. كن واعي بحقوقك، واعرف وين تروح إذا حسيتي بلي تم انتهاكها.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/cdd-cdi-maroc" className="text-emerald-600 underline hover:text-emerald-800">الفرق بين CDD و CDI</Link>
-          {" | "}
-          <Link href="/emplois/guides/indemnite-licenciement-maroc" className="text-emerald-600 underline hover:text-emerald-800">تعويضات الفصل</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

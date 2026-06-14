@@ -5,7 +5,7 @@ function Card({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
-        "rounded-xl border border-gray-200 bg-white shadow-sm",
+        "rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-200 hover:shadow-md",
         className,
       )}
       {...props}
@@ -31,7 +31,7 @@ function CardDescription({
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <p className={cn("mt-1 text-sm text-gray-500", className)} {...props} />
+    <p className={cn("mt-1 text-sm text-gray-500 leading-relaxed", className)} {...props} />
   );
 }
 

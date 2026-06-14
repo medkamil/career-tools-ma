@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "الحد الأدنى للأجور SMIG في المغرب 2026 (دليل كامل)",
-  description: "SMIG 2026 المغرب: الأجر الأدنى بالساعة والشهر، SMAG للفلاحة، القطاعات المعنية، الزيادات القانونية، وحساب الأجر الصافي. دليل كامل ومحدث.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,38 +86,30 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function SmigSalaireMinimumMarocPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">الحد الأدنى للأجور SMIG في المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">الحد الأدنى للأجور SMIG في المغرب 2026 (دليل كامل)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>12 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>SMIG (Salaire Minimum Interprofessionnel Garanti) هو الحد الأدنى للأجور فالمغرب. كايضمن لكل أجير أجر لا يقل عن مبلغ معين. ف 2026، SMIG ولا موضوع مهم بزاف فالنقاشات الاجتماعية والاقتصادية فالمغرب.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "الحد الأدنى للأجور SMIG في المغرب 2026", href: "/emplois/guides/smig-salaire-minimum-maroc" }
+      ]}
+      title="الحد الأدنى للأجور SMIG في المغرب 2026 (دليل كامل)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>SMIG (Salaire Minimum Interprofessionnel Garanti) هو الحد الأدنى للأجور فالمغرب. كايضمن لكل أجير أجر لا يقل عن مبلغ معين. ف 2026، SMIG ولا موضوع مهم بزاف فالنقاشات الاجتماعية والاقتصادية فالمغرب.</p>
 
         <p>فهاد المقال غادي نشرحو كل شي على SMIG فالمغرب 2026: القيمة الحالية، الفرق بين SMIG و SMAG، كيفية الحساب، والقطاعات المعنية. دليل كامل باش تفهم حقوقك.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو SMIG؟</h2>
+        <h2>شنو هو SMIG؟</h2>
         <p>SMIG هو Salaire Minimum Interprofessionnel Garanti (الحد الأدنى القانوني للأجور بين المهن). كايحدد من قبل الحكومة بالتشاور مع النقابات (Syndicats) والاتحاد العام للمقاولات المغربية (CGEM). الهدف هو ضمان مستوى معيشة لائق للأجراء.</p>
 
         <p>فالمغرب، SMIG كايتطبق على:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الصناعة:</strong> جميع القطاعات الصناعية (تحويلية، استخراجية، طاقية).</li>
           <li><strong>التجارة:</strong> جميع الأنشطة التجارية.</li>
           <li><strong>المهن الحرة:</strong> المحاماة، الطب، الهندسة، المحاسبة.</li>
@@ -129,7 +117,7 @@ export default function SmigSalaireMinimumMarocPage() {
           <li><strong>الخدمات:</strong> الفنادق، المطاعم، النقل.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">SMIG 2026 فالمغرب: الأرقام الرسمية</h2>
+        <h2>SMIG 2026 فالمغرب: الأرقام الرسمية</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -149,17 +137,17 @@ export default function SmigSalaireMinimumMarocPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">الفرق بين SMIG و SMAG</h2>
+        <h2>الفرق بين SMIG و SMAG</h2>
         <p>SMAG (Salaire Minimum Agricole Garanti) هو الحد الأدنى للأجور فالقطاع الفلاحي. الفرق الرئيسي هو أن SMAG أقل من SMIG (15.82 مقابل 16.52 درهم فالساعة). السبب هو:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>ساعات العمل ف الفلاحة 48 ساعة فالأسبوع (مقابل 44 ساعة فالصناعة).</li>
           <li>الطبيعة الموسمية للعمل الفلاحي.</li>
           <li>التكاليف الإضافية (السكن، المأكل) لي كايوفرها المشغل فبعض الحالات.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">كيفاش كايتحتسب SMIG الشهري؟</h2>
+        <h2>كيفاش كايتحتسب SMIG الشهري؟</h2>
         <p>الحساب كايدوي على الشكل التالي:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الأجر بالساعة:</strong> 16.52 درهم.</li>
           <li><strong>عدد ساعات العمل ف الأسبوع:</strong> 44 ساعة.</li>
           <li><strong>عدد الأسابيع ف الشهر:</strong> 4.33 (52 أسبوع ÷ 12 شهر).</li>
@@ -167,16 +155,16 @@ export default function SmigSalaireMinimumMarocPage() {
         </ul>
         <p>الأجر الصافي (Net) كايكون حوالي 2,800 - 3,000 درهم بعد خصم CNSS (4.48%), AMO (2%), والتضامن (1%).</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو كايشمل SMIG؟</h2>
+        <h2>شنو كايشمل SMIG؟</h2>
         <p>SMIG هو الأجر الأساسي الأدنى. التعويضات التالية كاتزاد عليه:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>تعويض النقل (Indemnité de transport):</strong> 30 - 50 درهم فاليوم حسب القطاع.</li>
           <li><strong>تعويض المأكل (Indemnité de panier):</strong> 30 - 50 درهم فاليوم.</li>
           <li><strong>تعويض الخبرة (Prime d&apos;ancienneté):</strong> 5% من الأجر كل 3 سنين (حتى 20%).</li>
           <li><strong>تعويض المردودية (Prime de rendement):</strong> حسب أداء الموظف.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">تطور SMIG فالمغرب (2020 - 2026)</h2>
+        <h2>تطور SMIG فالمغرب (2020 - 2026)</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -196,38 +184,26 @@ export default function SmigSalaireMinimumMarocPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">القطاعات المستثناة من SMIG</h2>
+        <h2>القطاعات المستثناة من SMIG</h2>
         <p>ما كايتطبقش SMIG على:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الوظيفة العمومية:</strong> الموظفون عندهم نظام أجور خاص (Statut de la fonction publique).</li>
           <li><strong>المقاولون الذاتيون (Auto-entrepreneurs):</strong> حيت كايشتغلو لحسابهم.</li>
           <li><strong>العمال المنزليون:</strong> (Les travailleurs domestiques) حالياً خارج التغطية (ولكن قانون جديد ف الطريق).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">كيفاش تحمي حقوقك إذا SMIG ما كايتطبقش؟</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>كيفاش تحمي حقوقك إذا SMIG ما كايتطبقش؟</h2>
+        <ul>
           <li><strong>جمع الوثائق:</strong> عقد العمل، فواتير الأجر، ساعات العمل المسجلة.</li>
           <li><strong>مفتشية الشغل:</strong> قدم شكوى للمفتشية الجهوية للشغل (Inspection Régionale du Travail).</li>
           <li><strong>النقابة:</strong> اتصل بالنقابة ديال القطاع ديالك.</li>
           <li><strong>المحكمة:</strong> قدم شكوى للمحكمة الاجتماعية (Tribunal Social).</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>SMIG هو حق أساسي لكل أجير فالمغرب. ف 2026، الأجر الأدنى هو 16.52 درهم فالساعة (3,171 MAD فالشهر). إذا المشغل كايصرف أقل من هاد المبلغ، عندك الحق فالشكوى. استعمل <Link href="/salary-calculator" className="text-emerald-600 underline">حاسبة الراتب</Link> باش تعرف الأجر الصافي ديالك.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/droits-salarie-maroc" className="text-emerald-600 underline hover:text-emerald-800">حقوق الأجير</Link>
-          {" | "}
-          <Link href="/emplois/guides/salaire-moyen-maroc-par-secteur" className="text-emerald-600 underline hover:text-emerald-800">متوسط الرواتب حسب القطاع</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

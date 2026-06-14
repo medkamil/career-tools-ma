@@ -27,8 +27,10 @@ const footerColumns = [
       { href: "/cv-generator", label: "مولد السيرة الذاتية" },
       { href: "/salary-calculator", label: "حاسبة الراتب" },
       { href: "/compensation-calculator", label: "حاسبة التعويضات" },
-      { href: "/cheque-printer", label: "طباعة الشيك" },
       { href: "/devis-generator", label: "عرض السعر (Devis)" },
+      { href: "/facture-generator", label: "الفاتورة (Facture)" },
+      { href: "/pension-calculator", label: "المعاش التقاعدي" },
+      { href: "/cheque-printer", label: "طباعة الشيك" },
     ],
   },
   {
@@ -49,15 +51,15 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-gray-50">
+    <footer className="border-t border-gray-100 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="mb-4 text-sm font-semibold text-gray-900">
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">
                 {column.title}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -75,14 +77,16 @@ export function Footer() {
 
         <div className="mt-10 border-t border-gray-200 pt-8">
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <Briefcase className="h-5 w-5 text-emerald-600" />
-              <span className="text-sm font-bold text-gray-900">
+            <Link href="/" className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-sm">
+                <Briefcase className="h-4 w-4 text-white" />
+              </div>
+              <span className="text-sm font-bold text-gray-900 tracking-tight">
                 {siteConfig.name}
               </span>
             </Link>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -91,10 +95,10 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 transition-colors hover:text-emerald-600"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 transition-colors hover:bg-emerald-100 hover:text-emerald-600"
                     aria-label={social.label}
                   >
-                    <Icon className="h-5 w-5" />
+                    <Icon className="h-4 w-4" />
                   </a>
                 );
               })}
@@ -102,8 +106,7 @@ export function Footer() {
           </div>
 
           <p className="mt-6 text-center text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} {siteConfig.name}. جميع الحقوق
-            محفوظة.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. جميع الحقوق محفوظة.
           </p>
         </div>
       </div>

@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "دليل العمل عن بعد في المغرب 2026: العقود والحقوق والنصائح",
-  description: "دليل شامل للعمل عن بعد (Travail a Distance) في المغرب 2026. شروط العقد، الحقوق القانونية، كيفية إيجاد وظائف عن بعد، والإنتاجية.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -82,35 +77,28 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function TravailDistancePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">العمل عن بعد فالمغرب</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">دليل العمل عن بعد في المغرب 2026: العقود والحقوق والنصائح</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>9 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>من بعد جائحة كورونا، العمل عن بعد (Travail à Distance) فالمغرب تحول من رفاهية لضرورة. ولي كاينة دابا ف 2026، بزاف ديال الشركات كاتعطيه كخيار دائم للموظفين. даже بعض الشركات ولاات remote first (كاتفضل العمل عن بعد على الحضور للمكتب). فهاد المقال، غادي نعطيك دليل كامل للعمل عن بعد فالمغرب: العقود، الحقوق، كيفاش تلقى الخدمة، ونصائح للإنتاجية.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "دليل العمل عن بعد في المغرب 2026", href: "/emplois/guides/travail-distance-maroc" }
+      ]}
+      title="دليل العمل عن بعد في المغرب 2026: العقود والحقوق والنصائح"
+      readingTime="10 دقائق قراءة"
+    >
+<p>من بعد جائحة كورونا، العمل عن بعد (Travail à Distance) فالمغرب تحول من رفاهية لضرورة. ولي كاينة دابا ف 2026، بزاف ديال الشركات كاتعطيه كخيار دائم للموظفين. даже بعض الشركات ولاات remote first (كاتفضل العمل عن بعد على الحضور للمكتب). فهاد المقال، غادي نعطيك دليل كامل للعمل عن بعد فالمغرب: العقود، الحقوق، كيفاش تلقى الخدمة، ونصائح للإنتاجية.</p>
 
         <p>العمل عن بعد فالمغرب معترف به قانونيا من خلال تعديلات مدونة الشغل لي دازت ف السنوات الأخيرة. القانون كايعترف بنوعين: travail à distance النظامي (فيه إطار قانوني كامل مع حقوق وواجبات)، و télétravail المؤقت (فاش كاتكون ظروف استثنائية بحال جائحة ولا مشكلة فالمكتب). الأجير ف العمل عن بعد عندو نفس الحقوق ديال الأجير فالمكتب (نفس الأجر، نفس التغطية، نفس الإجازات).</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. مزايا العمل عن بعد</h2>
+        <h2>1. مزايا العمل عن بعد</h2>
         <p>العمل عن بعد عندو مزايا كبيرة لي كاتخليه خيار مغري للبزاف ديال الشباب المغربي:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>توفير الوقت والفلوس:</strong> ما كاينش التنقل اليومي (اللي فكازا كاياخد 2 ل 3 ساعات ف النهار). كاتوفر فالكار والبنزين وحتى فالملبس. التوفير الشهري يقدر يوصل ل 1,000 ل 2,000 درهم.</li>
           <li><strong>المرونة:</strong> تقدر تخدم فالساعات لي تناسبك (فحدود المعقول). بعض الشركات كاتعطي حرية فالتوقيت (Flexible Hours).</li>
           <li><strong>التوازن بين الخدمة والحياة:</strong> تقدر تجمع بين الخدمة والحياة العائلية. مثلا، تكون حاضر لولادك فاش كايدوزو من المدرسة.</li>
@@ -118,9 +106,9 @@ export default function TravailDistancePage() {
           <li><strong>الإنتاجية:</strong> بزاف ديال الناس كايخدمو أحسن من دارهم منين ما كاينش الضوضاء والمقاطعات ديال المكتب.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. عيوب العمل عن بعد فالمغرب</h2>
+        <h2>2. عيوب العمل عن بعد فالمغرب</h2>
         <p>ولكن، ما كلشي وردي. العمل عن بعد عندو تحديات خاصة فالمغرب:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>العزلة الاجتماعية:</strong> قلة التفاعل مع الزملاء كاتخلي بعض الناس كايحسو بالوحدة. البعض كايتعرض لـ bore-out (الملل المهني). الحل: خرج مع الأصحاب فالفترة الليلية، ولا خدم من shared space (فضاء مشترك) فالمدينة.</li>
           <li><strong>صعوبة الفصل بين الخدمة والحياة:</strong> الخدمة كاتدخل على الحياة الشخصية. منين كاتخدم من دارك، كايبان ليك دايما كاتخدم. الحل: حدد مساحة مخصصة للخدمة، وحدد ساعة باش توقف.</li>
           <li><strong>الانترنت:</strong> فبعض المناطق فالمغرب، الأنترنيت ما زال غير مستقر. فالمدن الصغيرة والقرى، الـ ADSL كايكون بطيء و الـ 4G ما كايكفيش. الحل: استثمر فـ Fibre Optique (كاينة دابا فبزاف ديال المدن) ولا فـ 4G مكرر جيد.</li>
@@ -128,9 +116,9 @@ export default function TravailDistancePage() {
           <li><strong>الترقية المهنية:</strong> منين كاتكون بعيد على المكتب، كاتكون خارج الأنظار، والترقية كاتكون أبطأ. الحل: تواصل بزاف مع المدير، واهم باش يشوفوك.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. كيفية إيجاد وظيفة عن بعد</h2>
+        <h2>3. كيفية إيجاد وظيفة عن بعد</h2>
         <p>لقاء وظيفة عن بعد فالمغرب ف 2026 كايتطلب استراتيجية واضحة. هاد هي أفضل الطرق:</p>
-        <ol className="list-decimal space-y-2 pr-6">
+        <ol>
           <li><strong>المنصات المغربية:</strong> Rekrute.ma (كاتفلتر ب "Télétravail" ولا "Remote")، Anapec.ma، Hays.ma، و Tawdif Pro طبعا.</li>
           <li><strong>LinkedIn:</strong> الأهم. فعّل الـ Open to Work وخلي فيلتر Remote. تواصل مع الـ Recruiters فالمغرب. نظم البروفيل ديالك باش يجذب العروض.</li>
           <li><strong>المنصات العالمية:</strong> Upwork و Fiverr (للخدمات الحرة - Freelance)، Remote.com، We Work Remotely، و FlexJobs. بزاف ديال المغاربة كايخدمو على هاد المنصات بالدولار.</li>
@@ -138,9 +126,9 @@ export default function TravailDistancePage() {
           <li><strong>الشبكات الاجتماعية:</strong> مجموعات الفيسبوك المتخصصة (مثلا "الوظائف عن بعد فالمغرب").</li>
         </ol>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. أدوات العمل عن بعد</h2>
+        <h2>4. أدوات العمل عن بعد</h2>
         <p>باش تكون منتج فالعمل عن بعد، خاصك تكون مجهز بالأدوات المناسبة:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>التواصل (Communication):</strong> Slack, Microsoft Teams, Zoom, Google Meet. فالمغرب، Microsoft Teams هو الأكثر شيوعا فالشركات.</li>
           <li><strong>إدارة المشاريع:</strong> Trello, Asana, Jira, Notion. هاد الأدوات كاتساعدك فتنظيم المهام والمشاريع.</li>
           <li><strong>التخزين والمشاركة:</strong> Google Drive, OneDrive, Dropbox. مهم باش تشارك الملفات مع الفريق.</li>
@@ -148,8 +136,8 @@ export default function TravailDistancePage() {
           <li><strong>VPN (شبكة خاصة افتراضية):</strong> مهمة باش توصل لسيرفيرات الشركة بشكل آمن. بزاف ديال الشركات المغربية كاتطلب VPN.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. نصائح للإنتاجية فالعمل عن بعد</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>5. نصائح للإنتاجية فالعمل عن بعد</h2>
+        <ul>
           <li><strong>خصص مساحة للخدمة (Home Office):</strong> حتى كانت طاولة ف侧فة الغرفة. المهم تكون مريحة وما تكونش فوسط الصالون ولا المطبخ.</li>
           <li><strong>حدد ساعات الخدمة والتزم بها:</strong> مثلا من 9:00 ل 18:00. بعد هاد الساعة، قفل اللابتوب. الحياة الشخصية مقدسة.</li>
           <li><strong>استعمل تقنية Pomodoro:</strong> 25 دقيقة خدمة مركزة + 5 دقائق راحة. بعد 4 دورات، خد راحة 15 ل 30 دقيقة.</li>
@@ -158,9 +146,9 @@ export default function TravailDistancePage() {
           <li><strong>خرج من الدار:</strong> ما تبقاش محبوس. خرج فالفطور، تمشى فالفترة ديال الاستراحة، تعشى خارج.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. العقد والحقوق القانونية</h2>
+        <h2>6. العقد والحقوق القانونية</h2>
         <p>فاش كاتعقد على وظيفة عن بعد، العقد (Contrat de Travail) خاصو يذكر بوضوح أن الخدمة غادي تكون عن بعد. العقد كايحدد:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>مكان الخدمة (عن بعد ولا Hybrid).</li>
           <li>التوقيت (ساعات الخدمة والمرونة).</li>
           <li>المعدات (الشركة كاتعطي لابتوب ولا لا).</li>
@@ -169,19 +157,10 @@ export default function TravailDistancePage() {
         </ul>
         <p>فالمغرب، الراتب فالعمل عن بعد كايكون نفس الراتب فالمكتب. بعض الشركات كاتعطي زيادة 10 ل 15% للأجراء عن بعد باش تعوض مصاريف التنقل والملبس. إلا كانت الشركة فمدينة أخرى، الراتب كايتحدد على أساس سوق مدينة الشركة مش مدينة سكنك.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>العمل عن بعد فالمغرب ف 2026 هو واقع وليس موضة. الشركات كاتفتح أكثر فأكثر لهاد النمط. إذا كنتي باغي تبقى تنافسي فسوق الشغل، خاصك تكون مرن ومستعد للخدمة عن بعد. جهز الـ CV ديالك، تعلم الأدوات الرقمية، وكن جاهز للفرص. المستقبل هو الـ Remote Work، والمغرب عندو إمكانيات كبيرة فهاد المجال.</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/cv-professionnel-maroc-2026" className="text-emerald-600 underline hover:text-emerald-800">CV professionnel Maroc 2026</Link>
-          {" | "}
-          <Link href="/emplois/guides/salaire-moyen-maroc-par-secteur" className="text-emerald-600 underline hover:text-emerald-800">متوسط الرواتب فالمغرب</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

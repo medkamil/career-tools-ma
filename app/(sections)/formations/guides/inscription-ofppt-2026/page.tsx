@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "التسجيل في OFPPT 2026 (دليل كامل بالخطوات)",
-  description: "دليل كامل للتسجيل في OFPPT 2026: الشروط، المواعيد، التخصصات المتاحة، والخطوات العملية. كل ما تحتاج لمعرفته عن التكوين المهني فالمغرب.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,38 +85,30 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function InscriptionOfpptPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/formations" className="hover:text-emerald-600">التكوين</Link>
-        {" > "}
-        <span className="text-gray-900">التسجيل في OFPPT 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">التسجيل في OFPPT 2026 (دليل كامل بالخطوات)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>12 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>مكتب التكوين المهني وإنعاش الشغل (OFPPT - Office de la Formation Professionnelle et de la Promotion du Travail) هو أكبر مؤسسة للتكوين المهني فالمغرب. كل سنة، أكتر من 500,000 مرشح كايقدموا على التسجيل ف OFPPT.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التكوين", href: "/formations" },
+        { name: "التسجيل في OFPPT 2026", href: "/formations/guides/inscription-ofppt-2026" }
+      ]}
+      title="التسجيل في OFPPT 2026 (دليل كامل بالخطوات)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>مكتب التكوين المهني وإنعاش الشغل (OFPPT - Office de la Formation Professionnelle et de la Promotion du Travail) هو أكبر مؤسسة للتكوين المهني فالمغرب. كل سنة، أكتر من 500,000 مرشح كايقدموا على التسجيل ف OFPPT.</p>
 
         <p>فهاد المقال، غادي نعرفوك على كل شي خاص بالتسجيل ف OFPPT 2026: الشروط، المواعيد، التخصصات، وكيفاش تسجل خطوة بخطوة.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">شنو هو OFPPT؟</h2>
+        <h2>شنو هو OFPPT؟</h2>
         <p>OFPPT تأسس ف 1974. عندو أكثر من 400 مؤسسة تكوينية فجميع جهات المغرب. كايقدم تكوينات فجميع المجالات: الصناعة، البناء، الخدمات، التكنولوجيا، الفلاحة، والصحة. الشهادات ديالو كايتعترف بهم وطنياً ودولياً.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">شروط التسجيل ف OFPPT 2026</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>شروط التسجيل ف OFPPT 2026</h2>
+        <ul>
           <li><strong>السن:</strong> 15 - 25 سنة. (يمكن استثناء للأشخاص فوق 25 سنة فالتكوين المستمر).</li>
           <li><strong>المستوى الدراسي:</strong> يختلف حسب التخصص: السادس ابتدائي, الثالثة إعدادي, الجذع المشترك, البكالوريا.</li>
           <li><strong>الجنسية:</strong> مغربية.</li>
@@ -129,7 +116,7 @@ export default function InscriptionOfpptPage() {
           <li><strong>الاختبار:</strong> اجتياز اختبار القبول والمقابلة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">المواعيد المهمة ل 2026</h2>
+        <h2>المواعيد المهمة ل 2026</h2>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
             <thead className="bg-gray-50">
@@ -148,10 +135,10 @@ export default function InscriptionOfpptPage() {
           </table>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">أفضل التخصصات ف OFPPT 2026</h2>
+        <h2>أفضل التخصصات ف OFPPT 2026</h2>
 
         <h3 className="text-xl font-bold text-gray-900">1. التكنولوجيا الرقمية (Digital)</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>Développement Digital (Web et Mobile).</li>
           <li>Cybersécurité.</li>
           <li>Cloud Computing.</li>
@@ -159,28 +146,28 @@ export default function InscriptionOfpptPage() {
         </ul>
 
         <h3 className="text-xl font-bold text-gray-900">2. الطاقة المتجددة</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>الطاقة الشمسية (Panneaux Solaires).</li>
           <li>الطاقة الريحية (Éolienne).</li>
           <li>الكفاءة الطاقية.</li>
         </ul>
 
         <h3 className="text-xl font-bold text-gray-900">3. الصناعة 4.0</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>الروبوتيك (Robotique industrielle).</li>
           <li>الأتمتة (Automatisme).</li>
           <li>الميكاترونيك (Mécatronique).</li>
         </ul>
 
         <h3 className="text-xl font-bold text-gray-900">4. الصحة</h3>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>المساعد الطبي (Aide-soignant).</li>
           <li>التمريض (Infirmier).</li>
           <li>تقنية المختبرات.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">خطوات التسجيل ف OFPPT 2026 أونلاين</h2>
-        <ol className="list-decimal space-y-2 pr-6">
+        <h2>خطوات التسجيل ف OFPPT 2026 أونلاين</h2>
+        <ol>
           <li><strong>دخل لموقع ofppt.ma:</strong> من أي متصفح (Chrome, Firefox).</li>
           <li><strong>انقر على &quot;Inscription en ligne&quot;:</strong> الرابط كايكون فالصفحة الرئيسية.</li>
           <li><strong>أنشئ حساب:</strong> بإيميل صحيح وكلمة سر قوية. تأكد من الإيميل حيت غادي تستقبل كل المراسلات.</li>
@@ -190,8 +177,8 @@ export default function InscriptionOfpptPage() {
           <li><strong>اطبع وصل التسجيل:</strong> الأحتفظ بالنسخة.</li>
         </ol>
 
-        <h2 className="text-2xl font-bold text-gray-900">الوثائق المطلوبة</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>الوثائق المطلوبة</h2>
+        <ul>
           <li>نسخة من الشهادة الدراسية (Relevé de notes + Attestation).</li>
           <li>نسخة من بطاقة التعريف الوطنية (CIN).</li>
           <li>صورتين فوتوغرافيتين (4×3 خلفية بيضاء).</li>
@@ -200,15 +187,15 @@ export default function InscriptionOfpptPage() {
           <li>إثبات العنوان (Justificatif de domicile).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">اختبارات القبول (Concours)</h2>
+        <h2>اختبارات القبول (Concours)</h2>
         <p>اختبارات OFPPT كايكونو على مرحلتين:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الاختبار الكتابي:</strong> أسئلة عامة + أسئلة في التخصص (رياضيات، لغة، منطق). المدة: ساعتين.</li>
           <li><strong>المقابلة الشفوية:</strong> أسئلة حول التحفيز، المعرفة بالتخصص، والمشروع المهني.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">نصائح للنجاح فالتسجيل</h2>
-        <ul className="list-disc space-y-2 pr-6">
+        <h2>نصائح للنجاح فالتسجيل</h2>
+        <ul>
           <li><strong>سجل باكر:</strong> من أول يوم لفتح التسجيل.</li>
           <li><strong>جهز الوثائق قبل:</strong> باش ما تعانيش من ضغط الوقت.</li>
           <li><strong>اختر تخصصات مطلوبة:</strong> باش تلقى الخدمة بسهولة بعد التخرج.</li>
@@ -216,22 +203,10 @@ export default function InscriptionOfpptPage() {
           <li><strong>ابدأ فكرة على المعهد:</strong> زور المعهد قبل التسجيل إذا تقدرو.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>OFPPT هو فرصة ذهبية للشباب المغربي. تكوين مجاني، شهادة معترف بها، وفرصة للشغل. ف 2026، التخصصات الرقمية والطاقة المتجددة هي الأكثر طلباً. سجل ف الوقت المناسب، جهز وثائقك، وتأكد من اختيار التخصص المناسب ليك.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/formations/guides/meilleures-formations-maroc-2026" className="text-emerald-600 underline hover:text-emerald-800">أفضل التكوينات المهنية 2026</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-gratuite-en-ligne" className="text-emerald-600 underline hover:text-emerald-800">تكوين مجاني عن بعد</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

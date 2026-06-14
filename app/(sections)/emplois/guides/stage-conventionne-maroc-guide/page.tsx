@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "دليل التدريب المهني والمرقمن في المغرب 2026: الشروط والحقوق",
-  description: "دليل شامل حول التدريب المهني (Stage Conventionne) في المغرب 2026. شروط الاستفادة، الحقوق القانونية للمتدرب، التعويضات، وكيفية إيجاد فرص التدريب.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -74,42 +69,35 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function StageConventionnePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">التدريب المهني فالمغرب</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">دليل التدريب المهني والمرقمن في المغرب 2026: الشروط والحقوق</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>10 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>التدريب المهني (Stage Conventionné) هو أول خطوة فالحياة المهنية لمعظم الشباب المغربي. ولكن، بزاف ديال الطلاب والطالبات ما كايعرفوش شنو هي حقوقهم، شنو هو التعويض لي خاصهم، وكيفاش يلقاو فرصة تدريب فشركة محترمة. فهاد المقال، غادي نعطيك دليل كامل باش تستعد للتدريب المهني فالمغرب ف 2026.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "دليل التدريب المهني والمرقمن في المغرب 2026", href: "/emplois/guides/stage-conventionne-maroc-guide" }
+      ]}
+      title="دليل التدريب المهني والمرقمن في المغرب 2026: الشروط والحقوق"
+      readingTime="10 دقائق قراءة"
+    >
+<p>التدريب المهني (Stage Conventionné) هو أول خطوة فالحياة المهنية لمعظم الشباب المغربي. ولكن، بزاف ديال الطلاب والطالبات ما كايعرفوش شنو هي حقوقهم، شنو هو التعويض لي خاصهم، وكيفاش يلقاو فرصة تدريب فشركة محترمة. فهاد المقال، غادي نعطيك دليل كامل باش تستعد للتدريب المهني فالمغرب ف 2026.</p>
 
         <p>شنو هو Stage Conventionné؟ هو تدريب مهني كايتنظم بموجب اتفاقية (Convention de Stage) بين 3 أطراف: المؤسسة التعليمية (المدرسة ولا الجامعة)، الشركة المضيفة (l entreprise d accueil)، والمتدرب (le stagiaire). هاد الاتفاقية كاتحدد المدة، الأهداف، التعويض، والحقوق والواجبات ديال كل طرف. بلا هاد الاتفاقية، التدريب ما كايتعترفش بيه قانونيا.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. أنواع التداريب فالمغرب</h2>
+        <h2>1. أنواع التداريب فالمغرب</h2>
         <p>كل نوع ديال التدريب عندو هدف معين ومدة محددة:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>Stage d Initiation (تدريب اكتشافي):</strong> هدفو التعرف على بيئة العمل بشكل عام. المدة: شهر واحد غالبا. كايكون فالسنة الأولى والثانية من التكوين (Bac+1, Bac+2). ما كايتوقعش منك تكون منتج بزاف، ولكن كاتعلم كيفاش كاتمشي الأمور فشركة.</li>
           <li><strong>Stage d Application (تدريب تطبيقي):</strong> كايطبق الطالب المعرفة النظرية لي قراها فالمدرسة على أرض الواقع. المدة: 1 ل 3 أشهر. كايكون فالسنة الثالثة (Bac+3, Licence).</li>
           <li><strong>Stage de Fin d Études (PFE - مشروع التخرج):</strong> هو أهم تدريب فالمسار الدراسي. المدة: 3 ل 6 أشهر. كايكون فالسنة الأخيرة (Master, Ingénieur, Bac+5). المشروع ديال التخرج هو لي كايدوزك للشهادة.</li>
           <li><strong>Stage en Alternance (التدريب بالتناوب):</strong> نظام كايجمع بين الدراسة النظرية فالمؤسسة التعليمية والتدريب العملي فشركة. المدة: 6 ل 24 شهر. كاتقسم وقتك بين المدرسة (30%) والشركة (70%).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. التعويضات (Indemnités de Stage)</h2>
+        <h2>2. التعويضات (Indemnités de Stage)</h2>
         <p>التعويض فالتدريب المهني فالمغرب غير إلزامي قانونيا (إلا فبعض الحالات). ولكن، العرف كايدفع الشركات تعويض رمزي باش تغطي مصاريف التنقل والغذاء. التعويض كايختالف على حسب نوع التدريب والشركة:</p>
         <div className="overflow-x-auto rounded-xl border border-gray-200">
           <table className="min-w-full text-sm">
@@ -130,9 +118,9 @@ export default function StageConventionnePage() {
         </div>
         <p>الشركات الكبرى (بحال OCP, Attijariwafa Bank, Maroc Telecom, والشركات المتعددة الجنسيات) كاتعطي تعويضات أكبر بزاف من الشركات الصغيرة. بعض الشركات فـ IT كاتعطي حتى 8,000 درهم لتداريب PFE. المهم: التفاوض على التعويض واش ممكن؟ فالبزاف ديال الشركات، ايوه. خصوصا إلا كنتي تجيب مهارات نادرة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. حقوق المتدرب فالمغرب</h2>
+        <h2>3. حقوق المتدرب فالمغرب</h2>
         <p>المتدرب (stagiaire) ما عندوش نفس الحقوق ديال الأجير النظامي. ولكن، القانون المغربي كايضمن ليك هاد الحقوق:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>Convention de Stage:</strong> الحق فاتفاقية مكتوبة تحدد الأهداف والمدة والتعويض. ما تبداش التدريب بلا اتفاقية.</li>
           <li><strong>التعويض (Indemnité):</strong> غير إلزامي قانونيا ولكنه متعارف عليه. الشركات الكبرى عندها سياسة تعويض واضحة.</li>
           <li><strong>التغطية الصحية (CNSS):</strong> فاش كاتزيد مدة التدريب على 6 أشهر، كايتأكد المتدرب فـ CNSS وتكون عندك تغطية صحية.</li>
@@ -142,9 +130,9 @@ export default function StageConventionnePage() {
         </ul>
         <p>معلومة مهمة: المتدرب ما كايتعتابرش أجير (salarié). يعني، القانون الشغل كاملا ما كاينطبقش عليه. ولكن، الشركة ملزمة بالاتفاقية لي وقعات عليها.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. كيفاش تلقى Stage Conventionné فالمغرب ف 2026</h2>
+        <h2>4. كيفاش تلقى Stage Conventionné فالمغرب ف 2026</h2>
         <p>لقاء التدريب المناسب كايحتاج جهد واستراتيجية. هاد هي الطرق الأكثر فعالية:</p>
-        <ol className="list-decimal space-y-2 pr-6">
+        <ol>
           <li><strong>مكتب العلاقات مع الشركات (Bureau des Stages):</strong> المؤسسة التعليمية غالبا عندها شراكات مع شركات. هاد أول مكان تسقسى فيه.</li>
           <li><strong>منصات التشغيل:</strong> LinkedIn (الأهم)، Rekrute.ma، Anapec.ma، Hays.ma، و Tawdif Pro طبعا.</li>
           <li><strong>التقديم المباشر (Candidature Spontanée):</strong> حتى إلا ما كاينش إعلان تدريب، تقدر ترسل CV و Lettre de Motivation للشركات لي باغي.</li>
@@ -152,9 +140,9 @@ export default function StageConventionnePage() {
           <li><strong>العلاقات الشخصية (Réseautage):</strong> فالمغرب، العلاقات كاتلعب دور كبير. سقسى الأهل، الأصحاب، والأساتذة. بزاف ديال التداريب كاتعطى عن طريق العلاقات.</li>
         </ol>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. نصائح للنجاح فالتدريب</h2>
+        <h2>5. نصائح للنجاح فالتدريب</h2>
         <p>التدريب هو فرصة باش تتعلم وتبني سمعتك المهنية. هاد النصائح غادي تساعدك:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>كن استباقي (Proactif):</strong> ما تستناش حتى يديروك على الخدمة. عرض المساعدة، سقسى على المشاريع، ودي مبادرات.</li>
           <li><strong>تدرب على المهارات:</strong> استغل وقت الفراغ فالتدريب باش تتعلم أدوات جديدة. مثلا، إلا كنتي فالتسويق، تعلم Google Analytics. إلا كنتي فـ IT، تعلم Docker أو Cloud.</li>
           <li><strong>ابني العلاقات:</strong> التواصل مع الزملاء والمشرفين. هاد العلاقات ممكن تفيدك فالمستقبل. خذ الـ LinkedIn ديالهم وتواصل معاهم.</li>
@@ -163,28 +151,19 @@ export default function StageConventionnePage() {
           <li><strong>وثق إنجازاتك:</strong> سجل جميع المشاريع والمهام لي ديرتيها. هادشي غادي يعاونك فكتابة CV و فالمقابلات الجاية.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. من التدريب للتوظيف</h2>
+        <h2>6. من التدريب للتوظيف</h2>
         <p>بزاف ديال الشركات فالمغرب كاتوظف المتدربين لي تألقو فالتدريب. الإحصاءات كاتشير أن 30 ل 40% من المتدربين فـ PFE كايتوظفو ف نفس الشركة من بعد التدريب. باش تزيد فرصك فالتوظيف:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>أظهر حبك للتعلم والرغبة فالتطور.</li>
           <li>كن جزء من الفريق، ما تبقاشش ف "وضعية المتدرب".</li>
           <li>سقسى على إمكانية التوظيف فآخر التدريب.</li>
           <li>اطلب خطاب توصية (Lettre de Recommandation) من المشرف فاش كاتكمل.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
+        <h2>خاتمة</h2>
         <p>التدريب المهني (Stage Conventionné) هو أول بوابة لعالم الشغل. حتى إلا كان التعويض صغير ولا ما كاينش، الخبرة، العلاقات، والمهارات لي كاتجيب معاه كاتساوي بزاف فالمدى البعيد. استعد، قدم فبزاف ديال الشركات، استعمل شبكة العلاقات ديالك، وكن مبادر خلال التدريب. الباب كايتفتح للي كايطرق.</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/cv-professionnel-maroc-2026" className="text-emerald-600 underline hover:text-emerald-800">CV professionnel Maroc 2026</Link>
-          {" | "}
-          <Link href="/emplois/guides/questions-entretien-embauche-reponses" className="text-emerald-600 underline hover:text-emerald-800">أسئلة مقابلة العمل</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

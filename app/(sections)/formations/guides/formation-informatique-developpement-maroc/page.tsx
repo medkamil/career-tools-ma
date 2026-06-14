@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
   title: "تكوين البرمجة والمعلوميات في المغرب: المدارس، الأسعار، والمستقبل",
@@ -30,27 +31,28 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
   { "@type": "ListItem", position: 3, name: "تكوين البرمجة والمعلوميات في المغرب", item: "https://tawdifpro.ma/formations/guides/formation-informatique-developpement-maroc" },
 ]};
 
+const schemas = [articleSchema, faqSchema, breadcrumbSchema];
+
+
 export default function FormationsGuidePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">تكوين البرمجة والمعلوميات في المغرب 2026: المدارس، الأسعار، والمستقبل</h1>
-        <p className="mt-3 text-lg text-gray-600">أحسن المعاهد + الرواتب + الخيارات المجانية</p>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>•</span><span>9 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p className="text-lg font-medium text-emerald-700">البرمجة والمعلوميات (Programmation et Informatique) راهي من أحسن المجالات لي تقدر تخدم فيها فالمغرب 2026. الرواتب عالية، الطلب كبير، ويمكنك تخدم من دارك.</p>
+  <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "الرئيسية", href: "/formations" },
+        { name: "تكوين البرمجة والمعلوميات في المغرب", href: "/formations/guides/formation-informatique-developpement-maroc" }
+      ]}
+      title="تكوين البرمجة والمعلوميات في المغرب: المدارس، الأسعار، والمستقبل"
+      readingTime="10 دقائق قراءة"
+    >
+<p className="text-lg font-medium text-emerald-700">البرمجة والمعلوميات (Programmation et Informatique) راهي من أحسن المجالات لي تقدر تخدم فيها فالمغرب 2026. الرواتب عالية، الطلب كبير، ويمكنك تخدم من دارك.</p>
         <p>المغرب كيعرف تحول رقمي كبير (Digital Transformation). الشركات والمصانع والإدارات كلها كتدخل فالعالم الرقمي، وهاد الشي كيخلق حاجة ماسة للمبرمجين والمهندسين فالمعلوميات. فهاد المقال غنعطيكم كل المعلومات على تكوين البرمجة فالمغرب.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-2xl font-bold text-gray-900">أنواع التكوين فالمعلوميات</h2>
+        <hr />
+        <h2>أنواع التكوين فالمعلوميات</h2>
         <p>كاين عدة طرق باش تتعلم البرمجة فالمغرب: التكوين الجامعي (Facultes Sciences, ENSIAS, ESI)، التكوين المهني (OFPPP, YouCode, 1337)، المعاهد الخاصة (HEM, ISGA)، Bootcamps (GomyCode, Le Wagon)، و التكوين الذاتي عبر الإنترنت.</p>
         <p>كل طريقة عندها مزاياها وعيوبها. المهم هو تختار الطريقة لي تناسبك.</p>
-        <h2 className="text-2xl font-bold text-gray-900">أفضل المعاهد والبرامج فالمغرب</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>أفضل المعاهد والبرامج فالمغرب</h2>
+        <ul>
           <li><strong>YouCode:</strong> فSafi و Youssoufia. برنامج 3 سنين. مجاني بالكامل. تعلم بالاعتماد على المشاريع.</li>
           <li><strong>1337 (42 Network):</strong> Khourigba, Ben Guerir. مجاني. طريقة تعلم جديدة (P2P). 3-5 سنين.</li>
           <li><strong>ENSIAS:</strong> الرباط. مدارس المهندسين. 3 سنين بعد Bac+2. عمومي.</li>
@@ -58,30 +60,21 @@ export default function FormationsGuidePage() {
           <li><strong>OFPPT (Technicien Specialise en Developpement Informatique):</strong> سنتين. مجاني.</li>
           <li><strong>GomyCode:</strong> مراكش. Bootcamp 6 شهور. الثمن: 15,000 - 25,000 DH.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-gray-900">الرواتب المتوقعة فالمعلوميات</h2>
-        <ul className="list-disc space-y-1 pr-6">
+        <h2>الرواتب المتوقعة فالمعلوميات</h2>
+        <ul>
           <li><strong>مطور ويب مبتدئ:</strong> 5,000 - 8,000 DH</li>
           <li><strong>مطور ف React/Next.js:</strong> 8,000 - 15,000 DH</li>
           <li><strong>مهندس برمجيات (3-5 سنين):</strong> 15,000 - 25,000 DH</li>
           <li><strong>Freelance مع شركات أجنبية:</strong> 2,000 - 8,000 USD شهريا</li>
         </ul>
         <p>باش تعرف الراتب الصافي ديالك، استعمل <Link href="/salary-calculator" className="font-medium text-emerald-600 underline hover:text-emerald-700">حاسبة الراتب</Link>.</p>
-        <h2 className="text-2xl font-bold text-gray-900">المستقبل المهني</h2>
+        <h2>المستقبل المهني</h2>
         <p>البرمجة والمعلوميات عندها مستقبل كبير فالمغرب. مع مبادرات الحكومة (Maroc Digital 2025-2030) وانتشار Offshoring والشركات الناشئة، الطلب على المبرمجين غادي يبقى مرتفع فالسنوات الجاية.</p>
         <p>إذا كنت باغي تتعلم حاجة فيها مستقبل، تعلم البرمجة. هاد القطاع غادي يزيد ولا أحسن.</p>
-        <hr className="border-gray-200" />
-        <h2 className="text-xl font-bold text-gray-900">الخلاصة</h2>
+        <hr />
+        <h2>الخلاصة</h2>
         <p>تكوين البرمجة والمعلوميات هو الاستثمار في مستقبلك. سواء اخترت المعاهد المجانية (YouCode, 1337, OFPPT) ولا الخاصة، الأهم هو الاستمرار فالتعلم والتطبيق العملي.</p>
         <p className="text-emerald-700 font-medium">شارك هاد المقال مع أصحابك لي كيبغيو يتعلمو البرمجة!</p>
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          📚 اقرأ أيضاً:{" "}
-          <Link href="/formations/guides/formation-comptabilite-gestion-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين المحاسبة والتدبير</Link>
-          {" | "}
-          <Link href="/formations/guides/formation-langue-anglais-maroc" className="text-emerald-600 underline hover:text-emerald-800">تكوين اللغة الإنجليزية</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }

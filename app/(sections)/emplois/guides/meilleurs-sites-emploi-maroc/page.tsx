@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "أفضل 10 مواقع للبحث عن عمل في المغرب 2026 (مجانية وحديثة)",
-  description: "أفضل مواقع البحث عن عمل في المغرب 2026: Rekrute, MarocAnnonces, LinkedIn, Tanmia.ma والمزيد. دليلك الكامل للعثور على وظيفة في المغرب.",
-};
+import { ArticleLayout } from "@/components/ArticleLayout";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -90,36 +85,28 @@ const faqSchema = {
   ],
 };
 
+const schemas = [articleSchema, breadcrumbSchema, faqSchema];
+
 export default function MeilleursSitesEmploiMarocPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-emerald-600">الرئيسية</Link>
-        {" > "}
-        <Link href="/emplois" className="hover:text-emerald-600">التوظيف</Link>
-        {" > "}
-        <span className="text-gray-900">أفضل 10 مواقع للبحث عن عمل في المغرب 2026</span>
-      </nav>
-      <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">أفضل 10 مواقع للبحث عن عمل في المغرب 2026 (مجانية وحديثة)</h1>
-        <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-          <span>من طرف فريق Tawdif Pro</span>
-          <span>.</span>
-          <span>12 دقائق قراءة</span>
-        </div>
-      </header>
-      <div className="space-y-6 text-base leading-8 text-gray-800">
-
-        <p>البحث على خدمة فالمغرب 2026 ولّا صعيب بزاف. المنافسة كبيرة، والشركات فالتطور. ولكن مع هاد المواقع، غادي تقدر تلقى أكبر عدد من الفرص فمكان واحد. سواء كنت خريج جديد، ولا موظف باغي تبدل الخدمة، ولا عاطل، هاد القائمة د sites دالبحث على l&apos;emploi فالمغرب غادي تفيدك.</p>
+    <ArticleLayout
+      schemas={schemas}
+      breadcrumbs={[
+        { name: "قسم التوظيف", href: "/emplois" },
+        { name: "أفضل 10 مواقع للبحث عن عمل في المغرب 2026", href: "/emplois/guides/meilleurs-sites-emploi-maroc" }
+      ]}
+      title="أفضل 10 مواقع للبحث عن عمل في المغرب 2026 (مجانية وحديثة)"
+      readingTime="10 دقائق قراءة"
+    >
+<p>البحث على خدمة فالمغرب 2026 ولّا صعيب بزاف. المنافسة كبيرة، والشركات فالتطور. ولكن مع هاد المواقع، غادي تقدر تلقى أكبر عدد من الفرص فمكان واحد. سواء كنت خريج جديد، ولا موظف باغي تبدل الخدمة، ولا عاطل، هاد القائمة د sites دالبحث على l&apos;emploi فالمغرب غادي تفيدك.</p>
 
         <p>فهاد المقال غادي نعرفوك على أفضل 10 مواقع توظيف فالمغرب 2026. كل موقع عندو مميزاتو وعيوبو. المهم أنك تستعمل 3 على الأقل باش توسع فرصك.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. Rekrute.com — الموقع الأول للتوظيف فالمغرب</h2>
+        <h2>1. Rekrute.com — الموقع الأول للتوظيف فالمغرب</h2>
         <p>Rekrute هو أكبر موقع توظيف فالمغرب. تأسس ف 1999، وعندو قاعدة بيانات كبيرة ديال الشركات والباحثين. ف 2026, Rekrute باقي أقوى منصة مهنية فالمغرب.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>عدد الزوار:</strong> أكتر من 1.5 مليون زائر كل شهر.</li>
           <li><strong>الشركات:</strong> أكتر من 500 شركة مغربية ودولية.</li>
           <li><strong>القطاعات:</strong> كل القطاعات: الهندسة، المالية، التجارة، التعليم، الصحة، IT.</li>
@@ -127,56 +114,56 @@ export default function MeilleursSitesEmploiMarocPage() {
           <li><strong>السعر:</strong> مجاني للباحثين عن العمل.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. MarocAnnonces.com — الأكثر تنوعاً</h2>
+        <h2>2. MarocAnnonces.com — الأكثر تنوعاً</h2>
         <p>MarocAnnonces هو منصة إعلانات مبوبة مغربية. فيها قسم خاص بالوظائف (Emploi). كاتميز بالكمية الكبيرة ديال الإعلانات اليومية.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>الميزة:</strong> التنوع والكمية.</li>
           <li><strong>العيب:</strong> بعض الإعلانات غير محدثة.</li>
           <li><strong>نصيحة:</strong> استعمل التصفية (Filtres) باش تلقى الوظائف الحديثة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. LinkedIn.com — الشبكة المهنية العالمية</h2>
+        <h2>3. LinkedIn.com — الشبكة المهنية العالمية</h2>
         <p>LinkedIn هو أكبر شبكة مهنية فالعالم. فالمغرب، عندو حضور قوي. الشركات الكبرى كاتنشر الإعلانات هنا أولاً. الفرق بين LinkedIn والمواقع التقليدية أنك تقدر تتواصل مباشرة مع المسؤولين والموظفين.</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>المستخدمين فالمغرب:</strong> أكتر من 3 ملايين مستخدم.</li>
           <li><strong>اللغة:</strong> الفرنسية والإنجليزية.</li>
           <li><strong>خاصية Easy Apply:</strong> تقدّم لوظيفة بنقرة وحدة.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. Tanmia.ma — المنصة الحكومية للتشغيل (ANAPEC)</h2>
+        <h2>4. Tanmia.ma — المنصة الحكومية للتشغيل (ANAPEC)</h2>
         <p>Tanmia.ma هي منصة ANAPEC الرسمية. مجانية 100% وكاتربطك ببرامج التكوين والتشغيل الحكومية. كاتوفق بين المهارات ديالك واحتياجات الشركات. الأنسب للشباب والخريجين الجدد.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">5. Emploi.ma — موقع متخصص</h2>
+        <h2>5. Emploi.ma — موقع متخصص</h2>
         <p>Emploi.ma هو موقع توظيف مغربي آخر. عندو واجهة بسيطة وسهلة. كايتميز بالوظائف فمجالات: التجارة، الإدارة، المالية، والهندسة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">6. Job.ma — البحث السريع</h2>
+        <h2>6. Job.ma — البحث السريع</h2>
         <p>Job.ma هو منصة مغربية كاتجمع إعلانات الوظائف من عدة مصادر. ما عندوش واجهة معقدة. الأنسب للبحث السريع.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">7. Groupe Rekrute Academy — التوظيف عبر التكوين</h2>
+        <h2>7. Groupe Rekrute Academy — التوظيف عبر التكوين</h2>
         <p>هاد المنصة كاتربط بين التكوين والتوظيف. كايديرو دورات تكوينية، وبعدها كايوفرو فرص عمل للمتدربين. أنسب للشباب لي باغي يكتسب مهارات جديدة قبل البحث على الخدمة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">8. Indeed.ma — العملاق العالمي</h2>
+        <h2>8. Indeed.ma — العملاق العالمي</h2>
         <p>Indeed هو أكبر محرك بحث عن الوظائف فالعالم. النسخة المغربية (Indeed.ma) كاتجمع إعلانات من مواقع مغربية متعددة. قاعدة البيانات ديالو كبيرة بزاف. كايتميز بالتصفية المتقدمة (الراتب، التاريخ، الشركة).</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">9. JobIQR.ma — جديد ومبتكر</h2>
+        <h2>9. JobIQR.ma — جديد ومبتكر</h2>
         <p>JobIQR منصة مغربية جديدة نسبياً. كاتميز بالذكاء الاصطناعي باش تطابق CV ديالك مع الوظائف المتاحة. عندها تطبيق للهاتف بواجهة عصرية.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">10. Facebook Groups — الميتافيرس ديال التوظيف</h2>
+        <h2>10. Facebook Groups — الميتافيرس ديال التوظيف</h2>
         <p>بزاف ديال المجموعات ف Facebook كاتخصص للوظائف فالمغرب. مثلاً: &quot;Offres d&apos;emploi au Maroc&quot;، &quot;وظائف المغرب&quot;، &quot;Emploi Casablanca&quot;. بعض الشركات الصغيرة والمتوسطة كاتنشر الفرص هنا حيت رخيصة وسريعة.</p>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-2xl font-bold text-gray-900">كيفاش تختار الموقع المناسب ليك؟</h2>
+        <h2>كيفاش تختار الموقع المناسب ليك؟</h2>
         <p>ما عندكش باش تسجل فجميع المواقع. اختار 3 على حسب:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>إذا كنت خريج جديد:</strong> Rekrute + Tanmia.ma + LinkedIn.</li>
           <li><strong>إذا كنت عندك خبرة:</strong> Rekrute + LinkedIn + Indeed.</li>
           <li><strong>إذا كنت باغي خدمة سريعة:</strong> MarocAnnonces + Job.ma + Facebook.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">نصائح ذهبية للنجاح فالبحث عبر الإنترنت</h2>
+        <h2>نصائح ذهبية للنجاح فالبحث عبر الإنترنت</h2>
         <p>هاد النصائح غادي تزيد فرصك ب 70%:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li><strong>حدّث البروفايل:</strong> كل شهر، جدد المعلومات والخبرات.</li>
           <li><strong>استعمل الكلمات المفتاحية:</strong> قرا الإعلان مزيان وضمن نفس الكلمات ف CV.</li>
           <li><strong>خصص لكل وظيفة:</strong> ما ترسلش CV عام. عدل عليه حسب كل وظيفة.</li>
@@ -184,9 +171,9 @@ export default function MeilleursSitesEmploiMarocPage() {
           <li><strong>تابع:</strong> بعد 7 أيام من التقديم، تابع ب إيميل أو LinkedIn.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900">إحصائيات سوق الشغل فالمغرب 2026</h2>
+        <h2>إحصائيات سوق الشغل فالمغرب 2026</h2>
         <p>حسب آخر الإحصائيات:</p>
-        <ul className="list-disc space-y-2 pr-6">
+        <ul>
           <li>معدل البطالة فالمغرب 2026: 12.5%.</li>
           <li>البطالة فالشباب (15-24 سنة): 30%.</li>
           <li>الدار البيضاء كاتجمع 40% من فرص العمل.</li>
@@ -194,22 +181,10 @@ export default function MeilleursSitesEmploiMarocPage() {
           <li>الراتب المتوسط للخريج الجديد: 5,000 - 8,000 MAD.</li>
         </ul>
 
-        <hr className="border-gray-200" />
+        <hr />
 
-        <h2 className="text-xl font-bold text-gray-900">ختاما</h2>
+        <h2>ختاما</h2>
         <p>هاد المواقع غادي تعطيك فرص كبيرة باش تلقى خدمة فالمغرب. المهم هو المثابرة والتخصيص. ما تيأسش. كل ما تقدم على وظائف كتر، كل ما زادت فرصك. الله يوفق.</p>
-
-      </div>
-      <div className="mt-8 rounded-xl bg-gray-50 p-4">
-        <p className="text-sm text-gray-600">
-          {"اقرا أيضا: "}
-          <Link href="/emplois/guides/cv-professionnel-maroc-2026" className="text-emerald-600 underline hover:text-emerald-800">كيف تكتب CV احترافي</Link>
-          {" | "}
-          <Link href="/emplois/guides/conseils-entretien-embauche" className="text-emerald-600 underline hover:text-emerald-800">نصائح مقابلة العمل</Link>
-          {" | "}
-          <Link href="/salary-calculator" className="text-emerald-600 underline hover:text-emerald-800">احسب راتبك الصافي</Link>
-        </p>
-      </div>
-    </article>
+    </ArticleLayout>
   );
 }
