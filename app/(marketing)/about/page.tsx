@@ -3,8 +3,8 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "من نحن - Tawdif Pro",
-  description: "منصة مغربية شاملة للتوظيف، التكوين المهني، المشاريع الصغيرة، والأدوات التفاعلية المجانية.",
+  title: "من نحن",
+  description: "Tawdif Pro منصة مغربية 100% هادفة لمساعدة الشباب المغربي فالتوظيف والتكوين وريادة الأعمال. نقدمو أدوات تفاعلية مجانية ومحتوى بالدارجة والفرنسية.",
 };
 
 export default function AboutPage() {

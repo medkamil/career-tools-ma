@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "كيف تصبح مقاولاً ذاتياً في المغرب 2026 (دليل كامل) | Tawdif Pro",
-  description: "دليل المقاول الذاتي في المغرب 2026: شروط التسجيل، الضرائب، التصريح، والمزايا. خطوات عملية لتصبح Auto-entrepreneur.",
+  title: "كيف تصبح مقاولاً ذاتياً في المغرب 2026 (دليل كامل)",
+  description: "دليل المقاول الذاتي في المغرب 2026: شروط التسجيل فموقع المقاول الذاتي، الضرائب والإعفاءات، التصريح الشهري، والمزايا. خطوات عملية باش تولي Auto-entrepreneur.",
 };
 
 const articleSchema = {

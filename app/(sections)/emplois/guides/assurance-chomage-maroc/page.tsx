@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "التأمين على البطالة في المغرب 2026: الشروط وكيفية الاستفادة | Tawdif Pro",
+  title: "التأمين على البطالة في المغرب 2026: الشروط وكيفية الاستفادة",
   description: "دليل التأمين على البطالة فالمغرب 2026. شروط الاستفادة من indemnite de perte d emploi، كيفية التسجيل ف ANAPEC، مدة التعويض، والوثائق المطلوبة.",
 };
 

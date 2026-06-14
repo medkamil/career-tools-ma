@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "التسجيل في OFPPT 2026 (دليل كامل بالخطوات) | Tawdif Pro",
-  description: "دليل كامل للتسجيل في OFPPT 2026: الشروط، المواعيد، التخصصات، والخطوات. كل ما تحتاج لمعرفته عن التسجيل في التكوين المهني.",
+  title: "التسجيل في OFPPT 2026 (دليل كامل بالخطوات)",
+  description: "دليل كامل للتسجيل في OFPPT 2026: الشروط، المواعيد، التخصصات المتاحة، والخطوات العملية. كل ما تحتاج لمعرفته عن التكوين المهني فالمغرب.",
 };
 
 const articleSchema = {

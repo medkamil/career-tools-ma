@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين مساعد التمريض في المغرب: المراكز، الأسعار، وشروط الولوج | Tawdif Pro",
+  title: "تكوين مساعد التمريض في المغرب: المراكز، الأسعار، وشروط الولوج",
   description: "دليل تكوين مساعد التمريض (Auxiliaire de Vie) في المغرب 2026: أفضل معاهد التمريض، شهادة المساعد الطبي، الرواتب، وفرص العمل في المغرب.",
 };
 

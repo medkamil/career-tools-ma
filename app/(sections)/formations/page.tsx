@@ -4,8 +4,8 @@ import { GraduationCap, Monitor, TrendingUp, ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "قسم التكوين - دورات تكوينية وشهادات مهنية في المغرب | Tawdif Pro",
-  description: "دليلك الكامل للتكوين المهني في المغرب: OFPPT، تكوين مجاني، والمهن المطلوبة في 2026.",
+  title: "قسم التكوين - دورات تكوينية وشهادات مهنية في المغرب",
+  description: "دليلك الكامل للتكوين المهني في المغرب: التسجيل في OFPPT، تكوين مجاني عن بعد بشهادات معتمدة، منح التكوين، وأفضل المهن المطلوبة في 2026.",
 };
 
 const features = [
@@ -31,7 +31,9 @@ export default function FormationsPage() {
         <p className="mt-3 text-lg text-gray-600">دورات تكوينية، شهادات مهنية، وكل ما يخص التكوين في المغرب</p>
       </section>
 
-      <section className="mt-10 grid gap-6 sm:grid-cols-3">
+      <section>
+        <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">مميزات القسم</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
         {features.map((f) => {
           const Icon = f.icon;
           return (
@@ -46,6 +48,7 @@ export default function FormationsPage() {
             </Card>
           );
         })}
+        </div>
       </section>
 
       <section className="mt-12">

@@ -4,7 +4,7 @@ import { FileText } from "lucide-react";
 export const metadata: Metadata = {
   title: "مولد السيرة الذاتية",
   description:
-    "أنشئ سيرة ذاتية احترافية باللغة العربية بخطوات بسيطة - مولد CV مجاني",
+    "أنشئ سيرة ذاتية احترافية بالعربية والفرنسية فدقايق. مولد CV مجاني للمغرب: قوالب حديثة، تنزيل PDF، ونصائح ذهبية لكتابة السيرة الذاتية لي غادي تفتح ليك أبواب الشغل.",
 };
 
 export default function CvGeneratorPage() {
@@ -18,6 +18,7 @@ export default function CvGeneratorPage() {
         أداة احترافية لإنشاء السيرة الذاتية (CV) باللغة العربية. قم بتعبئة
         معلوماتك واحصل على سيرة ذاتية جاهزة للطباعة.
       </p>
+      <h2 className="sr-only">معلومات السيرة الذاتية</h2>
 
       <div className="mt-12 rounded-xl border-2 border-dashed border-gray-300 p-12">
         <p className="text-gray-500">

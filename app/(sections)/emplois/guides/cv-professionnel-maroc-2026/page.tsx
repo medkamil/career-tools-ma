@@ -2,8 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "كيفاش تكتب CV احترافي في المغرب 2026 (نماذج + نصائح ذهبية) | Tawdif Pro",
+  title: "كيفاش تكتب CV احترافي في المغرب 2026 (نماذج + نصائح ذهبية)",
   description: "دليل شامل لكتابة السيرة الذاتية في المغرب. نماذج CV بالعربية والفرنسية، نصائح من خبراء التوظيف، والأخطاء القاتلة اللي خاصك تتفادا.",
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "كيفاش تكتب CV احترافي في المغرب 2026 (نماذج + نصائح ذهبية)",
+  description: "دليل شامل لكتابة السيرة الذاتية في المغرب. نماذج CV بالعربية والفرنسية، نصائح من خبراء التوظيف، والأخطاء القاتلة اللي خاصك تتفادا.",
+  author: { "@type": "Person", name: "Tawdif Pro" },
+  publisher: { "@type": "Organization", name: "Tawdif Pro", logo: { "@type": "ImageObject", url: "https://tawdifpro.ma/logo.png" } },
+  datePublished: "2026-06-01",
+  dateModified: "2026-06-13",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://tawdifpro.ma" },
+    { "@type": "ListItem", position: 2, name: "قسم التوظيف", item: "https://tawdifpro.ma/emplois" },
+    { "@type": "ListItem", position: 3, name: "كيفاش تكتب CV احترافي في المغرب 2026", item: "https://tawdifpro.ma/emplois/guides/cv-professionnel-maroc-2026" },
+  ],
 };
 
 const faqSchema = {
@@ -56,7 +77,7 @@ const faqSchema = {
 export default function CVGuidePage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
 
       <header className="mb-10 text-center">
         <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">

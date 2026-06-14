@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "نموذج رسالة الدافع (Lettre de Motivation) في المغرب 2026 مع أمثلة | Tawdif Pro",
-  description: "أفضل نماذج رسالة الدافع (Lettre de Motivation) في المغرب 2026. أمثلة جاهزة، نصائح الكتابة، والأخطاء الشائعة.",
+  title: "نموذج رسالة الدافع (Lettre de Motivation) في المغرب 2026 مع أمثلة",
+  description: "أفضل نماذج رسالة الدافع (Lettre de Motivation) في المغرب 2026. أمثلة جاهزة للتعديل، نصائح الكتابة، والأخطاء الشائعة اللي خاصك تتفادا باش تزيد فرصك فالقبول.",
 };
 
 const articleSchema = {
@@ -94,40 +94,79 @@ export default function LettreMotivationPage() {
         </div>
       </header>
       <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>Lettre de Motivation هي وثيقة صغيرة ولكن تأثيرها كبير. فالمغرب، بزاف ديال الشركات كاتقرا الرسالة قبل CV. يعني، الرسالة هي الانطباع الأول.</p>
+        <p>Lettre de Motivation (رسالة الدافع) هي وثيقة صغيرة ولكن تأثيرها كبير فسوق الشغل المغربي. بزاف ديال الشركات فالمغرب كاتقرا الرسالة قبل CV. يعني، الرسالة هي الانطباع الأول وغالبا ما كاتحدد واش غادي يقراو CV ديالك ولا لا. فهاد المقال غادي نعطيك نماذج جاهزة ونصائح عملية باش تكتب رسالة كاتفتح ليك الأبواب.</p>
+
+        <p>شنو هي بالضبط Lettre de Motivation؟ هي رسالة كاترفق مع CV فاش كاتقدم على وظيفة. الهدف ديالها: شرح علاش أنت الشخص المناسب للوظيفة، وعلاش بغيتي هاد الشركة بالذات. ما كاتعاودش المعلومات لي فـ CV، ولكن كاتعمق فسببين: قدراتك، ورغبتك فالانضمام لتلك الشركة.</p>
 
         <hr className="border-gray-200" />
 
-        <h2 className="text-2xl font-bold text-gray-900">1. نموذج Lettre de Motivation بالعربية</h2>
+        <h2 className="text-2xl font-bold text-gray-900">1. نموذج Lettre de Motivation بالعربية (للقطاع العام والوظائف الإدارية)</h2>
+        <p>هاد النموذج كايناسب المباريات والوظائف الحكومية والمؤسسات العمومية:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
-          <p>الموضوع: ترشيح لمنصب [اسم المنصب]</p>
-          <p>السيد [اسم مسؤول التوظيف]،</p>
-          <p>أنا [اسمك]، حاصل على [شهادتك]. أتقدم بترشيحي لمنصب [اسم المنصب]. أمتلك [X] سنوات من الخبرة في مجال [المجال].</p>
+          <p><strong>الموضوع:</strong> ترشيح لمنصب [اسم المنصب]</p>
+          <p className="mt-3">السيد [اسم مسؤول التوظيف]،</p>
+          <p>أنا [الاسم الكامل]، حاصل على [الشهادة] من [المؤسسة]. أتقدم بترشيحي لمنصب [اسم المنصب] بعد اطلاعي على الإعلان المنشور على [المصدر]. أمتلك [X] سنوات من الخبرة ف مجال [المجال]، حيث عملت على [ذكر أهم الإنجازات]. إن خبرتي ف [المجال] وشغفي ب [الهدف] كايجعلاني مرشحا قويا لهذا المنصب.</p>
+          <p>أتطلع لمناقشة مؤهلاتي معكم ف مقابلة شخصية.</p>
           <p>وتفضلوا بقبول فائق الاحترام،</p>
-          <p>[اسمك] - [هاتفك] - [إيميلك]</p>
+          <p>[الاسم الكامل] - [رقم الهاتف] - [البريد الإلكتروني]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. نموذج Lettre de Motivation بالفرنسية</h2>
+        <h2 className="text-2xl font-bold text-gray-900">2. نموذج Lettre de Motivation بالفرنسية (للوظائف بالقطاع الخاص)</h2>
+        <p>هاد النموذج هو الأكثر طلبا فالمغرب. كايناسب الشركات الخاصة والبنوك:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
-          <p>Objet: Candidature au poste de [Titre du Poste]</p>
-          <p>Madame, Monsieur,</p>
-          <p>Actuellement [votre situation], je me permets de vous adresser ma candidature pour le poste de [Titre du Poste].</p>
-          <p>Dans l attente de votre retour, veuillez agreer l expression de mes salutations distinguees.</p>
-          <p>[Votre Nom]</p>
+          <p className="font-bold">Objet: Candidature au poste de [Titre du Poste]</p>
+          <p className="mt-3">Madame, Monsieur,</p>
+          <p>Actuellement [votre situation professionnelle], je me permets de vous adresser ma candidature pour le poste de [Titre du Poste] au sein de [Nom de l entreprise]. Ayant eu l occasion de suivre les projets de votre entreprise, notamment [Projet spécifique], je suis convaincu que mon profil correspond à vos besoins.</p>
+          <p>Fort de [X] années d expérience dans le domaine de [Domaine], j ai eu l opportunité de [Réalisation importante] chez [Ancienne entreprise]. Ma maîtrise de [Compétence clé] me permettra de contribuer efficacement à la réussite de votre équipe.</p>
+          <p>Je me tiens à votre disposition pour un entretien afin de vous exposer plus en détail ma motivation.</p>
+          <p>Dans l attente de votre retour, veuillez agréer l expression de mes salutations distinguées.</p>
+          <p>[Votre Nom et Prénom]</p>
+          <p>[Téléphone] | [Email]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. نصائح عملية للكتابة</h2>
+        <h2 className="text-2xl font-bold text-gray-900">3. نموذج Lettre de Motivation بالإنجليزية (للمناصب الدولية)</h2>
+        <p>هاد النموذج كايناسب الشركات المتعددة الجنسيات والمناصب لي كاتطلب الإنجليزية:</p>
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
+          <p className="font-bold">Subject: Application for [Job Title]</p>
+          <p className="mt-3">Dear Hiring Manager,</p>
+          <p>I am writing to express my strong interest in the [Job Title] position at [Company Name]. With [X] years of experience in [Industry], I have developed skills in [Key Skills] that align perfectly with the requirements of this role.</p>
+          <p>At my current position with [Current Company], I successfully [Key Achievement]. I am excited about the opportunity to bring my expertise to [Company Name] and contribute to [Company Goal].</p>
+          <p>I would welcome the opportunity to discuss my qualifications with you in an interview.</p>
+          <p>Sincerely,</p>
+          <p>[Full Name]</p>
+        </div>
+
+        <h2 className="text-2xl font-bold text-gray-900">4. نصائح عملية للكتابة</h2>
+
+        <h3 className="text-xl font-bold text-gray-900">4.1. التخصيص هو المفتاح</h3>
+        <p>ما ترسلش نفس الرسالة لجميع الشركات. اقرا عن الشركة قبل ما تكتب. شوف شنو كاتدير، شنو قيمها، شنو مشاريعها الحالية. وضمن هاد المعلومات ف الرسالة. مثلا: "أتابع مشاريعكم فمجال الطاقة المتجددة، وأعجبت بشكل خاص بمشروع Noor". هاد الشي كايوريهم أنك بغيتي هاد الشركة بالذات، مش أي شركة.</p>
+
+        <h3 className="text-xl font-bold text-gray-900">4.2. الأرقام كاتعطي قيمة</h3>
+        <p>بدل ما تقول "كنت خدام فالتسويق"، قل "ساهمت فزيادة المبيعات بنسبة 20% خلال 6 أشهر". الأرقام كاتخلي الرسالة كاتحكي وكاتعطي مصداقية. حاول دير رقم واحد على الأقل ف كل فقرة.</p>
+
+        <h3 className="text-xl font-bold text-gray-900">4.3. الطول المثالي</h3>
+        <p>صفحة وحدة، ولا تزيد. 3 ل 4 فقرات هو المثالي. مدير الموارد البشرية عندو وقت محدود. الرسالة الطويلة كاتمله وتخلية يحطها ف side. اختصر، كن مباشر، وركز على الأساسي.</p>
+
+        <h3 className="text-xl font-bold text-gray-900">4.4. الأخطاء الإملائية</h3>
+        <p>هاد أكبر عدو. خطأ إملائي واحد كايخلي الـ recruteur كايعتقد أنك ما عندكش اهتمام بالتفاصيل. استعمل أدوات مجانية باش تصلح الأخطاء: Scribens (للفرنسية)، BonPatron، و Grammarly (للإنجليزية). اقرا الرسالة بصوت عالي قبل ما ترسلها.</p>
+
+        <h2 className="text-2xl font-bold text-gray-900">5. أخطاء شائعة ف Lettre de Motivation فالمغرب</h2>
         <ul className="list-disc space-y-2 pr-6">
-          <li><strong>التخصيص:</strong> كل شركة عندها رسالة خاصة.</li>
-          <li><strong>الأرقام:</strong> استعمل الأرقام (10% زيادة، 5 مشاريع).</li>
-          <li><strong>اللغة:</strong> راقب اللغة. الأخطاء الإملائية كاتقتل فرصك.</li>
-          <li><strong>الطول:</strong> صفحة وحدة. لا تزيد.</li>
+          <li><strong>النسخ واللصق:</strong> قالب عام بدون تخصيص. هاد أكبر خطأ. الـ recruteur كايقرا بزاف ديال الرسائل ونفس القالب البارد كايبان من بعيد.</li>
+          <li><strong>التكرار:</strong> نفس المعلومات لي فـ CV. الرسالة كاتكمل الـ CV، ما كاتعاودش.</li>
+          <li><strong>العبارات المكررة:</strong> "Je suis motivé, dynamique, ponctuel, sérieux..." هاد الكلمات كاتعني والو. بدلها بأمثلة واقعية.</li>
+          <li><strong>عدم ذكر اسم الشركة:</strong> "أتقدم لشركتكم المحترمة" بدون ذكر الاسم. الـ recruteur كايحس أن نفس الرسالة مشات ل 100 شركة.</li>
+          <li><strong>طولها بزاف:</strong> أكثر من صفحة. المدير ما عندوش وقت يقرا رواية.</li>
+          <li><strong>اللغة الغير مناسبة:</strong> مستوى اللغة الرسمية كايختلف حسب الشركة. شركة حديثة (startup) تقدر تستعمل لغة أقل رسمية. بنك تقليدي خاصك رسمي بزاف.</li>
         </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900">6. الفرق بين Lettre للقطاع العام والقطاع الخاص</h2>
+        <p>الفرق واضح فالمغرب. فالقطاع العام (الوظيفة العمومية): الشكل رسمي بزاف، كايتكتب بالعربية غالبا، والتركيز على الخدمة العمومية والرغبة فخدمة الوطن. فالقطاع الخاص: الشكل أقل رسمية، كايتكتب بالفرنسية غالبا، والتركيز على المهارات والإنجازات والقيمة لي غادي تجيبها للشركة.</p>
 
         <hr className="border-gray-200" />
 
         <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
-        <p>Lettre de Motivation هي مفتاحك للوظيفة. استثمر الوقت فكتابتها. بالتوفيق.</p>
+        <p>Lettre de Motivation هي مفتاحك للوظيفة لي كاتحلم بها. استثمر الوقت فكتابتها، خصصها لكل شركة، راقب الأخطاء الإملائية، واستعمل الأرقام والأمثلة الواقعية. تذكر: أول انطباع كايدوم. رسالة قوية كاتخلي الـ recruteur يقرا CV ديالك باهتمام. بالتوفيق!</p>
       </div>
       <div className="mt-8 rounded-xl bg-gray-50 p-4">
         <p className="text-sm text-gray-600">

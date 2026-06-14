@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "برنامج Forsa 2026 (فرصة) - دليل كامل للتقديم والشروط | Tawdif Pro",
-  description: "برنامج Forsa 2026 في المغرب: شروط التسجيل، التمويل، المبلغ، وكيفية التقديم. دليل كامل لبرنامج فرصة لدعم المقاولات.",
+  title: "برنامج Forsa 2026 (فرصة) - دليل كامل للتقديم والشروط",
+  description: "برنامج Forsa 2026 فالمغرب: شروط التسجيل، التمويل حتى 100,000 درهم، المبلغ، كيفية التقديم، والوثائق المطلوبة. دليل كامل لبرنامج فرصة لدعم المقاولات الشابة.",
 };
 
 const articleSchema = {

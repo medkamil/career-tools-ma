@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين السباكة والتدفئة في المغرب: المراكز، الأسعار، والمستقبل المهني | Tawdif Pro",
+  title: "تكوين السباكة والتدفئة في المغرب: المراكز، الأسعار، والمستقبل المهني",
   description: "دليل تكوين السباكة والتدفئة (Plomberie et Chauffage) في المغرب 2026: أفضل معاهد التكوين، أسعار الترصيم، شهادة OFPPT، ورواتب السباكين.",
 };
 

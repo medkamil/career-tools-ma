@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "أفضل 10 مواقع للبحث عن عمل في المغرب 2026 (مجانية وحديثة) | Tawdif Pro",
+  title: "أفضل 10 مواقع للبحث عن عمل في المغرب 2026 (مجانية وحديثة)",
   description: "أفضل مواقع البحث عن عمل في المغرب 2026: Rekrute, MarocAnnonces, LinkedIn, Tanmia.ma والمزيد. دليلك الكامل للعثور على وظيفة في المغرب.",
 };
 

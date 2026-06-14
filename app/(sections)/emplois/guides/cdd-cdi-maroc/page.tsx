@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "الفرق بين CDD و CDI في المغرب 2026 (دليل شامل) | Tawdif Pro",
-  description: "دليل شامل للفرق بين عقد CDD و CDI في المغرب 2026. المدة، المزايا، الإنهاء، والتعويضات. أيهما تختار؟",
+  title: "الفرق بين CDD و CDI في المغرب 2026 (دليل شامل)",
+  description: "دليل شامل للفرق بين عقد CDD و CDI في المغرب 2026. المدة، المزايا، الإنهاء، والتعويضات. أيهما تختار؟ مقارنة كاملة مع أمثلة عملية ونماذج العقود.",
 };
 
 const articleSchema = {

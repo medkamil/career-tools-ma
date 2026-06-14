@@ -3,8 +3,8 @@ import Link from "next/link";
 import { CompensationCalculator } from "./components/CompensationCalculator";
 
 export const metadata: Metadata = {
-  title: "حاسبة التعويضات في المغرب 2026: فصل، عطلة، إخطار | Tawdif Pro",
-  description: "احسب تعويضاتك القانونية في المغرب: تعويض الفصل (licenciement)، تعويض العطلة السنوية، تعويض الإخطار (préavis)، وعلاوة CDD. أداة مجانية مبنية على قانون الشغل المغربي.",
+  title: "حاسبة التعويضات في المغرب 2026: فصل، عطلة، إخطار",
+  description: "احسب تعويضاتك القانونية فالمغرب: تعويض الفصل (licenciement)، تعويض العطلة السنوية، تعويض الإخطار (préavis)، وعلاوة CDD. أداة مجانية مطابقة لقانون الشغل المغربي.",
 };
 
 const faqSchema = {

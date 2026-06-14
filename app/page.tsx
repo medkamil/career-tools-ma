@@ -4,7 +4,7 @@ import { ArrowLeft, Briefcase, GraduationCap, Rocket, Wrench, FileText, Calculat
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "منصة التوظيف والتكوين والمشاريع في المغرب | Tawdif Pro",
+  title: "منصة التوظيف والتكوين والمشاريع في المغرب",
   description:
     "منصة مغربية شاملة للتوظيف، التكوين المهني، المشاريع الصغيرة، والأدوات التفاعلية المجانية. كل ما تحتاجه في رحلتك المهنية.",
 };

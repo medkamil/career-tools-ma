@@ -2,9 +2,9 @@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "مشروع قاعة الرياضة (Salle de Sport) في المغرب: أرباح وتكاليف 2026 | Tawdif Pro",
+  title: "مشروع قاعة الرياضة (Salle de Sport) في المغرب: أرباح وتكاليف 2026",
   description:
-    "دليل كامل لمشروع قاعة الرياضة (salle de sport) في المغرب: التكاليف، المعدات، التراخيص، stratégie marketing، والأرباح المتوقعة. كل ما تحتاج لفتح salle de fitness ناجحة.",
+    "دليل كامل لمشروع قاعة الرياضة فالمغرب: التكاليف، المعدات، التراخيص، استراتيجية التسويق، والأرباح المتوقعة. كل ما تحتاج لفتح صالة رياضية ناجحة فالمغرب.",
 };
 
 const articleSchema = {

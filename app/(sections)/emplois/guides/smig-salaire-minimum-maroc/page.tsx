@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "الحد الأدنى للأجور SMIG في المغرب 2026 (دليل كامل) | Tawdif Pro",
-  description: "SMIG 2026 المغرب: الأجر الأدنى بالساعة والشهر، SMAG للفلاحة، القطاعات المعنية، وحساب الزيادات. دليل كامل.",
+  title: "الحد الأدنى للأجور SMIG في المغرب 2026 (دليل كامل)",
+  description: "SMIG 2026 المغرب: الأجر الأدنى بالساعة والشهر، SMAG للفلاحة، القطاعات المعنية، الزيادات القانونية، وحساب الأجر الصافي. دليل كامل ومحدث.",
 };
 
 const articleSchema = {

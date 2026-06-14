@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين البرمجة والمعلوميات في المغرب: المدارس، الأسعار، والمستقبل | Tawdif Pro",
+  title: "تكوين البرمجة والمعلوميات في المغرب: المدارس، الأسعار، والمستقبل",
   description: "دليل تكوين البرمجة والمعلوميات (Informatique et Programmation) في المغرب 2026: أفضل مدارس البرمجة، معاهد التكوين، الأسعار، والرواتب.",
 };
 

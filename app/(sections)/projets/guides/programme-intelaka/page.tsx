@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "برنامج INTELAKA (انطلاقة) - دليل كامل 2026 | Tawdif Pro",
-  description: "برنامج INTELAKA (انطلاقة) في المغرب 2026: شروط التمويل، خطوات التسجيل، والمبلغ. دليل كامل لدعم المشاريع الصغرى.",
+  title: "برنامج INTELAKA (انطلاقة) - دليل كامل 2026",
+  description: "برنامج INTELAKA (انطلاقة) فالمغرب 2026: شروط الاستفادة، التمويل حتى 100,000 درهم، خطوات التسجيل، الوثائق المطلوبة. دليل كامل باش تستفيد من دعم المشاريع الصغرى.",
 };
 
 const articleSchema = {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين اللغة الإنجليزية في المغرب: المعاهد، الأسعار، وشهادات التوفل | Tawdif Pro",
+  title: "تكوين اللغة الإنجليزية في المغرب: المعاهد، الأسعار، وشهادات التوفل",
   description: "دليل تكوين اللغة الإنجليزية (Formation d Anglais) في المغرب 2026: أفضل معاهد اللغة، أسعار التكوين، شهادات TOEFL/IELTS، وفرص الشغل",
 };
 

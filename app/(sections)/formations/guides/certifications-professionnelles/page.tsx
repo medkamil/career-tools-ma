@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "أهم الشهادات المهنية المطلوبة في المغرب 2026 | Tawdif Pro",
-  description: "أهم الشهادات المهنية المطلوبة في المغرب 2026: PMP, Google, Microsoft, CISCO, وغيرها. دليل كامل للشهادات المعتمدة.",
+  title: "أهم الشهادات المهنية المطلوبة في المغرب 2026",
+  description: "أهم الشهادات المهنية المطلوبة في المغرب 2026: PMP, Google, Microsoft, CISCO, TOEFL, وغيرها. دليل كامل للشهادات المعتمدة لي كتزيد فرصك فالشغل وراتبك.",
 };
 
 const articleSchema = {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "التمويل البنكي للمشاريع في المغرب 2026 (دليل كامل) | Tawdif Pro",
+  title: "التمويل البنكي للمشاريع في المغرب 2026 (دليل كامل)",
   description:
     "دليل شامل للتمويل البنكي للمشاريع في المغرب: شروط القروض، البنوك المغربية، taux d'intérêt، وثائق التقديم، ونسبة القبول. كل ما تحتاج لتمويل مشروعك.",
 };

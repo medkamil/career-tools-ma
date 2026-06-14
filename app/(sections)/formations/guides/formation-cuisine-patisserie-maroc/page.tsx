@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين الطبخ والحلويات في المغرب: المراكز، الأسعار، وشهادات الشيف | Tawdif Pro",
+  title: "تكوين الطبخ والحلويات في المغرب: المراكز، الأسعار، وشهادات الشيف",
   description: "دليل تكوين الطبخ والحلويات (Cuisine et Patisserie) في المغرب 2026: أفضل مدارس الطبخ، ثمن التكوين، شهادة الشيف، وفرص العمل.",
 };
 

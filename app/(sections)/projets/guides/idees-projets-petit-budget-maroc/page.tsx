@@ -2,8 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "10 أفكار مشاريع صغيرة مربحة بميزانية أقل من 30,000 درهم في المغرب | Tawdif Pro",
-  description: "دليل المشاريع الصغيرة في المغرب 2026. 10 أفكار عملية بميزانية محدودة، برامج دعم Forsa و INTELAKA، وكيفاش تبدأ المقاولة الذاتية.",
+  title: "10 أفكار مشاريع صغيرة مربحة بميزانية أقل من 30,000 درهم في المغرب",
+  description: "دليل المشاريع الصغيرة فالمغرب 2026. 10 أفكار عملية بميزانية محدودة، برامج دعم Forsa و INTELAKA، وكيفاش تبدأ المقاولة الذاتية. ابدأ مشروعك بأقل من 30,000 درهم.",
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "10 أفكار مشاريع صغيرة مربحة بميزانية أقل من 30,000 درهم في المغرب",
+  description: "دليل المشاريع الصغيرة فالمغرب 2026. 10 أفكار عملية بميزانية محدودة، برامج دعم Forsa و INTELAKA، وكيفاش تبدأ المقاولة الذاتية. ابدأ مشروعك بأقل من 30,000 درهم.",
+  author: { "@type": "Person", name: "Tawdif Pro" },
+  publisher: { "@type": "Organization", name: "Tawdif Pro", logo: { "@type": "ImageObject", url: "https://tawdifpro.ma/logo.png" } },
+  datePublished: "2026-06-01",
+  dateModified: "2026-06-13",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://tawdifpro.ma" },
+    { "@type": "ListItem", position: 2, name: "قسم المشاريع", item: "https://tawdifpro.ma/projets" },
+    { "@type": "ListItem", position: 3, name: "10 أفكار مشاريع صغيرة مربحة في المغرب", item: "https://tawdifpro.ma/projets/guides/idees-projets-petit-budget-maroc" },
+  ],
 };
 
 const faqSchema = {
@@ -56,7 +77,7 @@ const faqSchema = {
 export default function ProjetsGuidePage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
 
       <header className="mb-10 text-center">
         <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">

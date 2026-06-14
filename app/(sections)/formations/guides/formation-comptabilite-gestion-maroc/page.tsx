@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين المحاسبة والتدبير في المغرب: المدارس، الشهادات، والرواتب | Tawdif Pro",
+  title: "تكوين المحاسبة والتدبير في المغرب: المدارس، الشهادات، والرواتب",
   description: "دليل تكوين المحاسبة والتدبير (Comptabilite et Gestion) في المغرب 2026: أفضل المعاهد، شهادة التقني المحاسب، أسعار التكوين، وفرص العمل.",
 };
 

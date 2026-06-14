@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين الحام (Soudure) في المغرب: المراكز والأسعار والشهادة | Tawdif Pro",
+  title: "تكوين الحام (Soudure) في المغرب: المراكز والأسعار والشهادة",
   description: "دليل تكوين الحام (Soudure) في المغرب 2026: أفضل مراكز التكوين، أسعار الترصيم، شهادة OFPPT، رواتب عمال اللحام، وشروط الولوج لمهنة الحام.",
 };
 

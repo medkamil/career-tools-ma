@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "سياسة الخصوصية - Tawdif Pro",
-  description: "سياسة الخصوصية لمنصة Tawdif Pro. كيف نحمي معلوماتك الشخصية وكيف نستخدمها.",
+  title: "سياسة الخصوصية",
+  description: "سياسة الخصوصية لمنصة Tawdif Pro. نشرح كيفاش كنجمعو المعلومات الشخصية، كيفاش كنسخدمو الكوكيز و Google AdSense، وكيف نحمي بياناتك. تواصل معانا فحال عندك سؤال.",
 };
 
 export default function PrivacyPolicyPage() {

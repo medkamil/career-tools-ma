@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "الدراسة السوقية للمشروع في المغرب 2026 (دليل كامل) | Tawdif Pro",
-  description: "دليل كامل للدراسة السوقية (Étude de marché) للمشاريع في المغرب 2026. خطوات، أدوات، ونماذج عملية لدراسة جدوى مشروعك.",
+  title: "الدراسة السوقية للمشروع في المغرب 2026 (دليل كامل)",
+  description: "دليل كامل للدراسة السوقية (Étude de marché) للمشاريع في المغرب 2026. خطوات عملية، أدوات مجانية، ونماذج جاهزة لدراسة جدوى مشروعك قبل ما تبدا.",
 };
 
 const articleSchema = {

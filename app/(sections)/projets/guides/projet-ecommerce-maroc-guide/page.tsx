@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "مشروع التجارة الإلكترونية (E-commerce) في المغرب 2026 | Tawdif Pro",
+  title: "مشروع التجارة الإلكترونية (E-commerce) في المغرب 2026",
   description: "دليل شامل لبدء مشروع التجارة الإلكترونية في المغرب 2026: منصات، تكاليف من 10,000 درهم، شحن، دفع، ضرائب، وأمثلة لمتاجر مغربية ناجحة.",
 };
 

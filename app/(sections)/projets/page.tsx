@@ -4,8 +4,8 @@ import { Lightbulb, Handshake, UserCheck, ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "قسم المشاريع - أفكار مشاريع وبرامج دعم في المغرب | Tawdif Pro",
-  description: "دليلك الكامل لريادة الأعمال في المغرب: أفكار مشاريع، برامج دعم (Forsa, INTELAKA)، والمقاول الذاتي.",
+  title: "قسم المشاريع - أفكار مشاريع وبرامج دعم في المغرب",
+  description: "دليلك الكامل لريادة الأعمال في المغرب: أفكار مشاريع صغيرة مربحة، برامج دعم Forsa و INTELAKA، التمويل البنكي، والمقاول الذاتي. ابدأ مشروعك الآن.",
 };
 
 const features = [
@@ -31,7 +31,9 @@ export default function ProjetsPage() {
         <p className="mt-3 text-lg text-gray-600">أفكار مشاريع، برامج دعم، وكل ما يخص ريادة الأعمال في المغرب</p>
       </section>
 
-      <section className="mt-10 grid gap-6 sm:grid-cols-3">
+      <section>
+        <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">مميزات القسم</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
         {features.map((f) => {
           const Icon = f.icon;
           return (
@@ -46,6 +48,7 @@ export default function ProjetsPage() {
             </Card>
           );
         })}
+        </div>
       </section>
 
       <section className="mt-12">

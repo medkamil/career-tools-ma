@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "أفضل منصات التكوين المجاني عن بعد في المغرب 2026 | Tawdif Pro",
-  description: "أفضل منصات التكوين المجاني عن بعد في المغرب 2026. Coursera, Edx, منصة التكوين عن بعد, وغيرها. شهادات مجانية ومعتمدة.",
+  title: "أفضل منصات التكوين المجاني عن بعد في المغرب 2026",
+  description: "أفضل منصات التكوين المجاني عن بعد في المغرب 2026. Coursera, Edx, منصة التكوين عن بعد, Udemy, وغيرها. تعلم مهارات جديدة بشهادات معتمدة وطور مسيرتك المهنية.",
 };
 
 const articleSchema = {

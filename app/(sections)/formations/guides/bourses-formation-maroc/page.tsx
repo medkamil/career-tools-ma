@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "منح التكوين المهني في المغرب 2026 (دليل كامل) | Tawdif Pro",
-  description: "دليل كامل لمنح التكوين المهني في المغرب 2026. منح OFPPT, منح وزارة التربية, منح الاتحاد الأوروبي, وكيفية التقديم.",
+  title: "منح التكوين المهني في المغرب 2026 (دليل كامل)",
+  description: "دليل كامل لمنح التكوين المهني في المغرب 2026. منح OFPPT ووزارة التربية والتعليم العالي، منح الاتحاد الأوروبي، وشروط وكيفية التقديم خطوة بخطوة.",
 };
 
 const articleSchema = {

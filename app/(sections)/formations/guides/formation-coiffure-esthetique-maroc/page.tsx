@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين الحلاقة والتجميل في المغرب: المراكز، الأسعار، وشهادة التجميل | Tawdif Pro",
+  title: "تكوين الحلاقة والتجميل في المغرب: المراكز، الأسعار، وشهادة التجميل",
   description: "دليل تكوين الحلاقة والتجميل (Coiffure et Esthetique) في المغرب 2026: أفضل مراكز التجميل، أسعار التكوين، شهادة OFPPT، وفرص العمل.",
 };
 

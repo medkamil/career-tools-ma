@@ -2,8 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "أفضل 10 تكوينات مهنية مطلوبة في المغرب 2026 (OFPPT + تكوينات مجانية) | Tawdif Pro",
-  description: "دليل التكوين المهني في المغرب 2026. أفضل 10 تخصصات مطلوبة، شروط التسجيل في OFPPT، وتكوينات مجانية بشهادات معتمدة.",
+  title: "أفضل 10 تكوينات مهنية مطلوبة في المغرب 2026 (OFPPT + تكوينات مجانية)",
+  description: "دليل التكوين المهني في المغرب 2026. أفضل 10 تخصصات مطلوبة فسوق الشغل، شروط التسجيل في OFPPT، تكوينات مجانية بشهادات معتمدة، والرواتب المتوقعة لكل تخصص.",
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "أفضل 10 تكوينات مهنية مطلوبة في المغرب 2026 (OFPPT + تكوينات مجانية)",
+  description: "دليل التكوين المهني في المغرب 2026. أفضل 10 تخصصات مطلوبة فسوق الشغل، شروط التسجيل في OFPPT، تكوينات مجانية بشهادات معتمدة، والرواتب المتوقعة لكل تخصص.",
+  author: { "@type": "Person", name: "Tawdif Pro" },
+  publisher: { "@type": "Organization", name: "Tawdif Pro", logo: { "@type": "ImageObject", url: "https://tawdifpro.ma/logo.png" } },
+  datePublished: "2026-06-01",
+  dateModified: "2026-06-13",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://tawdifpro.ma" },
+    { "@type": "ListItem", position: 2, name: "قسم التكوين", item: "https://tawdifpro.ma/formations" },
+    { "@type": "ListItem", position: 3, name: "أفضل 10 تكوينات مهنية مطلوبة في المغرب 2026", item: "https://tawdifpro.ma/formations/guides/meilleures-formations-maroc-2026" },
+  ],
 };
 
 const faqSchema = {
@@ -56,7 +77,7 @@ const faqSchema = {
 export default function FormationsGuidePage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
 
       <header className="mb-10 text-center">
         <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">

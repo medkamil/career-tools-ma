@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "شروط الاستخدام - Tawdif Pro",
-  description: "شروط استخدام منصة Tawdif Pro. الحقوق والواجبات عند استخدام الخدمات والأدوات المتاحة.",
+  title: "شروط الاستخدام",
+  description: "شروط استخدام منصة Tawdif Pro. باستخدامك للموقع كتوافق على هاد الشروط. الملكية الفكرية، حدود المسؤولية، الأدوات التفاعلية، والقانون المطبق هو القانون المغربي.",
 };
 
 export default function TermsOfServicePage() {

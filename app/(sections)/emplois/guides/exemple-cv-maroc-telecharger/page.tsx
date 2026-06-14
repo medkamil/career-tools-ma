@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "أفضل نموذج CV المغرب 2026 مع أمثلة جاهزة للتحميل | Tawdif Pro",
+  title: "أفضل نموذج CV المغرب 2026 مع أمثلة جاهزة للتحميل",
   description: "أفضل نموذج CV المغرب 2026. أمثلة جاهزة بالعربية والفرنسية، نصائح لكتابة السيرة الذاتية للمغرب، قوالب للقطاعين العام والخاص.",
 };
 
@@ -102,52 +102,100 @@ export default function ExempleCVPage() {
         </div>
       </header>
       <div className="space-y-6 text-base leading-8 text-gray-800">
-        <p>CV ولا السيرة الذاتية هو أول وثيقة كايقراها المشغل عنك. ف 2026، سوق الشغل فالمغرب ولا أكثر تنافسية. CV بدون تصميم ولا الأخطاء الإملائية كايتحذف ف 10 ثواني.</p>
+        <p>CV ولا السيرة الذاتية هو أول وثيقة كايقراها المشغل عنك. ف 2026، سوق الشغل فالمغرب ولا أكثر تنافسية من قبل. CV ضعيف ولا فيه أخطاء إملائية كايتحذف ف 10 ثواني فقط. فهاد المقال، غادي نعطيك نماذج جاهزة، نصائح عملية، وقوالب تقدر تحملها وتعدل عليها.</p>
+
+        <p>قبل ما نبداو، حاجة مهمة: فالمغرب ماشي بحال أوربا. الشركات المغربية كاتفضل CV بالفرنسية ف 60% من الحالات. العربية كاتستعمل ف 30% (خصوصا فالقطاع العام والبنوك التقليدية). الإنجليزية كاتستعمل ف 10% (الشركات المتعددة الجنسيات). اختار اللغة على حسب المجال ديالك.</p>
 
         <hr className="border-gray-200" />
 
         <h2 className="text-2xl font-bold text-gray-900">1. نموذج CV بالفرنسية (الأكثر استخداما فالمغرب)</h2>
+        <p>هاد النموذج كايناسب أغلب الوظائف فالمغرب. نظيف، بسيط، ومباشر:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
-          <p><strong>[Nom Prenom]</strong></p>
-          <p>[Adresse] | [Telephone] | [Email] | [LinkedIn]</p>
-          <p><strong>Profil</strong></p>
-          <p>Ingenieur en [specialite] avec [X] annees d experience.</p>
-          <p><strong>Experiences Professionnelles</strong></p>
-          <p>[Poste] - [Societe] - [Date]</p>
-          <p><strong>Formation</strong></p>
-          <p>[Diplome] - [Ecole] - [Annee]</p>
+          <p className="font-bold text-lg">[Nom Prénom]</p>
+          <p className="text-gray-600">[Ville, Maroc] | [Téléphone] | [Email] | [LinkedIn]</p>
+          <p className="mt-3 font-bold">Profil Professionnel</p>
+          <p>Ingénieur en [Spécialité] avec [X] années d expérience dans le secteur [Secteur]. Passionné par [Domaine], je cherche à rejoindre une équipe dynamique pour [Objectif].</p>
+          <p className="mt-3 font-bold">Expériences Professionnelles</p>
+          <p><strong>[Poste]</strong> - [Société], [Ville] | [Date Début] - [Date Fin]</p>
+          <p className="mr-4">• Réalisation [X] avec un impact de [Y]% sur le chiffre d affaires.</p>
+          <p className="mr-4">• Management d une équipe de [Z] personnes.</p>
+          <p className="mt-3 font-bold">Formation</p>
+          <p><strong>[Diplôme]</strong> - [École/Université] | [Année]</p>
+          <p className="mt-3 font-bold">Compétences</p>
+          <p className="mr-4">• [Compétence 1] • [Compétence 2] • [Compétence 3] • [Compétence 4]</p>
+          <p className="mt-3 font-bold">Langues</p>
+          <p className="mr-4">Arabe (Langue maternelle) | Français (Courant) | Anglais (Intermédiaire)</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">2. نموذج CV بالعربية (للقطاع العام)</h2>
+        <h2 className="text-2xl font-bold text-gray-900">2. نموذج CV بالعربية (للقطاع العام والوظائف الإدارية)</h2>
+        <p>هاد النموذج كايناسب المباريات والمقابلات فالقطاع العمومي. الرسمية والوضوح هما الأساس:</p>
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
-          <p><strong>[الاسم الكامل]</strong></p>
-          <p>[العنوان] | [الهاتف] | [البريد الإلكتروني]</p>
-          <p><strong>الملخص المهني</strong></p>
-          <p>متخصص في [المجال] مع [X] سنوات من الخبرة.</p>
+          <p className="font-bold text-lg">[الاسم الكامل]</p>
+          <p className="text-gray-600">[المدينة، المغرب] | [رقم الهاتف] | [البريد الإلكتروني]</p>
+          <p className="mt-3 font-bold">الملخص المهني</p>
+          <p>متخصص في [المجال] مع [X] سنوات من الخبرة. عملت مع [نوع المؤسسات]. أتطلع للمساهمة في [الهدف المهني].</p>
+          <p className="mt-3 font-bold">الخبرات المهنية</p>
+          <p><strong>[المسمى الوظيفي]</strong> - [الشركة/المؤسسة]، [المدينة] | [تاريخ البداية] - [تاريخ النهاية]</p>
+          <p className="mr-4">• الإشراف على [المشروع/الفريق] وتنفيذ [المهمة].</p>
+          <p className="mt-3 font-bold">المؤهلات العلمية</p>
+          <p><strong>[الشهادة]</strong> - [الجامعة/المدرسة] | [السنة]</p>
+          <p className="mt-3 font-bold">المهارات</p>
+          <p className="mr-4">• [مهارة 1] • [مهارة 2] • [مهارة 3]</p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">3. نصائح مهمة لـ CV ناجح</h2>
-        <h3 className="text-xl font-bold text-gray-900">3.1. التخصيص</h3>
-        <p>ما ترسلش نفس CV لجميع الشركات. خصص CV لكل وظيفة.</p>
+        <h2 className="text-2xl font-bold text-gray-900">3. نموذج CV بالإنجليزية (للشركات المتعددة الجنسيات)</h2>
+        <p>هاد النموذج كايناسب الشركات الدولية لي كاتطلب الإنجليزية كلغة خدمة:</p>
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-sm leading-7">
+          <p className="font-bold text-lg">[Full Name]</p>
+          <p className="text-gray-600">[City, Morocco] | [Phone] | [Email] | [LinkedIn]</p>
+          <p className="mt-3 font-bold">Professional Summary</p>
+          <p>Results-driven [Job Title] with [X] years of experience in [Industry]. Proven track record in [Key Skill].</p>
+          <p className="mt-3 font-bold">Work Experience</p>
+          <p><strong>[Job Title]</strong> - [Company], [Location] | [Start] - [End]</p>
+          <p className="mr-4">• Achieved [Result] by implementing [Strategy].</p>
+          <p className="mt-3 font-bold">Education</p>
+          <p><strong>[Degree]</strong> - [University] | [Year]</p>
+        </div>
 
-        <h3 className="text-xl font-bold text-gray-900">3.2. الكلمات المفتاحية (ATS)</h3>
-        <p>بزاف ديال الشركات الكبرى كاتستعمل Applicant Tracking System (ATS) باش تمسح CV. اقرأ الإعلان باش تعرف الكلمات المهمة، وضمنها ف CV ديالك.</p>
+        <h2 className="text-2xl font-bold text-gray-900">4. نصائح مهمة لـ CV ناجح</h2>
 
-        <h3 className="text-xl font-bold text-gray-900">3.3. الأرقام والنتائج</h3>
-        <p>الأرقام كاتعطي مصداقية. بدل ما تكتب كنت مسؤول عن فريق، اكتب كنت أدير فريق من 12 شخصا.</p>
+        <h3 className="text-xl font-bold text-gray-900">4.1. التخصيص (Personnalisation)</h3>
+        <p>ما ترسلش نفس CV لجميع الشركات. كل شركة عندها احتياجات مختلفة. اقرا الإعلان مليح، شوف شنو كايتطلب، وعدل CV باش يظهر أنك الشخص المناسب. خصص حتى الملخص ديالك (Profil) على حسب الوظيفة.</p>
 
-        <h2 className="text-2xl font-bold text-gray-900">4. قائمة المراجعة قبل إرسال CV</h2>
+        <h3 className="text-xl font-bold text-gray-900">4.2. الكلمات المفتاحية و ATS</h3>
+        <p>بزاف ديال الشركات الكبرى كاتستعمل Applicant Tracking System (ATS) باش تمسح وتصنف CV. هاد النظام كايقرى الكلمات المفتاحية. يعني، إلا كان الإعلان كايقول "Gestion de projet", "Budget", "Microsoft Excel". خاصك تضمن هاد الكلمات فـ CV ديالك. ما تحاولش تغش النظام بوضع كلمات فنية بزاف فالباك (هاد الشي كايتشاف كـ spam).</p>
+
+        <h3 className="text-xl font-bold text-gray-900">4.3. الأرقام والنتائج</h3>
+        <p>الأرقام كاتعطي مصداقية للـ CV. بدل ما تكتب "كنت مسؤول عن فريق"، اكتب "كنت أدير فريق من 12 شخصا وحققت زيادة 20% فالإنتاجية". الأرقام كاتخلي الـ Recruteur كايتوقف ويقرا بتركيز. أمثلة: زدت المبيعات، خفضت المصاريف، دبرت مشاريع بقيمة كذا.</p>
+
+        <h3 className="text-xl font-bold text-gray-900">4.4. التصميم والشكل</h3>
+        <p>فالمغرب، التصميم المعقد (ألوان بزاف، رسومات) ما كاينفعش. معظم الشركات كاتفضل CV نظيف بالأسود والأبيض أو بلون واحد (أزرق، أخضر داكن). استعمل Canva ولا قوالب Word باش دير تصميم احترافي. المهم: يكون قابلة للقراءة، بخط واضح، وهوامش منظمة.</p>
+
+        <h2 className="text-2xl font-bold text-gray-900">5. قائمة المراجعة قبل إرسال CV</h2>
+        <p>قبل ما ترسل CV، تأكد من هاد النقاط:</p>
         <ul className="list-disc space-y-2 pr-6">
-          <li>صحيح الإملاء والنحو؟</li>
-          <li>صحيح التنسيق؟ (هوامش، خط واحد، مسافات متساوية).</li>
-          <li>مخصص للوظيفة؟ (غير عام).</li>
-          <li>PDF وليس Word؟</li>
+          <li>صحيح الإملاء والنحو؟ (استعمل خدمة مجانية بحال Scribens ولا BonPatron).</li>
+          <li>صحيح التنسيق؟ (هوامش متساوية، خط واحد فكلشي، نفس الحجم).</li>
+          <li>مخصص للوظيفة؟ (غير عام، كاين شي حاجة خاصة بهاد الشركة).</li>
+          <li>PDF وليس Word؟ الـ PDF كايحافظ على التنسيق فجميع الأجهزة.</li>
+          <li>اسم الملف: "CV_اسمك_المنصب.pdf" (ماشي "CV_final_2.pdf").</li>
+          <li>البريد الإلكتروني: احترامي (firstname.lastname@gmail.com) ماشي cool_boy@xxx.</li>
+          <li>LinkedIn مظبوط؟ الصورة، الملخص، الخبرات كلها محدثة.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900">6. أخطاء قاتلة فـ CV</h2>
+        <ul className="list-disc space-y-2 pr-6">
+          <li><strong>الكذب:</strong> أغلى غلط. الشركات الكبرى كاتتحقق من المعلومات (background check).</li>
+          <li><strong>طول CV:</strong> أقل من 10 سنين خبرة = صفحة وحدة. أكثر = صفحتين. بزاف من الناس كايديرو 3 صفحات وهاد خطأ قاتل.</li>
+          <li><strong>الصورة غير مهنية:</strong> صورة جواز السفر، صورة فالشاطئ، صورة مع الأصحاب. خاصك صورة مهنية (خلفية بيضاء، لباس رسمي).</li>
+          <li><strong>معلومات شخصية:</strong> رقم CIN، الحالة العائلية (إلا ما طلباتش)، الطول والوزن. هاد معلومات شخصية ما كاتحتاجش فـ CV.</li>
+          <li><strong>الروتين:</strong> "Je suis motivé, dynamique, ponctuel..." هاد الكلمات ما كاتعني والو. استبدلها بالنتائج والأرقام.</li>
         </ul>
 
         <hr className="border-gray-200" />
 
         <h2 className="text-xl font-bold text-gray-900">خاتمة</h2>
-        <p>CV هو بوابتك للوظيفة. استثمر الوقت والجهد فكتابته. بالتوفيق.</p>
+        <p>CV هو بوابتك للوظيفة لي كاتحلم بها. استثمر الوقت والجهد فكتابته. خصصه لكل وظيفة، راقب الأخطاء، واستعمل الأرقام والأمثلة الواقعية. ومانساش، سوق الشغل فالمغرب ف 2026 كايطلب CV احترافي باش يكون ليك فرصة. بالتوفيق فمسيرتك المهنية!</p>
       </div>
       <div className="mt-8 rounded-xl bg-gray-50 p-4">
         <p className="text-sm text-gray-600">

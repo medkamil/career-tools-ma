@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "اتصل بنا - Tawdif Pro",
-  description: "تواصل مع فريق Tawdif Pro. أسئلة، اقتراحات، أو شراكات — نحن هنا لمساعدتك.",
+  title: "اتصل بنا",
+  description: "تواصل مع فريق Tawdif Pro. عندك سؤال على حاسبة الراتب ولا التكوين المهني؟ ولا باغي شراكة ولا إعلان؟ نحن هنا باش نعاونوك فظرف 24-48 ساعة.",
 };
 
 export default function ContactPage() {

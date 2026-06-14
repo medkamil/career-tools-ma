@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "أنواع عقود العمل في المغرب: CDD و CDI والفرق بينهم بالتفصيل | Tawdif Pro",
+  title: "أنواع عقود العمل في المغرب: CDD و CDI والفرق بينهم بالتفصيل",
   description: "دليل شامل لأنواع عقود العمل في المغرب 2026. الفرق بين CDD و CDI، عقد العمل المؤقت والموسمي، شروط التجديد، الحقوق والواجبات، ونماذج العقود.",
 };
 

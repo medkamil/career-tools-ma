@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين كهرباء البناء في المغرب: المراكز، الأسعار، وشروط الولوج | Tawdif Pro",
+  title: "تكوين كهرباء البناء في المغرب: المراكز، الأسعار، وشروط الولوج",
   description: "دليل تكوين كهرباء البناء (Electricite de Batiment) في المغرب 2026: أحسن مراكز التكوين، ثمن التسجيل، شهادة التقني، والراتب المتوقع.",
 };
 

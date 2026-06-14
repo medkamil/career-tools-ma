@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { SalaryCalculator } from "./components/SalaryCalculator";
 
 export const metadata: Metadata = {
-  title: "حاسبة الراتب الصافي في المغرب 2026 | Tawdif Pro",
+  title: "حاسبة الراتب الصافي في المغرب 2026",
   description:
-    "احسب صافي راتبك في المغرب بسهولة. حاسبة مجانية تأخذ بعين الاعتبار CNSS، AMO، والضريبة على الدخل IR.",
+    "احسب صافي راتبك فالمغرب بسهولة. حاسبة مجانية دقيقة كتاخد بعين الاعتبار CNSS (6.74%)، AMO (2.26%)، والضريبة على الدخل IR. مطابقة لقانون الشغل المغربي 2026.",
 };
 
 const faqSchema = {

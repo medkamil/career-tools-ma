@@ -4,8 +4,8 @@ import { FileText, MessageCircle, ShieldCheck, ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "قسم التوظيف - فرص عمل ونصائح مهنية في المغرب | Tawdif Pro",
-  description: "دليلك الكامل للتوظيف في المغرب: نماذج CV، نصائح المقابلات، حقوق الأجير، وأحدث فرص العمل.",
+  title: "قسم التوظيف - فرص عمل ونصائح مهنية في المغرب",
+  description: "دليلك الكامل للتوظيف في المغرب: نماذج CV بالعربية والفرنسية، نصائح المقابلات، حقوق الأجير في قانون الشغل، وأحدث فرص العمل. كل ما تحتاج لمسيرتك المهنية فمكان واحد.",
 };
 
 const features = [
@@ -31,7 +31,9 @@ export default function EmploisPage() {
         <p className="mt-3 text-lg text-gray-600">فرص عمل، نصائح مهنية، وكل ما يخص التوظيف في المغرب</p>
       </section>
 
-      <section className="mt-10 grid gap-6 sm:grid-cols-3">
+      <section>
+        <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">مميزات القسم</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
         {features.map((f) => {
           const Icon = f.icon;
           return (
@@ -46,6 +48,7 @@ export default function EmploisPage() {
             </Card>
           );
         })}
+        </div>
       </section>
 
       <section className="mt-12">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "تكوين ميكانيك السيارات في المغرب: المراكز، الأسعار، والشهادة | Tawdif Pro",
+  title: "تكوين ميكانيك السيارات في المغرب: المراكز، الأسعار، والشهادة",
   description: "دليل تكوين ميكانيك السيارات (Mecanique Automobile) في المغرب 2026: أفضل مراكز التكوين، أسعار التسجيل، شهادة OFPPT، ورواتب الميكانيكيين.",
 };
 

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "مشروع شركة التنظيف في المغرب: خطوات وتكاليف 2026 | Tawdif Pro",
+  title: "مشروع شركة التنظيف في المغرب: خطوات وتكاليف 2026",
   description:
-    "دليل شامل لمشروع شركة التنظيف في المغرب: التكاليف، التجهيزات، التراخيص، stratégie marketing، والأرباح المتوقعة. كل ما تحتاج لبدء projet de nettoyage ناجح.",
+    "دليل شامل لمشروع شركة التنظيف فالمغرب: التكاليف، التجهيزات، التراخيص، استراتيجية التسويق، والأرباح المتوقعة. كل ما تحتاج لبدء مشروع خدمات التنظيف الخاص بك.",
 };
 
 const articleSchema = {

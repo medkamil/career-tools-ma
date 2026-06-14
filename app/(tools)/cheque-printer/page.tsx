@@ -3,7 +3,7 @@ import { Printer } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "طباعة الشيك",
-  description: "أداة لطباعة الشيكات البنكية بالمغرب بسهولة وبصيغة احترافية",
+  description: "أداة مجانية لطباعة الشيكات البنكية المغربية بكل سهولة. أدخل معلومات الشيك واحصل عليه جاهزاً للطباعة بصيغة احترافية مطابقة للمعايير البنكية المغربية.",
 };
 
 export default function ChequePrinterPage() {
@@ -17,6 +17,7 @@ export default function ChequePrinterPage() {
         أداة لطباعة الشيكات البنكية المغربية بكل سهولة. أدخل المعلومات واحصل
         على شيك جاهز للطباعة.
       </p>
+      <h2 className="sr-only">معلومات الشيك</h2>
 
       <div className="mt-12 rounded-xl border-2 border-dashed border-gray-300 p-12">
         <p className="text-gray-500">
