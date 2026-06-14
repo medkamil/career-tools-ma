@@ -28,6 +28,7 @@ const footerColumns = [
       { href: "/salary-calculator", label: "حاسبة الراتب" },
       { href: "/compensation-calculator", label: "حاسبة التعويضات" },
       { href: "/cheque-printer", label: "طباعة الشيك" },
+      { href: "/devis-generator", label: "عرض السعر (Devis)" },
     ],
   },
   {
