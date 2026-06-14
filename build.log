@@ -1,0 +1,80 @@
+
+> tawdifproproject@0.1.0 build
+> next build
+
+▲ Next.js 16.2.9 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 5 errors:
+./app/(sections)/formations/guides/bourses-formation-maroc/page.tsx:9:24
+Unexpected character '«'
+  [90m 7 |[0m };
+  [90m 8 |[0m
+[31m[1m>[0m [90m 9 |[0m [36mconst[0m articleSchema = {
+  [90m   |[0m                        [31m[1m^[0m
+  [90m10 |[0m   «@context»: [32m"https://schema.org"[0m,
+  [90m11 |[0m   «@type»: [32m"Article"[0m,
+  [90m12 |[0m   «headline»: [32m"منح التكوين المهني في المغرب 2026 (دليل كامل[0m)",
+
+Parsing ecmascript source code failed
+
+
+./app/(sections)/formations/guides/certifications-professionnelles/page.tsx:9:24
+Unexpected character '«'
+  [90m 7 |[0m };
+  [90m 8 |[0m
+[31m[1m>[0m [90m 9 |[0m [36mconst[0m articleSchema = {
+  [90m   |[0m                        [31m[1m^[0m
+  [90m10 |[0m   «@context»: [32m"https://schema.org"[0m,
+  [90m11 |[0m   «@type»: [32m"Article"[0m,
+  [90m12 |[0m   «headline»: [32m"أهم الشهادات المهنية المطلوبة في المغرب 20[0m26",
+
+Parsing ecmascript source code failed
+
+
+./app/(sections)/formations/guides/formation-continue-maroc/page.tsx:9:24
+Unexpected character '«'
+  [90m 7 |[0m };
+  [90m 8 |[0m
+[31m[1m>[0m [90m 9 |[0m [36mconst[0m articleSchema = {
+  [90m   |[0m                        [31m[1m^[0m
+  [90m10 |[0m   «@context»: [32m"https://schema.org"[0m,
+  [90m11 |[0m   «@type»: [32m"Article"[0m,
+  [90m12 |[0m   «headline»: [32m"التدريب المستمر للعاملين في المغرب 2026 (دل[0mيل كامل)",
+
+Parsing ecmascript source code failed
+
+
+./app/(sections)/formations/guides/formation-gratuite-en-ligne/page.tsx:9:24
+Unexpected character '«'
+  [90m 7 |[0m };
+  [90m 8 |[0m
+[31m[1m>[0m [90m 9 |[0m [36mconst[0m articleSchema = {
+  [90m   |[0m                        [31m[1m^[0m
+  [90m10 |[0m   «@context»: [32m"https://schema.org"[0m,
+  [90m11 |[0m   «@type»: [32m"Article"[0m,
+  [90m12 |[0m   «headline»: [32m"أفضل منصات التكوين المجاني عن بعد في المغ[0mرب 2026",
+
+Parsing ecmascript source code failed
+
+
+./app/(sections)/formations/guides/inscription-ofppt-2026/page.tsx:9:24
+Unexpected character '«'
+  [90m 7 |[0m };
+  [90m 8 |[0m
+[31m[1m>[0m [90m 9 |[0m [36mconst[0m articleSchema = {
+  [90m   |[0m                        [31m[1m^[0m
+  [90m10 |[0m   «@context»: [32m"https://schema.org"[0m,
+  [90m11 |[0m   «@type»: [32m"Article"[0m,
+  [90m12 |[0m   «headline»: [32m"التسجيل في OFPPT 2026 (دليل كامل بالخطوات)"[0m,
+
+Parsing ecmascript source code failed
+
+
+    at <unknown> (./app/(sections)/formations/guides/bourses-formation-maroc/page.tsx:9:24)
+    at <unknown> (./app/(sections)/formations/guides/certifications-professionnelles/page.tsx:9:24)
+    at <unknown> (./app/(sections)/formations/guides/formation-continue-maroc/page.tsx:9:24)
+    at <unknown> (./app/(sections)/formations/guides/formation-gratuite-en-ligne/page.tsx:9:24)
+    at <unknown> (./app/(sections)/formations/guides/inscription-ofppt-2026/page.tsx:9:24)

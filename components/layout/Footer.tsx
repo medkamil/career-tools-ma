@@ -26,6 +26,7 @@ const footerColumns = [
     links: [
       { href: "/cv-generator", label: "مولد السيرة الذاتية" },
       { href: "/salary-calculator", label: "حاسبة الراتب" },
+      { href: "/compensation-calculator", label: "حاسبة التعويضات" },
       { href: "/cheque-printer", label: "طباعة الشيك" },
     ],
   },

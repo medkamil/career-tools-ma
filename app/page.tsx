@@ -20,6 +20,7 @@ const tools = [
   { title: "مولد السيرة الذاتية", description: "أنشئ سيرة ذاتية احترافية في دقائق", icon: FileText, href: "/cv-generator" },
   { title: "حاسبة الراتب", description: "احسب صافي راتبك بعد الخصومات والضرائب", icon: Calculator, href: "/salary-calculator" },
   { title: "طباعة الشيك", description: "اطبع شيكات بنكية احترافية بسهولة", icon: Printer, href: "/cheque-printer" },
+  { title: "حاسبة التعويضات", description: "احسب تعويض الفصل والعطلة والإخطار", icon: Calculator, href: "/compensation-calculator" },
 ];
 
 const values = [
